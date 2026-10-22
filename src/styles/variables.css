@@ -1,0 +1,17 @@
+:root {
+
+    --color-primary: #0b2145;
+    --color-hover: #d7a637;
+    --color-background: #ffffff;
+    --color-surface: #f7f8fa;
+    --color-text: #202938;
+    --color-secondtext: #687385;
+
+    --container-width: 1200px;
+
+    --radius-card: 12px;
+    --radius-button: 5px;
+
+    --section-space: 72px;
+
+}
