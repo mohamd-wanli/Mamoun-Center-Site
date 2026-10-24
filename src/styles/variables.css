@@ -1,7 +1,11 @@
 :root {
 
     --color-primary: #0b2145;
+    --color-primary-dark: #081731;
+    --color-accent: #d7a637;
+    --color-accent-light: #f0c359;
     --color-hover: #d7a637;
+    --color-muted: #687385;
     --color-background: #ffffff;
     --color-surface: #f7f8fa;
     --color-text: #202938;
