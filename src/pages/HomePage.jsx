@@ -10,21 +10,21 @@ import StatsSection from "../components/home/Stats/StatsSection";
 import CTASection from "../components/home/CTA/CTASection";
 
 export default function HomePage() {
-    return (
-        <>
-            <TopBar />
-            {/* <Header /> */}
+  return (
+    <>
+      <TopBar />
+      {/* <Header /> */}
 
-            <main>
-                <HeroSection />
-                <BenefitsBar />
-                <AboutSection />
-                <CoursesSection />
-                <StatsSection />
-                <CTASection />
-            </main>
+      <main>
+        <HeroSection />
+        <BenefitsBar />
+        <AboutSection />
+        <CoursesSection />
+        <StatsSection />
+        <CTASection />
+      </main>
 
-            <Footer />
-        </>
-    );
+      {/* <Footer /> */}
+    </>
+  );
 }

@@ -1,0 +1,117 @@
+.cta-section {
+  padding-block: 84px;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-container {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 52px;
+  align-items: center;
+}
+
+.cta-image-col {
+  position: relative;
+}
+
+.cta-image-frame {
+  width: 100%;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(11, 33, 69, 0.14);
+}
+
+.cta-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.cta-image-frame:hover .cta-image {
+  transform: scale(1.03);
+}
+
+.cta-content-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.cta-description {
+  color: var(--color-secondtext, #687385);
+  font-size: 1rem;
+  line-height: 1.85;
+  margin: 0 0 32px;
+}
+
+.cta-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cta-btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-accent, #d7a637);
+  color: var(--color-primary, #0b2145);
+  padding: 13px 28px;
+  border-radius: var(--radius-button, 6px);
+  font-weight: 800;
+  font-size: 0.92rem;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-btn-gold:hover {
+  background: #e8b94d;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(215, 166, 55, 0.35);
+}
+
+.cta-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  color: var(--color-primary, #0b2145);
+  border: 1.5px solid #d0d7e2;
+  padding: 13px 24px;
+  border-radius: var(--radius-button, 6px);
+  font-weight: 700;
+  font-size: 0.92rem;
+  transition: all 0.2s ease;
+}
+
+.cta-btn-outline:hover {
+  border-color: var(--color-primary, #0b2145);
+  background: #f8fafc;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .cta-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .cta-image-frame {
+    height: 320px;
+  }
+}
+
+@media (max-width: 520px) {
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-buttons a {
+    justify-content: center;
+  }
+}
+
