@@ -1,52 +1,54 @@
-const programs = [
+import ghairImg from "../assets/images/ghair.jfif";
+import sewingImg from "../assets/images/sewing.jfif";
+import mhairImg from "../assets/images/mhair.jfif";
+import phoneImg from "../assets/images/phone.jfif";
+import carImg from "../assets/images/car.jfif";
+
+export const programs = [
   {
     id: 1,
     title: "الحلاقة النسائية الشاملة",
-    // subtitle: "مبتدئ",
-    desc: "قص الشعر، تصفيفه، تلوينه، والعناية بالشعر وفروة الرأس.",
-    badge: "المستوى التأسيسي",
-    // linkText: "Grades K-2",
+    subtitle: "Hair Styling",
+    description: "قص الشعر، تصفيفه، تلوينه، والعناية بالشعر وفروة الرأس.",
+    linkText: "استكشف الدورة",
     path: "/courses",
-    img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&auto=format&fit=crop&q=80",
+    image: ghairImg,
   },
   {
     id: 2,
     title: "الخياطة وتصميم الأزياء",
-    // subtitle: "متقدم",
-    desc: "تعليم مهارات الخياطة، تصميم الأزياء، وتطوير الإبداع الفني.",
-    // badge: "المستوى الأساسي",
-    // linkText: "Grades 3-5",
+    subtitle: "Fashion & Sewing",
+    description: "تعليم مهارات الخياطة، تصميم الأزياء، وتطوير الإبداع الفني.",
+    linkText: "استكشف الدورة",
     path: "/courses",
-    img: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&auto=format&fit=crop&q=80",
+    image: sewingImg,
   },
   {
     id: 3,
     title: "الحلاقة الرجالية",
-    // subtitle: "Middle School",
-    desc: "خدمة حلاقة شاملة للرجال مع التركيز على التنسيق والجمال.",
-    // badge: "المستوى المتوسط",
-    // linkText: "Grades 6-8",
+    subtitle: "Men's Barbering",
+    description: "خدمة حلاقة شاملة للرجال مع التركيز على التنسيق والجمال.",
+    linkText: "استكشف الدورة",
     path: "/courses",
-    img: "https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=600&auto=format&fit=crop&q=80",
+    image: mhairImg,
   },
   {
     id: 4,
-    title: " هندسة صيانة الهاتف المحمول",
-    // subtitle: "High School",
-    desc: "تعليم مهارات صيانة الأجهزة الذكية وحل المشكلات التقنية.",
-    // badge: "المستوى المتقدم",
-    // linkText: "Grades 9-12",
+    title: "هندسة صيانة الهاتف المحمول",
+    subtitle: "Phone Maintenance",
+    description: "تعليم مهارات صيانة الأجهزة الذكية وحل المشكلات التقنية.",
+    linkText: "استكشف الدورة",
     path: "/courses",
-    img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&auto=format&fit=crop&q=80",
+    image: phoneImg,
   },
   {
     id: 5,
-    title: "الأنشطة اللاصفية",
-    subtitle: "Co-Curricular",
-    desc: "استكشاف المواهب والمهارات الرياضية والتقنية والفنية.",
-    badge: "أنشطة ومواهب",
-    linkText: "Clubs & Activities",
+    title: "ميكانيك السيارات",
+    subtitle: "Auto Mechanics",
+    description: "تعليم مهارات صيانة السيارات وحل المشكلات التقنية.",
+    linkText: "استكشف الدورة",
     path: "/courses",
-    img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&auto=format&fit=crop&q=80",
+    image: carImg,
   },
 ];
+

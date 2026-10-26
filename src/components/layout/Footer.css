@@ -1,0 +1,276 @@
+/* ==========================================================================
+   Footer Styles - Matching Mockup Design
+   ========================================================================== */
+
+.site-footer {
+  background-color: var(--color-primary, #0b2145);
+  color: #ffffff;
+  padding-top: 64px;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-top {
+  padding-bottom: 50px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr 1.3fr;
+  gap: 36px;
+  align-items: flex-start;
+}
+
+/* Col 1: Brand & Logo */
+.footer-col-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.footer-brand-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-accent, #d7a637);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+.footer-brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer-brand-text h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.footer-brand-text span {
+  font-size: 0.68rem;
+  color: var(--color-accent, #d7a637);
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer-tagline {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.84rem;
+  line-height: 1.8;
+  margin: 0 0 22px;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.04);
+  transition: all 0.25s ease;
+}
+
+.social-icon:hover {
+  background: var(--color-accent, #d7a637);
+  border-color: var(--color-accent, #d7a637);
+  color: var(--color-primary, #0b2145);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(215, 166, 55, 0.3);
+}
+
+/* Headings */
+.footer-col-title {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  margin: 0 0 20px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+/* Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.83rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--color-accent, #d7a637);
+  transform: translateX(-4px);
+}
+
+/* Contact List */
+.footer-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.83rem;
+  line-height: 1.6;
+}
+
+.contact-icon {
+  color: var(--color-accent, #d7a637);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* Newsletter */
+.footer-newsletter-desc {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.83rem;
+  line-height: 1.7;
+  margin: 0 0 16px;
+}
+
+.footer-newsletter-form {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  padding: 4px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.footer-newsletter-form:focus-within {
+  border-color: var(--color-accent, #d7a637);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.footer-newsletter-form input {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 8px 12px;
+  color: #ffffff;
+  font-size: 0.82rem;
+  min-width: 0;
+}
+
+.footer-newsletter-form input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.footer-newsletter-form button {
+  background: var(--color-accent, #d7a637);
+  color: var(--color-primary, #0b2145);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.footer-newsletter-form button:hover {
+  background: #e8b94d;
+  transform: scale(1.05);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-block: 20px;
+  text-align: center;
+}
+
+.footer-bottom-inner p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.78rem;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 1080px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .footer-col-brand {
+    grid-column: span 3;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .footer-col-brand {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .footer-col-brand {
+    grid-column: span 1;
+  }
+
+  .site-footer {
+    padding-top: 48px;
+  }
+}
+

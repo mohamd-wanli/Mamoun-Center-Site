@@ -7,7 +7,7 @@ export default function CTASection() {
   return (
     <section className="cta-section section">
       <div className="container cta-container">
-        {/* Left media */}
+       
         <div className="cta-image-col">
           <div className="cta-image-frame">
             <img
@@ -26,7 +26,9 @@ export default function CTASection() {
             <span className="section-title-accent"> مستقبل واعد ومشرق</span>
           </h2>
           <p className="cta-description">
-            انضم إلى مجتمعنا التدريبي المتميز حيث ستحصل على كافة سبل الدعم والخبرة التطبيقية لتكتسب مهارات مهنية حقيقية تحقق بها أهدافك وطموحاتك.
+            انضم إلى مجتمعنا التدريبي المتميز حيث ستحصل على كافة سبل الدعم
+            والخبرة التطبيقية لتكتسب مهارات مهنية حقيقية تحقق بها أهدافك
+            وطموحاتك.
           </p>
 
           <div className="cta-buttons">

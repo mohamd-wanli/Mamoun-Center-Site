@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Play, Award, ArrowLeft } from "lucide-react";
 import "./HeroSection.css";
 import heroImage from "../../../assets/images/training-center2.png";
-import heroImage2 from "/images/center-training.jpg";
 export default function HeroSection() {
   return (
     <section className="hero">

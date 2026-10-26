@@ -6,6 +6,7 @@ import Footer from "./Footer";
 export default function SiteLayout() {
   return (
     <div>
+      <TopBar />
       <Header />
       <main>
         <Outlet />
