@@ -10,11 +10,10 @@ export default function CoursesSection() {
   return (
     <section className="course-section">
       <div className="course-section-header">
-        <span className="course-section-subtitle">ACADEMICS</span>
-        <h2 className="course-section-title">Discover Our Programs</h2>
+        <span className="course-section-subtitle">الدورات</span>
+        <h2 className="course-section-title">استكشف دوراتنا </h2>
         <p className="course-section-description">
-          A comprehensive curriculum designed to inspire and challenge every
-          learner.
+         "منهج أكاديمي شامل مُصمم لإلهام وتحدي كل متعلم."
         </p>
       </div>
 

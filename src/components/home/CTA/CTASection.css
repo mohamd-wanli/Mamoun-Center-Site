@@ -1,5 +1,6 @@
+
 .cta-section {
-  padding-block: 84px;
+  padding-block: 80px;
   background: #ffffff;
   position: relative;
   overflow: hidden;
@@ -7,21 +8,23 @@
 
 .cta-container {
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 52px;
   align-items: center;
 }
 
+/* Image Column */
 .cta-image-col {
   position: relative;
 }
 
 .cta-image-frame {
   width: 100%;
-  height: 400px;
+  height: 660px;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 18px 40px rgba(11, 33, 69, 0.14);
+  box-shadow: 0 18px 40px rgba(11, 33, 69, 0.12);
+  border: 1px solid #edf0f5;
 }
 
 .cta-image {
@@ -35,6 +38,7 @@
   transform: scale(1.03);
 }
 
+/* Content Column */
 .cta-content-col {
   display: flex;
   flex-direction: column;
@@ -42,58 +46,95 @@
 
 .cta-description {
   color: var(--color-secondtext, #687385);
-  font-size: 1rem;
+  font-size: 0.98rem;
   line-height: 1.85;
-  margin: 0 0 32px;
+  margin: 0 0 28px;
 }
 
-.cta-buttons {
+/* Features List replacing the buttons */
+.cta-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+.cta-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border: 1px solid #edf2f7;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.cta-feature-item:hover {
+  transform: translateX(-4px);
+  border-color: rgba(215, 166, 55, 0.4);
+  box-shadow: 0 8px 20px rgba(11, 33, 69, 0.06);
+  background: #ffffff;
+}
+
+.cta-feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(11, 33, 69, 0.06);
+  color: var(--color-primary, #0b2145);
   display: flex;
   align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.cta-btn-gold {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--color-accent, #d7a637);
-  color: var(--color-primary, #0b2145);
-  padding: 13px 28px;
-  border-radius: var(--radius-button, 6px);
-  font-weight: 800;
-  font-size: 0.92rem;
-  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cta-btn-gold:hover {
-  background: #e8b94d;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(215, 166, 55, 0.35);
-}
-
-.cta-btn-outline {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #ffffff;
-  color: var(--color-primary, #0b2145);
-  border: 1.5px solid #d0d7e2;
-  padding: 13px 24px;
-  border-radius: var(--radius-button, 6px);
-  font-weight: 700;
-  font-size: 0.92rem;
+  justify-content: center;
+  flex-shrink: 0;
   transition: all 0.2s ease;
 }
 
-.cta-btn-outline:hover {
-  border-color: var(--color-primary, #0b2145);
-  background: #f8fafc;
-  transform: translateY(-2px);
+.cta-feature-item:hover .cta-feature-icon {
+  background: var(--color-accent, #d7a637);
+  color: var(--color-primary, #0b2145);
 }
 
-@media (max-width: 900px) {
+.cta-feature-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.cta-feature-title {
+  margin: 0 0 4px;
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--color-primary, #0b2145);
+}
+
+.cta-feature-desc {
+  margin: 0;
+  font-size: 0.84rem;
+  color: var(--color-secondtext, #687385);
+  line-height: 1.65;
+}
+
+/* Informative Notice Badge */
+.cta-info-badge {
+  background: rgba(215, 166, 55, 0.1);
+  border-right: 4px solid var(--color-accent, #d7a637);
+  border-radius: 8px;
+  padding: 14px 18px;
+}
+
+.cta-info-badge p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-text, #202938);
+  line-height: 1.7;
+}
+
+.cta-info-badge strong {
+  color: var(--color-primary, #0b2145);
+}
+
+/* Responsive */
+@media (max-width: 960px) {
   .cta-container {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -104,14 +145,13 @@
   }
 }
 
-@media (max-width: 520px) {
-  .cta-buttons {
-    flex-direction: column;
-    align-items: stretch;
+@media (max-width: 540px) {
+  .cta-feature-item {
+    padding: 14px 16px;
   }
 
-  .cta-buttons a {
-    justify-content: center;
+  .cta-feature-icon {
+    width: 38px;
+    height: 38px;
   }
 }
-
