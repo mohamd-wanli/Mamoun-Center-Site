@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Play, Award, ArrowLeft } from "lucide-react";
 import "./HeroSection.css";
 import heroImage from "../../../assets/images/training-center2.png";
+import hero from "../../../assets/images/heroo.jfif";
 export default function HeroSection() {
   return (
     <section className="hero">
@@ -12,7 +13,7 @@ export default function HeroSection() {
       {/* Full-bleed hero visual that covers the hero like mockup */}
       <div className="hero__visual" aria-hidden="true">
         <img
-          src={heroImage}
+          src={hero}
           alt="مركز المأمون الدولي للتدريب"
           className="hero__visual-img"
         />

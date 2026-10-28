@@ -12,6 +12,7 @@ const CourseGrid = ({ programs }) => {
           description={program.description}
           linkText={program.linkText}
           path={program.path}
+          style={{ animationDelay: `${index * 130}ms` }}
         />
       ))}
     </div>

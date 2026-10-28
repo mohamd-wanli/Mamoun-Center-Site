@@ -1,28 +1,42 @@
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import "./CoursesSection.css";
-import {programs} from "../../../data/courses.js";
-import CourseCard from "../../courses/CourseCard";
+import { programs } from "../../../data/courses.js";
 import CourseGrid from "../../courses/CourseGrid";
-
 
 export default function CoursesSection() {
   return (
     <section className="course-section">
-      <div className="course-section-header">
-        <span className="course-section-subtitle">الدورات</span>
-        <h2 className="course-section-title">استكشف دوراتنا </h2>
-        <p className="course-section-description">
-         "منهج أكاديمي شامل مُصمم لإلهام وتحدي كل متعلم."
-        </p>
-      </div>
+      <div className="container">
+        <div className="course-section-header">
+          <div className="course-badge-wrap">
+            <span className="course-section-subtitle">
+              البرامج والدورات • ACADEMICS
+            </span>
+          </div>
 
-      <CourseGrid programs={programs} />
+          <h2 className="course-section-title">
+            استكشف دوراتنا <span>التدريبية</span>
+          </h2>
 
-      <div className="course-section-footer">
-        <button className="view-all-btn">
-          VIEW ALL PROGRAMS <span>&rarr;</span>
-        </button>
+          <div className="course-title-divider">
+            <span className="divider-line" />
+            <span className="divider-dot" />
+            <span className="divider-line" />
+          </div>
+
+          <p className="course-section-description">
+            مناهج أكاديمية وتطبيقية شاملة صُممت بعناية فائقة لتلهم وتصقل مهارات كل متدرب، وتفتح آفاقاً واسعة للتميز والريادة في سوق العمل.
+          </p>
+        </div>
+
+        <CourseGrid programs={programs} />
+
+        <div className="course-section-footer">
+          <Link to="/courses" className="view-all-btn">
+            <span>عرض جميع البرامج التدريبية</span>
+            <span className="btn-arrow">&larr;</span>
+          </Link>
+        </div>
       </div>
     </section>
   );
