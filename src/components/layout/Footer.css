@@ -1,7 +1,3 @@
-/* ==========================================================================
-   Footer Styles - Matching Mockup Design
-   ========================================================================== */
-
 .site-footer {
   background-color: var(--color-primary, #0b2145);
   color: #ffffff;
@@ -127,7 +123,9 @@
 .footer-links a {
   color: rgba(255, 255, 255, 0.75);
   font-size: 0.83rem;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
   display: inline-block;
 }
 
@@ -176,7 +174,9 @@
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
   padding: 4px;
-  transition: border-color 0.2s ease, background 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
 }
 
 .footer-newsletter-form:focus-within {
@@ -211,7 +211,9 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .footer-newsletter-form button:hover {
@@ -273,4 +275,3 @@
     padding-top: 48px;
   }
 }
-

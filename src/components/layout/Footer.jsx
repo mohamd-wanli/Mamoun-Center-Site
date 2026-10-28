@@ -12,26 +12,19 @@ function FacebookIcon() {
 
 function InstagramIcon() {
   return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
       <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-    </svg>
-  );
-}
-
-function LinkedinIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
-    </svg>
-  );
-}
-
-function YoutubeIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
     </svg>
   );
 }
@@ -41,7 +34,6 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container footer-top">
         <div className="footer-grid">
-          {/* Col 1: Brand Info & Socials */}
           <div className="footer-col footer-col-brand">
             <div className="footer-brand">
               <span className="footer-brand-logo">
@@ -53,27 +45,36 @@ export default function Footer() {
               </div>
             </div>
             <p className="footer-tagline">
-              نلهم العقول، نصنع المستقبل. بيئة تدريبية وتعليمية متكاملة تهدف إلى تنمية المهارات الأكاديمية والمهنية.
+              نلهم العقول، نصنع المستقبل. بيئة تدريبية وتعليمية متكاملة تهدف إلى
+              تنمية المهارات الأكاديمية والمهنية.
             </p>
             <div className="footer-socials">
-              <a href="#" aria-label="Facebook" className="social-icon">
+              <a
+                href="https://www.facebook.com/MamounInternationalCenter"
+                aria-label="Facebook"
+                className="social-icon"
+              >
                 <FacebookIcon />
               </a>
-              <a href="#" aria-label="Instagram" className="social-icon">
+              <a
+                href="https://www.instagram.com/micmamoun/"
+                aria-label="Instagram"
+                className="social-icon"
+              >
                 <InstagramIcon />
               </a>
-              <a href="#" aria-label="LinkedIn" className="social-icon">
-                <LinkedinIcon />
-              </a>
-              <a href="#" aria-label="YouTube" className="social-icon">
-                <YoutubeIcon />
+              <a
+                href="https://www.facebook.com/Mamoun.center1"
+                aria-label="Facebook"
+                className="social-icon"
+              >
+                <FacebookIcon />
               </a>
             </div>
           </div>
 
-          {/* Col 2: Quick Links */}
           <div className="footer-col">
-            <h4 className="footer-col-title">روابط سريعة • QUICK LINKS</h4>
+            <h4 className="footer-col-title">روابط سريعة </h4>
             <ul className="footer-links">
               <li>
                 <Link to="/">الرئيسية (Home)</Link>
@@ -96,7 +97,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3: Resources */}
           <div className="footer-col">
             <h4 className="footer-col-title">المصادر • RESOURCES</h4>
             <ul className="footer-links">
@@ -112,13 +112,9 @@ export default function Footer() {
               <li>
                 <Link to="/about">السياسات والشروط (Policies)</Link>
               </li>
-              <li>
-                <Link to="/contact">فرص العمل (Careers)</Link>
-              </li>
             </ul>
           </div>
 
-          {/* Col 4: Contact Us */}
           <div className="footer-col">
             <h4 className="footer-col-title">تواصل معنا • CONTACT US</h4>
             <ul className="footer-contact-list">
@@ -128,8 +124,17 @@ export default function Footer() {
               </li>
               <li>
                 <Phone size={18} className="contact-icon" />
-                <span dir="ltr">+963 11 123 4567</span>
+                <span dir="ltr"> Tel :221226 - 2245987</span>
               </li>
+              <li>
+                <MapPin size={18} className="contact-icon" />
+                <span>دمشق - الحلبوني - مبنى المأمون</span>
+              </li>
+              <li>
+                <Phone size={18} className="contact-icon" />
+                <span dir="ltr"> Tel :2242499 - 2251366</span>
+              </li>
+
               <li>
                 <Mail size={18} className="contact-icon" />
                 <span>info@mamouncom.com</span>
@@ -162,7 +167,10 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
-          <p>© 2026 Bright Future International / مركز المأمون الدولي. جميع الحقوق محفوظة.</p>
+          <p>
+            © 2026 Bright Future International / مركز المأمون الدولي. جميع
+            الحقوق محفوظة.
+          </p>
         </div>
       </div>
     </footer>
