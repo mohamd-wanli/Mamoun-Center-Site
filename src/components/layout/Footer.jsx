@@ -28,6 +28,21 @@ function InstagramIcon() {
     </svg>
   );
 }
+function LinkedinIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+    </svg>
+  );
+}
+
+function YoutubeIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+    </svg>
+  );
+}
 
 export default function Footer() {
   return (
@@ -41,7 +56,7 @@ export default function Footer() {
               </span>
               <div className="footer-brand-text">
                 <h3>مركز المأمون الدولي</h3>
-                <span>BRIGHT FUTURE INTERNATIONAL</span>
+                {/* <span>BRIGHT FUTURE INTERNATIONAL</span> */}
               </div>
             </div>
             <p className="footer-tagline">
@@ -69,6 +84,20 @@ export default function Footer() {
                 className="social-icon"
               >
                 <FacebookIcon />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/mic-syria/home/"
+                aria-label="LinkedIn"
+                className="social-icon"
+              >
+                <LinkedinIcon />
+              </a>
+              <a
+                href="https://www.youtube.com/@mamouncenter"
+                aria-label="YouTube"
+                className="social-icon"
+              >
+                <YoutubeIcon />
               </a>
             </div>
           </div>
@@ -98,7 +127,7 @@ export default function Footer() {
           </div>
 
           <div className="footer-col">
-            <h4 className="footer-col-title">المصادر • RESOURCES</h4>
+            <h4 className="footer-col-title">المصادر </h4>
             <ul className="footer-links">
               <li>
                 <Link to="/student-work">بوابة المتدرب (Portal)</Link>
@@ -116,7 +145,7 @@ export default function Footer() {
           </div>
 
           <div className="footer-col">
-            <h4 className="footer-col-title">تواصل معنا • CONTACT US</h4>
+            <h4 className="footer-col-title">تواصل معنا </h4>
             <ul className="footer-contact-list">
               <li>
                 <MapPin size={18} className="contact-icon" />
@@ -142,13 +171,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 5: Newsletter */}
           <div className="footer-col">
-            <h4 className="footer-col-title">النشرة البريدية • NEWSLETTER</h4>
+            {/* <h4 className="footer-col-title">النشرة البريدية </h4>
             <p className="footer-newsletter-desc">
               ابقَ على اطلاع بأحدث البرامج والأنشطة والفعاليات.
-            </p>
-            <form
+            </p> */}
+            {/* <form
               className="footer-newsletter-form"
               onSubmit={(e) => e.preventDefault()}
             >
@@ -160,7 +188,7 @@ export default function Footer() {
               <button type="submit" aria-label="اشترك">
                 <ArrowLeft size={18} />
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
       </div>
@@ -168,7 +196,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
           <p>
-            © 2026 Bright Future International / مركز المأمون الدولي. جميع
+            © 2026  مركز المأمون الدولي. جميع
             الحقوق محفوظة.
           </p>
         </div>

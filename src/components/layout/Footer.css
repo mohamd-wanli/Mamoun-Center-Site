@@ -12,7 +12,7 @@
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.2fr 1.3fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr ;
   gap: 36px;
   align-items: flex-start;
 }
