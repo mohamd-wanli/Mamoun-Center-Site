@@ -1,8 +1,8 @@
 import { GraduationCap, Menu, X, ChevronDown } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import "./Header.css";
-import { useState } from "react";
 
 const navLinks = [
   { label: "الرئيسية", path: "/" },
@@ -12,14 +12,27 @@ const navLinks = [
   { label: "أعمال المتدربين", path: "/student-work" },
   { label: "اتصل بنا", path: "/contact" },
 ];
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 40);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   function closeMenu() {
     setIsMenuOpen(false);
   }
+
   return (
-    <header className="mic-header">
+    <header
+      className={`mic-header ${isScrolled ? "mic-header--scrolled" : ""}`}
+    >
       <div className="container inner-header">
         <Link
           to="/"
@@ -53,7 +66,7 @@ export default function Header() {
           aria-label="التنقل الرئيسي"
         >
           <div className="main-nav-links">
-            {navLinks.map((link) => (
+            {navLinks.map((link, i) => (
               <NavLink
                 key={link.path}
                 to={link.path}
@@ -62,6 +75,7 @@ export default function Header() {
                   `main-nav-link ${isActive ? "main-nav-link--active" : ""}`
                 }
                 onClick={closeMenu}
+                style={{ animationDelay: `${i * 60}ms` }}
               >
                 <span> {link.label}</span>
                 {link.hasDropdown && (

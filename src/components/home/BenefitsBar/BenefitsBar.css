@@ -13,12 +13,34 @@
   border-radius: 18px;
   padding: 26px 32px;
   box-shadow: 0 22px 45px rgba(11, 33, 69, 0.28);
+
+  /* Initial state - slide up */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.benefits-bar--visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .benefit {
   display: flex;
   align-items: flex-start;
   gap: 12px;
+
+  /* Staggered entrance per benefit item */
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.benefits-bar--visible .benefit {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .benefit-icon {
@@ -30,6 +52,13 @@
   border-radius: 50%;
   border: 1.5px solid rgba(215, 166, 55, 0.5);
   color: var(--color-accent);
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.benefit:hover .benefit-icon {
+  transform: scale(1.1) rotate(5deg);
+  border-color: var(--color-accent);
+  background: rgba(215, 166, 55, 0.12);
 }
 
 .benefit-text h3 {
@@ -61,5 +90,14 @@
   .benefits-bar {
     grid-template-columns: 1fr 1fr;
     padding: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .benefits-bar,
+  .benefit {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }

@@ -10,10 +10,16 @@ import {
 import { Link } from "react-router-dom";
 import "./AboutSection.css";
 import campusImg from "../../../assets/images/about4.jfif";
+import useScrollReveal from "../../../hooks/useScrollReveal";
 
 export default function AboutSection() {
+  const [sectionRef, isVisible] = useScrollReveal({ threshold: 0.1 });
+
   return (
-    <section className="about-section section">
+    <section
+      className={`about-section section ${isVisible ? "about--visible" : ""}`}
+      ref={sectionRef}
+    >
       <div className="container about-grid">
         {/* Left Column: Text & Stats */}
         <div className="about-content">
@@ -80,7 +86,7 @@ export default function AboutSection() {
 
         {/* Right Column: Stat Cards Stack */}
         <div className="about-cards-stack">
-          <div className="metric-card">
+          <div className="metric-card" style={{ transitionDelay: "0.2s" }}>
             <div className="metric-card-icon">
               <GraduationCap size={28} />
             </div>
@@ -90,7 +96,7 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div className="metric-card">
+          <div className="metric-card" style={{ transitionDelay: "0.35s" }}>
             <div className="metric-card-icon">
               <GraduationCap size={28} />
             </div>
@@ -100,7 +106,7 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div className="metric-card">
+          <div className="metric-card" style={{ transitionDelay: "0.5s" }}>
             <div className="metric-card-icon">
               <Globe size={28} />
             </div>

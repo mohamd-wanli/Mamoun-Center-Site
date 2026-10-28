@@ -6,6 +6,7 @@ import {
     ShieldCheck,
 } from "lucide-react";
 import "./BenefitsBar.css";
+import useScrollReveal from "../../../hooks/useScrollReveal";
 
 const benefits = [
     {
@@ -36,12 +37,18 @@ const benefits = [
 ];
 
 export default function BenefitsBar() {
+    const [ref, isVisible] = useScrollReveal({ threshold: 0.2 });
+
     return (
-        <section className="benefits">
+        <section className="benefits" ref={ref}>
             <div className="container">
-                <div className="benefits-bar">
-                    {benefits.map(({ icon: Icon, title, text }) => (
-                        <div className="benefit" key={title}>
+                <div className={`benefits-bar ${isVisible ? "benefits-bar--visible" : ""}`}>
+                    {benefits.map(({ icon: Icon, title, text }, i) => (
+                        <div
+                            className="benefit"
+                            key={title}
+                            style={{ transitionDelay: `${i * 100}ms` }}
+                        >
                             <span className="benefit-icon">
                                 <Icon size={24} strokeWidth={1.7} />
                             </span>
