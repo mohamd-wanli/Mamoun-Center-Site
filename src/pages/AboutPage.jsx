@@ -1,3 +1,9 @@
-export default function AboutPage() {
 
+
+export default function AboutPage() {
+  return (
+    <>
+      
+    </>
+  );
 }

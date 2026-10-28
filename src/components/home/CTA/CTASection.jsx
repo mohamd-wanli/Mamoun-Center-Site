@@ -24,7 +24,6 @@ export default function CTASection() {
   return (
     <section className="cta-section section">
       <div className="container cta-container">
-        {/* Left media */}
         <div className="cta-image-col">
           <div className="cta-image-frame">
             <img
@@ -35,7 +34,6 @@ export default function CTASection() {
           </div>
         </div>
 
-        {/* Right content */}
         <div className="cta-content-col">
           <span className="section-tag">التسجيل والقبول </span>
           <h2 className="section-title">
@@ -43,10 +41,10 @@ export default function CTASection() {
             <span className="section-title-accent"> مستقبل واعد ومشرق</span>
           </h2>
           <p className="cta-description">
-            انضم إلى مجتمعنا التدريبي المتميز حيث نضع بين يديك كل ما تحتاجه من خبرات وإمكانيات للانطلاق بقوة وثقة في مسارك المهني.
+            انضم إلى مجتمعنا التدريبي المتميز حيث نضع بين يديك كل ما تحتاجه من
+            خبرات وإمكانيات للانطلاق بقوة وثقة في مسارك المهني.
           </p>
 
-          {/* Descriptive highlights replacing the two buttons */}
           <div className="cta-features-list">
             {features.map((item, idx) => {
               const Icon = item.icon;
@@ -66,7 +64,9 @@ export default function CTASection() {
 
           <div className="cta-info-badge">
             <p>
-              💡 <strong>باب التسجيل مفتوح لجميع الدورات:</strong> يمكنك زيارة المركز في دمشق - جسر فكتوريا أو الاستفسار المباشر عبر الهاتف لمعرفة المواعيد وحجز مقعدك.
+              💡 <strong>باب التسجيل مفتوح لجميع الدورات:</strong> يمكنك زيارة
+              المركز في دمشق - جسر فكتوريا أو الاستفسار المباشر عبر الهاتف
+              لمعرفة المواعيد وحجز مقعدك.
             </p>
           </div>
         </div>
@@ -74,4 +74,3 @@ export default function CTASection() {
     </section>
   );
 }
-
