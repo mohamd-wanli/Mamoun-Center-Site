@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Play, Award, ArrowLeft, Sparkles, CheckCircle2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import "./HeroSection.css";
-import hero from "../../../assets/images/heroowe.jfif";
+import hero from "../../../assets/images/hero1.png";
 import FloatingParticles from "../../common/FloatingParticles";
 
 export default function HeroSection() {
@@ -61,8 +61,9 @@ export default function HeroSection() {
 
           {/* Styled description with high legibility on the blue background */}
           <p className="hero-description">
-            بيئة تدريبية رائدة تجمع بين التقنيات المتطورة والخبرة العملية العريقة، لنُمكّنك من
-            اكتساب المهارات الاحترافية وصناعة مستقبلك في سوق العمل بثقة واقتدار.
+            بيئة تدريبية رائدة تجمع بين التقنيات المتطورة والخبرة العملية
+            العريقة، لنُمكّنك من اكتساب المهارات الاحترافية وصناعة مستقبلك في
+            سوق العمل بثقة واقتدار.
           </p>
 
           {/* Premium CTA actions */}

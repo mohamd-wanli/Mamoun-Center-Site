@@ -34,7 +34,7 @@ export const programs = [
   },
   {
     id: 4,
-    title: "هندسة صيانة الهاتف المحمول",
+    title: " صيانة الهاتف المحمول",
     subtitle: "Phone Maintenance",
     description: "تعليم مهارات صيانة الأجهزة الذكية وحل المشكلات التقنية.",
     linkText: "استكشف الدورة",
@@ -51,4 +51,3 @@ export const programs = [
     image: carImg,
   },
 ];
-

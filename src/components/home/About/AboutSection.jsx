@@ -23,7 +23,7 @@ export default function AboutSection() {
       <div className="container about-grid">
         {/* Left Column: Text & Stats */}
         <div className="about-content">
-          <span className="section-tag">عن المركز </span>
+          <span className="section-tag">من نحن </span>
           <h2 className="section-title">
             التميز في التعليم والتدريب
             <span className="section-title-accent">
