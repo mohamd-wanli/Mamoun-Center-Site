@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import { Play, Award, ArrowLeft, Sparkles, CheckCircle2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import "./HeroSection.css";
-import hero from "../../../assets/images/hero1.png";
+import hero from "../../../assets/images/hero2.png";
 import FloatingParticles from "../../common/FloatingParticles";
 
 export default function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Trigger entrance animations after mount
+  
     const timer = setTimeout(() => setIsLoaded(true), 80);
     return () => clearTimeout(timer);
   }, []);
@@ -39,12 +39,12 @@ export default function HeroSection() {
       <div className="container hero-content">
         <div className="hero-text">
           {/* Eyebrow badge */}
-          <div className="hero-pill">
+          {/* <div className="hero-pill">
             <Sparkles size={14} className="hero-pill-icon" />
             <span>مركز المأمون الدولي للتدريب والتأهيل</span>
             <span className="hero-pill-dot" />
             <span className="hero-pill-highlight">منذ 1960</span>
-          </div>
+          </div> */}
 
           {/* Main title with high-contrast glowing typography */}
           <div className="hero-title-reveal">

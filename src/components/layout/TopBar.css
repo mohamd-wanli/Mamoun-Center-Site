@@ -1,49 +1,56 @@
+
 .topbar {
-    background: var(--color-primary);
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.78rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: #081731;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.74rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .topbar-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    min-height: 38px;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 32px;
+  padding-block: 2px;
 }
 
 .topbar-info,
 .topbar-actions {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
 .topbar-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    transition: color 160ms ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+  transition: color 180ms ease, opacity 180ms ease;
 }
 
 .topbar-item svg {
-    color: var(--color-accent);
+  color: var(--color-accent, #d7a637);
+  flex-shrink: 0;
 }
 
 a.topbar-item:hover {
-    color: var(--color-accent-light);
+  color: #ffffff;
 }
 
-@media (max-width: 640px) {
-    .topbar-inner {
-        justify-content: center;
-        padding-block: 6px;
-    }
+a.topbar-item:hover svg {
+  color: var(--color-accent-light, #f0c359);
+}
 
-    .topbar-info {
-        gap: 14px;
-    }
+@media (max-width: 768px) {
+  .topbar-inner {
+    justify-content: center;
+    padding-block: 4px;
+  }
+
+  .topbar-actions {
+    display: none;
+  }
 }

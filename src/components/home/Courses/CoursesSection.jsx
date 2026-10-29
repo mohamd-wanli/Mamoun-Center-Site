@@ -2,10 +2,16 @@ import { Link } from "react-router-dom";
 import "./CoursesSection.css";
 import { programs } from "../../../data/courses.js";
 import CourseGrid from "../../courses/CourseGrid";
+import useScrollReveal from "../../../hooks/useScrollReveal";
 
 export default function CoursesSection() {
+  const [sectionRef, isVisible] = useScrollReveal({ threshold: 0.12 });
+
   return (
-    <section className="course-section">
+    <section
+      ref={sectionRef}
+      className={`course-section ${isVisible ? "courses--visible" : ""}`}
+    >
       <div className="container">
         <div className="course-section-header">
           <div className="course-badge-wrap">

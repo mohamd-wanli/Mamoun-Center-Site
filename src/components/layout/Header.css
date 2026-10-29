@@ -1,238 +1,220 @@
+/* ==========================================================================
+   Header - Modern Slim & Refined (Option 1)
+   ========================================================================== */
+
 .mic-header {
   position: sticky;
   top: 0;
   z-index: 100;
-
   background: #ffffff;
-  border-bottom: 1px solid #edf0f4;
-  box-shadow: 0 3px 14px rgb(11 33 69 / 4%);
-
+  border-bottom: 1px solid #eef2f6;
+  box-shadow: 0 2px 10px rgba(11, 33, 69, 0.03);
   direction: rtl;
-
-  transition: background 0.35s ease,
-    box-shadow 0.35s ease,
-    backdrop-filter 0.35s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Glass effect on scroll */
 .mic-header--scrolled {
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(16px) saturate(1.6);
-  -webkit-backdrop-filter: blur(16px) saturate(1.6);
-  box-shadow: 0 4px 24px rgb(11 33 69 / 8%);
-  border-bottom-color: rgba(237, 240, 244, 0.6);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px) saturate(1.5);
+  -webkit-backdrop-filter: blur(14px) saturate(1.5);
+  box-shadow: 0 4px 18px rgba(11, 33, 69, 0.06);
+  border-bottom-color: rgba(226, 232, 240, 0.8);
 }
 
 .inner-header {
-  min-height: 78px;
-
+  /* Slim height */
+  min-height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
+  gap: 24px;
 }
 
-/* Brand */
+/* ---- Brand Logo & Text ---- */
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 11px;
-
+  gap: 10px;
   flex-shrink: 0;
-  color: var(--color-primary);
-  transition: transform 0.3s ease;
+  color: var(--color-primary, #0b2145);
+  transition: transform 0.25s ease;
 }
 
 .brand:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 .brand-mark {
-  width: 49px;
-  height: 49px;
-
+  width: 38px;
+  height: 38px;
   display: grid;
   place-items: center;
+  border-radius: 50%;
+  background: rgba(215, 166, 55, 0.08);
+  border: 1px solid rgba(215, 166, 55, 0.3);
+  padding: 3px;
+  flex-shrink: 0;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
 
-  color: var(--color-accent);
-  /* border: 2px solid var(--color-accent); */
-  /* border-radius: 50%; */
+.brand:hover .brand-mark {
+  border-color: var(--color-accent, #d7a637);
+  transform: rotate(5deg);
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .brand-text {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 1px;
 }
 
 .brand-name {
-  font-size: 1.05rem;
+  font-size: 0.96rem;
   font-weight: 800;
-  line-height: 1.4;
+  line-height: 1.3;
+  color: var(--color-primary, #0b2145);
   white-space: nowrap;
+  letter-spacing: -0.01em;
 }
 
 .brand-subtitle {
-  font-size: 0.7rem;
-  color: var(--color-muted);
-  letter-spacing: 0.03em;
+  font-size: 0.64rem;
+  color: #718096;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
-/* Navigation */
+/* ---- Navigation Links ---- */
 
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 20px;
 }
 
 .main-nav-links {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 6px;
 }
 
 .main-nav-link {
   position: relative;
-
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-
-  padding-block: 12px;
-
-  color: var(--color-text);
+  gap: 4px;
+  padding: 7px 13px;
+  border-radius: 6px;
+  color: #334155;
   font-size: 0.84rem;
   font-weight: 600;
   white-space: nowrap;
+  transition: color 180ms ease, background-color 180ms ease;
+  animation: navLinkFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
 
-  transition: color 180ms ease;
+.main-nav-link:hover {
+  color: var(--color-primary, #0b2145);
+  background-color: rgba(11, 33, 69, 0.04);
+}
 
-  /* Nav link entrance animation */
-  animation: navLinkFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+.main-nav-link--active {
+  color: var(--color-primary, #0b2145);
+  font-weight: 700;
+  background-color: rgba(215, 166, 55, 0.08);
 }
 
 .main-nav-link::after {
   content: "";
   position: absolute;
-  right: 0;
-  bottom: 4px;
-  width: 0;
+  bottom: 0;
+  left: 12px;
+  right: 12px;
   height: 2px;
-  background: var(--color-accent);
+  background: var(--color-accent, #d7a637);
   border-radius: 2px;
-  transition: width 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scaleX(0);
+  transition: transform 220ms ease;
 }
 
-.main-nav-link:hover,
-.main-nav-link--active {
-  color: var(--color-primary);
-}
-
-.main-nav-link:hover::after,
-.main-nav-link--active::after {
-  width: 100%;
+.main-nav-link--active::after,
+.main-nav-link:hover::after {
+  transform: scaleX(1);
 }
 
 .main-nav-chevron {
-  color: var(--color-muted);
-  transition: transform 0.25s ease;
+  color: #94a3b8;
+  transition: transform 0.2s ease;
 }
 
 .main-nav-link:hover .main-nav-chevron {
   transform: rotate(180deg);
+  color: var(--color-accent, #d7a637);
 }
 
-/* Gold call-to-action */
+/* ---- Sleek Rounded Pill CTA ---- */
 
 .header-cta {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-
-  min-height: 42px;
-  padding: 0 21px;
-
-  border-radius: var(--radius-button);
-  background: var(--color-accent);
-  color: var(--color-primary);
-
-  font-size: 0.82rem;
-  font-weight: 800;
+  min-height: 36px;
+  padding: 0 18px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #f0c359 0%, #d7a637 100%);
+  color: #061224;
+  font-size: 0.8rem;
+  font-weight: 700;
   white-space: nowrap;
-
+  box-shadow: 0 3px 12px rgba(215, 166, 55, 0.28);
   position: relative;
   overflow: hidden;
-
-  transition: background 180ms ease,
-    transform 180ms ease,
-    box-shadow 180ms ease;
-
-  animation: navLinkFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
-}
-
-/* Shimmer sweep on CTA */
-.header-cta::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.25),
-    transparent
-  );
-  transform: skewX(-20deg);
-}
-
-.header-cta:hover::before {
-  animation: buttonShimmer 0.6s ease forwards;
+  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
 }
 
 .header-cta:hover {
-  background: #e8b94d;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(215, 166, 55, 0.35);
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 18px rgba(215, 166, 55, 0.45);
+  filter: brightness(1.03);
 }
 
-/* Mobile button */
+/* ---- Mobile Menu Button ---- */
 
 .mobile-menu-button {
   display: none;
-
   align-items: center;
   justify-content: center;
-
-  width: 44px;
-  height: 44px;
-
-  border: 1px solid #e3e7ed;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
-
-  color: var(--color-primary);
+  color: var(--color-primary, #0b2145);
   background: #ffffff;
-
   cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .mobile-menu-button:hover {
-  border-color: var(--color-accent);
-  transform: scale(1.05);
+  border-color: var(--color-accent, #d7a637);
+  transform: scale(1.04);
 }
 
 /* ==========================================================================
-   Keyframes
+   Animations
    ========================================================================== */
 
 @keyframes navLinkFadeIn {
   from {
     opacity: 0;
-    transform: translateY(-8px);
+    transform: translateY(-6px);
   }
   to {
     opacity: 1;
@@ -240,46 +222,26 @@
   }
 }
 
-@keyframes buttonShimmer {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 150%;
-  }
-}
-
 /* ==========================================================================
-   Responsive
+   Responsive Breakpoints
    ========================================================================== */
 
-@media (max-width: 1050px) {
-  .site-header__inner {
-    gap: 16px;
-  }
-
-  .main-nav {
+@media (max-width: 990px) {
+  .inner-header {
     gap: 16px;
   }
 
   .main-nav-links {
-    gap: 15px;
+    gap: 2px;
   }
 
   .main-nav-link {
-    font-size: 0.78rem;
-  }
-
-  .brand-name {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
+    padding: 6px 9px;
   }
 }
 
-@media (max-width: 850px) {
-  .mic-header-inner {
-    min-height: 72px;
-  }
-
+@media (max-width: 860px) {
   .mobile-menu-button {
     display: inline-flex;
     flex-shrink: 0;
@@ -287,59 +249,53 @@
 
   .main-nav {
     display: none;
-
     position: absolute;
     top: 100%;
     right: 0;
     left: 0;
-
-    padding: 18px 20px 22px;
-
+    padding: 16px 20px 20px;
     flex-direction: column;
     align-items: stretch;
-    gap: 16px;
-
-    background: rgba(255, 255, 255, 0.95);
+    gap: 14px;
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-top: 1px solid #edf0f4;
-    box-shadow: 0 12px 30px rgb(11 33 69 / 12%);
+    box-shadow: 0 12px 28px rgba(11, 33, 69, 0.1);
   }
 
   .main-nav--open {
     display: flex;
-    animation: mobileMenuSlide 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: mobileMenuSlide 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .main-nav-links {
     flex-direction: column;
     align-items: stretch;
-    gap: 2px;
+    gap: 4px;
   }
 
   .main-nav-link {
     width: 100%;
-    padding: 13px 4px;
-    font-size: 0.95rem;
-    animation: none;
+    padding: 11px 12px;
+    font-size: 0.92rem;
   }
 
   .main-nav-link::after {
-    right: auto;
-    left: 0;
+    display: none;
   }
 
   .header-cta {
     width: 100%;
-    min-height: 46px;
-    animation: none;
+    min-height: 42px;
+    margin-top: 6px;
   }
 }
 
 @keyframes mobileMenuSlide {
   from {
     opacity: 0;
-    transform: translateY(-12px);
+    transform: translateY(-10px);
   }
   to {
     opacity: 1;

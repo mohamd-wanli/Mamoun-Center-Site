@@ -1,6 +1,7 @@
 import { Award, Headphones, CheckCircle2 } from "lucide-react";
 import "./CTASection.css";
 import studentsImg from "../../../assets/images/cta.jfif";
+import useScrollReveal from "../../../hooks/useScrollReveal";
 
 const features = [
   {
@@ -21,9 +22,15 @@ const features = [
 ];
 
 export default function CTASection() {
+  const [sectionRef, isVisible] = useScrollReveal({ threshold: 0.15 });
+
   return (
-    <section className="cta-section section">
+    <section
+      ref={sectionRef}
+      className={`cta-section section ${isVisible ? "cta--visible" : ""}`}
+    >
       <div className="container cta-container">
+        {/* Left media */}
         <div className="cta-image-col">
           <div className="cta-image-frame">
             <img
@@ -34,8 +41,9 @@ export default function CTASection() {
           </div>
         </div>
 
+        {/* Right content */}
         <div className="cta-content-col">
-          <span className="section-tag">التسجيل والقبول </span>
+          <span className="section-tag">التسجيل والقبول • ADMISSIONS</span>
           <h2 className="section-title">
             ابدأ رحلتك نحو
             <span className="section-title-accent"> مستقبل واعد ومشرق</span>
@@ -49,7 +57,11 @@ export default function CTASection() {
             {features.map((item, idx) => {
               const Icon = item.icon;
               return (
-                <div className="cta-feature-item" key={idx}>
+                <div
+                  className="cta-feature-item"
+                  key={idx}
+                  style={{ transitionDelay: `${0.25 + idx * 0.14}s` }}
+                >
                   <div className="cta-feature-icon">
                     <Icon size={22} />
                   </div>
