@@ -15,9 +15,7 @@ export default function CoursesSection() {
       <div className="container">
         <div className="course-section-header">
           <div className="course-badge-wrap">
-            <span className="course-section-subtitle">
-              البرامج والدورات 
-            </span>
+            <span className="course-section-subtitle">البرامج والدورات</span>
           </div>
 
           <h2 className="course-section-title">
@@ -31,7 +29,8 @@ export default function CoursesSection() {
           </div>
 
           <p className="course-section-description">
-            مناهج أكاديمية وتطبيقية شاملة صُممت بعناية فائقة لتلهم وتصقل مهارات كل متدرب، وتفتح آفاقاً واسعة للتميز والريادة في سوق العمل.
+            مناهج أكاديمية وتطبيقية شاملة صُممت بعناية فائقة لتلهم وتصقل مهارات
+            كل متدرب، وتفتح آفاقاً واسعة للتميز والريادة في سوق العمل.
           </p>
         </div>
 
