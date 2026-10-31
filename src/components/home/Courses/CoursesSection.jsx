@@ -16,7 +16,7 @@ export default function CoursesSection() {
         <div className="course-section-header">
           <div className="course-badge-wrap">
             <span className="course-section-subtitle">
-              البرامج والدورات • ACADEMICS
+              البرامج والدورات 
             </span>
           </div>
 

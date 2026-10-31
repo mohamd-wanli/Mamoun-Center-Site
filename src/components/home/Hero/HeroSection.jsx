@@ -59,14 +59,12 @@ export default function HeroSection() {
             </h1>
           </div>
 
-          {/* Styled description with high legibility on the blue background */}
           <p className="hero-description">
             بيئة تدريبية رائدة تجمع بين التقنيات المتطورة والخبرة العملية
             العريقة، لنُمكّنك من اكتساب المهارات الاحترافية وصناعة مستقبلك في
             سوق العمل بثقة واقتدار.
           </p>
 
-          {/* Premium CTA actions */}
           <div className="hero-actions">
             <Link to="/courses" className="button button-primary">
               <span>اكتشف برامجنا التدريبية</span>

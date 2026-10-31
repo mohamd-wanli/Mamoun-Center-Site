@@ -34,9 +34,6 @@
   pointer-events: none;
 }
 
-/* ==========================================================================
-   Header Transitions
-   ========================================================================== */
 
 .course-section-header {
   margin-bottom: 64px;
@@ -48,7 +45,7 @@
   align-items: center;
 }
 
-/* Badge Subtitle */
+
 .course-badge-wrap {
   opacity: 0;
   transform: translateY(-20px);
@@ -84,7 +81,7 @@
   background: rgba(215, 166, 55, 0.18);
 }
 
-/* Title */
+
 .course-section-title {
   color: var(--color-primary, #0b2145);
   font-size: clamp(2rem, 3.2vw, 2.75rem);
@@ -108,7 +105,6 @@
   display: inline-block;
 }
 
-/* Elegant Center Divider */
 .course-title-divider {
   display: inline-flex;
   align-items: center;
