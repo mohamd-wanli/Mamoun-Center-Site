@@ -2,7 +2,8 @@
   position: relative;
   background: linear-gradient(135deg, #071733 0%, #0b2145 60%, #123267 100%);
   color: #ffffff;
-  padding: 70px 0 65px;
+  padding: 40px 0px 65px;
+
   overflow: hidden;
   direction: rtl;
   text-align: center;
@@ -28,7 +29,6 @@
   max-width: 860px;
 }
 
-/* Breadcrumbs */
 .page-hero-breadcrumbs {
   display: inline-flex;
   align-items: center;
@@ -121,4 +121,3 @@
     padding: 50px 0 45px;
   }
 }
-
