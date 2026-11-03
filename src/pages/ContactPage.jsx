@@ -7,7 +7,7 @@ export default function ContactPage() {
   return (
     <>
       <PageHeader
-        tag="تواصل معنا • CONTACT US"
+        tag="تواصل معنا "
         title="يسعدنا تواصلك مع مركز المأمون الدولي"
         subtitle="فريقنا جاهز للإجابة على استفساراتك، مساعدتك في اختيار الدورة التدريبية الأنسب، واستقبال طلبات التسجيل."
         breadcrumbs={[{ label: "اتصل بنا" }]}

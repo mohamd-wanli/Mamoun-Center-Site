@@ -64,7 +64,10 @@ export default function ContactFormSection() {
         <div className="contact-form-container">
           <div className="contact-form-header">
             <span className="section-tag">
-              <Sparkles size={14} style={{ verticalAlign: "middle", marginLeft: 6 }} />
+              <Sparkles
+                size={14}
+                style={{ verticalAlign: "middle", marginLeft: 6 }}
+              />
               نموذج الاستفسار والتسجيل
             </span>
             <h2 className="section-title">
@@ -72,8 +75,9 @@ export default function ContactFormSection() {
               <span className="section-title-accent"> وسنتواصل معك فوراً</span>
             </h2>
             <p className="contact-form-intro">
-              هل لديك سؤال حول دورة معينة أو ترغب في استشارة مهنية؟ املأ البيانات
-              أدناه وسيقوم مستشارنا التعليمي بالرد عليك خلال ساعات العمل.
+              هل لديك سؤال حول دورة معينة أو ترغب في استشارة مهنية؟ املأ
+              البيانات أدناه وسيقوم مستشارنا التعليمي بالرد عليك خلال ساعات
+              العمل.
             </p>
           </div>
 
@@ -82,7 +86,9 @@ export default function ContactFormSection() {
               <CheckCircle size={22} className="alert-icon" />
               <div>
                 <strong>تم استلام رسالتك بنجاح!</strong>
-                <p>شكراً لتواصلك معنا، سيقوم فريق المأمون بالرد عليك في أقرب وقت.</p>
+                <p>
+                  شكراً لتواصلك معنا، سيقوم فريق المأمون بالرد عليك في أقرب وقت.
+                </p>
               </div>
             </div>
           )}
@@ -171,7 +177,9 @@ export default function ContactFormSection() {
                         {prog.title} ({prog.subtitle})
                       </option>
                     ))}
-                    <option value="استفسار عام">استفسار عام / خدمات أخرى</option>
+                    <option value="استفسار عام">
+                      استفسار عام / خدمات أخرى
+                    </option>
                   </select>
                 </div>
               </div>
@@ -205,7 +213,9 @@ export default function ContactFormSection() {
                 status === "submitting" ? "btn--submitting" : ""
               }`}
             >
-              <span>{status === "submitting" ? "جارٍ الإرسال..." : "إرسال الرسالة"}</span>
+              <span>
+                {status === "submitting" ? "جارٍ الإرسال..." : "إرسال الرسالة"}
+              </span>
               <Send size={18} className="btn-icon" />
             </button>
           </form>
@@ -230,8 +240,8 @@ export default function ContactFormSection() {
               </li>
             </ul>
             <p className="hours-note">
-              * قسم التسجيل مفتوح طوال أيام الأسبوع لاستقبال المتدربين والإجابة على كافة
-              الاستفسارات.
+              * قسم التسجيل مفتوح طوال أيام الأسبوع لاستقبال المتدربين والإجابة
+              على كافة الاستفسارات.
             </p>
           </div>
 
@@ -241,7 +251,9 @@ export default function ContactFormSection() {
               <MapPin size={20} className="card-title-icon" />
               <div>
                 <h4 className="map-location-title">موقع المعهد في دمشق</h4>
-                <p className="map-location-sub">دمشق - جسر فكتوريا - بناء المأمون الدولي</p>
+                <p className="map-location-sub">
+                  دمشق - جسر فكتوريا - بناء المأمون الدولي
+                </p>
               </div>
             </div>
 
@@ -259,7 +271,7 @@ export default function ContactFormSection() {
             </div>
 
             <a
-              href="https://maps.google.com/?q=Victoria+Bridge+Damascus"
+              href="https://maps.app.goo.gl/pNzGkQCfprZDgSXT6"
               target="_blank"
               rel="noopener noreferrer"
               className="open-map-link"
@@ -273,4 +285,3 @@ export default function ContactFormSection() {
     </section>
   );
 }
-
