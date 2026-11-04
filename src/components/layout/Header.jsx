@@ -78,9 +78,9 @@ export default function Header() {
                 style={{ animationDelay: `${i * 60}ms` }}
               >
                 <span> {link.label}</span>
-                {link.hasDropdown && (
+                {/* {link.hasDropdown && (
                   <ChevronDown size={14} className="main-nav-chevron" />
-                )}
+                )} */}
               </NavLink>
             ))}
           </div>

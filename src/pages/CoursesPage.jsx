@@ -14,16 +14,13 @@ export default function CoursesPage() {
   const [sortBy, setSortBy] = useState("featured");
   const [activeModalCourse, setActiveModalCourse] = useState(null);
 
-  // Filter & Sort Logic
   const filteredPrograms = useMemo(() => {
     let result = [...programs];
 
-    // Filter by category
     if (selectedCategory !== "all") {
       result = result.filter((p) => p.categoryId === selectedCategory);
     }
 
-    // Filter by search query (title, subtitle, description, highlights)
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase().trim();
       result = result.filter((p) => {
@@ -63,7 +60,6 @@ export default function CoursesPage() {
       <div className="container" style={{ position: "relative" }}>
         <CoursesStats />
 
-        {/* Filter and Search Bar */}
         <CoursesFilterBar
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
@@ -74,20 +70,16 @@ export default function CoursesPage() {
           totalResults={filteredPrograms.length}
         />
 
-        {/* Courses Cards Catalog */}
         <CoursesCatalog
           programs={filteredPrograms}
           onQuickView={(prog) => setActiveModalCourse(prog)}
         />
       </div>
 
-      {/* 4-Step Learning Roadmap */}
       <LearningJourney />
 
-      {/* CTA Admission Section */}
       <CTASection />
 
-      {/* Quick View Modal */}
       {activeModalCourse && (
         <CourseQuickModal
           program={activeModalCourse}

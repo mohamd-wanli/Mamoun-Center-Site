@@ -16,7 +16,6 @@
   margin-bottom: 20px;
 }
 
-/* Search Box */
 .courses-search-box {
   position: relative;
   flex: 1;
@@ -69,7 +68,6 @@
   color: #0b2145;
 }
 
-/* Sort Select */
 .courses-sort-box {
   display: flex;
   align-items: center;
@@ -103,7 +101,6 @@
   cursor: pointer;
 }
 
-/* Category Pills */
 .filter-categories-pills {
   display: flex;
   flex-wrap: wrap;
@@ -139,7 +136,6 @@
   box-shadow: 0 4px 14px rgba(11, 33, 69, 0.2);
 }
 
-/* Results bar */
 .filter-results-bar {
   display: flex;
   align-items: center;

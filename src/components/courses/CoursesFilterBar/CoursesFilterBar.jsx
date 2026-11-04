@@ -13,9 +13,7 @@ export default function CoursesFilterBar({
 }) {
   return (
     <div className="courses-filter-wrapper">
-      {/* Top Search & Sort Row */}
       <div className="filter-top-row">
-        {/* Search Input */}
         <div className="courses-search-box">
           <Search size={18} className="search-icon" />
           <input
@@ -36,7 +34,6 @@ export default function CoursesFilterBar({
           )}
         </div>
 
-        {/* Sort Select */}
         <div className="courses-sort-box">
           <SlidersHorizontal size={16} className="sort-icon" />
           <span className="sort-label">ترتيب حسب:</span>
@@ -52,7 +49,6 @@ export default function CoursesFilterBar({
         </div>
       </div>
 
-      {/* Category Pills Navigation */}
       <div className="filter-categories-pills">
         {courseCategories.map((cat) => {
           const isActive = selectedCategory === cat.id;
@@ -68,7 +64,6 @@ export default function CoursesFilterBar({
         })}
       </div>
 
-      {/* Results Indicator */}
       <div className="filter-results-bar">
         <span className="results-count">
           تم العثور على <strong>{totalResults}</strong> من البرامج التدريبية المعتمدة

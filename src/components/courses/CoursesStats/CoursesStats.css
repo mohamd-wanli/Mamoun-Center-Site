@@ -24,11 +24,10 @@
   padding: 10px 14px;
   position: relative;
 
-  
   transform: translateY(20px);
   transition:
-    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.6s,
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s;
 }
 
 .courses-stat-item:not(:last-child)::after {
@@ -60,7 +59,7 @@
 }
 
 .courses-stat-item:hover .stat-icon-box {
-  background: var(--color-primary, #0b2145);
+  background: var(--color-primary, #141920);
   color: var(--color-accent, #d7a637);
   transform: scale(1.08) rotate(-4deg);
 }
