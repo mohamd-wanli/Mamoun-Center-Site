@@ -69,6 +69,7 @@ export default function CoursesPage() {
           setSortBy={setSortBy}
           totalResults={filteredPrograms.length}
         />
+      
 
         <CoursesCatalog
           programs={filteredPrograms}

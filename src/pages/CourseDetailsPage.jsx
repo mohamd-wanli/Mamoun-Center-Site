@@ -188,8 +188,7 @@ export default function CourseDetailsPage() {
               </div>
             )}
 
-            {/* Career Opportunities */}
-            {program.careerOpportunities && (
+            {/* {program.careerOpportunities && (
               <div className="details-card">
                 <h2 className="details-section-title">
                   <Briefcase size={20} className="title-icon" />
@@ -204,10 +203,9 @@ export default function CourseDetailsPage() {
                   ))}
                 </div>
               </div>
-            )}
+            )} */}
           </div>
 
-          {/* Sticky Sidebar */}
           <aside className="details-sidebar-col">
             {/* Enrollment Action Card */}
             <div className="sidebar-sticky-card">
@@ -294,7 +292,7 @@ export default function CourseDetailsPage() {
                 <div className="sidebar-whatsapp-row">
                   <span>أو تواصل فورياً عبر واتساب:</span>
                   <a
-                    href={`https://wa.me/963944000111?text=${encodeURIComponent(
+                    href={`https://wa.me/963966382224?text=${encodeURIComponent(
                       `مرحباً، أود الاستفسار والتسجيل في دورة: ${program.title}`
                     )}`}
                     target="_blank"

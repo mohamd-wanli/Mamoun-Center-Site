@@ -31,7 +31,6 @@ export default function CoursesCatalog({ programs, onQuickView }) {
             className="program-card"
             style={{ animationDelay: `${index * 0.08}s` }}
           >
-            {/* Card Media Wrap */}
             <div className="program-media">
               <img
                 src={program.image}
@@ -41,15 +40,15 @@ export default function CoursesCatalog({ programs, onQuickView }) {
               />
               <div className="program-img-overlay" />
 
-              {/* Badges */}
               <div className="program-badges-top">
-                <span className="program-cat-badge">{program.categoryLabel}</span>
+                <span className="program-cat-badge">
+                  {program.categoryLabel}
+                </span>
                 {program.badge && (
                   <span className="program-ribbon-badge">{program.badge}</span>
                 )}
               </div>
 
-              {/* Hover Quick View Trigger */}
               <button
                 type="button"
                 className="quick-view-hover-btn"
@@ -61,9 +60,7 @@ export default function CoursesCatalog({ programs, onQuickView }) {
               </button>
             </div>
 
-            {/* Card Body */}
             <div className="program-body">
-              {/* Rating & Reviews */}
               <div className="program-header-row">
                 <div className="program-rating">
                   <Star size={15} className="star-filled" />
@@ -73,16 +70,13 @@ export default function CoursesCatalog({ programs, onQuickView }) {
                 <span className="program-level-pill">{program.level}</span>
               </div>
 
-              {/* Title & Subtitle */}
               <h3 className="program-title">
                 <Link to={program.path}>{program.title}</Link>
               </h3>
               <span className="program-subtitle">{program.subtitle}</span>
 
-              {/* Description */}
               <p className="program-desc">{program.description}</p>
 
-              {/* Meta Chips */}
               <div className="program-meta-chips">
                 <div className="meta-chip">
                   <Clock size={14} className="chip-icon" />
@@ -98,7 +92,6 @@ export default function CoursesCatalog({ programs, onQuickView }) {
                 </div>
               </div>
 
-              {/* Highlights Checklist */}
               {program.highlights && program.highlights.length > 0 && (
                 <ul className="program-key-points">
                   {program.highlights.slice(0, 3).map((item, idx) => (
@@ -110,7 +103,6 @@ export default function CoursesCatalog({ programs, onQuickView }) {
                 </ul>
               )}
 
-              {/* Card Footer Actions */}
               <div className="program-actions">
                 <Link to={program.path} className="program-main-btn">
                   <span>تفاصيل المنهاج</span>
@@ -131,4 +123,3 @@ export default function CoursesCatalog({ programs, onQuickView }) {
     </div>
   );
 }
-

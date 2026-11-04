@@ -36,7 +36,6 @@ export default function CourseQuickModal({ program, onClose }) {
         role="dialog"
         aria-modal="true"
       >
-        {/* Close Button */}
         <button
           className="modal-close-btn"
           onClick={onClose}
@@ -45,7 +44,6 @@ export default function CourseQuickModal({ program, onClose }) {
           <X size={20} />
         </button>
 
-        {/* Modal Header Media */}
         <div className="modal-media-banner">
           <img
             src={program.image}
@@ -54,14 +52,15 @@ export default function CourseQuickModal({ program, onClose }) {
           />
           <div className="modal-banner-gradient" />
           <div className="modal-banner-badges">
-            <span className="modal-category-badge">{program.categoryLabel}</span>
+            <span className="modal-category-badge">
+              {program.categoryLabel}
+            </span>
             {program.badge && (
               <span className="modal-accent-badge">{program.badge}</span>
             )}
           </div>
         </div>
 
-        {/* Modal Body */}
         <div className="modal-scroll-body">
           <div className="modal-title-row">
             <div>
@@ -77,13 +76,14 @@ export default function CourseQuickModal({ program, onClose }) {
 
           <p className="modal-description">{program.description}</p>
 
-          {/* Quick Metrics */}
           <div className="modal-metrics-grid">
             <div className="modal-metric">
               <Clock size={18} className="metric-icon" />
               <div>
                 <strong>المدة والتدريب</strong>
-                <span>{program.duration} ({program.hours})</span>
+                <span>
+                  {program.duration} ({program.hours})
+                </span>
               </div>
             </div>
 
@@ -112,10 +112,11 @@ export default function CourseQuickModal({ program, onClose }) {
             </div>
           </div>
 
-          {/* Highlights */}
           {program.highlights && (
             <div className="modal-section-block">
-              <h4 className="modal-section-title">أبرز المهارات التي ستتقنها:</h4>
+              <h4 className="modal-section-title">
+                أبرز المهارات التي ستتقنها:
+              </h4>
               <ul className="modal-highlights-list">
                 {program.highlights.map((h, i) => (
                   <li key={i}>
@@ -127,7 +128,6 @@ export default function CourseQuickModal({ program, onClose }) {
             </div>
           )}
 
-          {/* Syllabus brief */}
           {program.syllabus && (
             <div className="modal-section-block">
               <h4 className="modal-section-title">محاور المنهاج التدريبي:</h4>
@@ -143,7 +143,6 @@ export default function CourseQuickModal({ program, onClose }) {
           )}
         </div>
 
-        {/* Modal Footer Actions */}
         <div className="modal-footer">
           <Link
             to={program.path}
@@ -165,4 +164,3 @@ export default function CourseQuickModal({ program, onClose }) {
     </div>
   );
 }
-
