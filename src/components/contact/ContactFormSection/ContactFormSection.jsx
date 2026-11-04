@@ -38,7 +38,6 @@ export default function ContactFormSection() {
     e.preventDefault();
     setStatus("submitting");
 
-    // Simulate smooth submission
     setTimeout(() => {
       setStatus("success");
       setFormData({
@@ -60,7 +59,7 @@ export default function ContactFormSection() {
       }`}
     >
       <div className="container contact-main-grid">
-        {/* Right Column: Form */}
+      
         <div className="contact-form-container">
           <div className="contact-form-header">
             <span className="section-tag">
@@ -95,7 +94,7 @@ export default function ContactFormSection() {
 
           <form onSubmit={handleSubmit} className="contact-form">
             <div className="form-row">
-              {/* Full Name */}
+           
               <div className="form-group">
                 <label htmlFor="fullName" className="form-label">
                   الاسم الكامل <span className="required">*</span>
@@ -115,7 +114,7 @@ export default function ContactFormSection() {
                 </div>
               </div>
 
-              {/* Phone / WhatsApp */}
+              
               <div className="form-group">
                 <label htmlFor="phone" className="form-label">
                   رقم الهاتف أو الواتساب <span className="required">*</span>
@@ -138,7 +137,7 @@ export default function ContactFormSection() {
             </div>
 
             <div className="form-row">
-              {/* Email */}
+           
               <div className="form-group">
                 <label htmlFor="email" className="form-label">
                   البريد الإلكتروني <span className="optional">(اختياري)</span>
@@ -157,7 +156,6 @@ export default function ContactFormSection() {
                 </div>
               </div>
 
-              {/* Course of Interest */}
               <div className="form-group">
                 <label htmlFor="course" className="form-label">
                   الدورة أو المجال المطلوب
@@ -185,7 +183,6 @@ export default function ContactFormSection() {
               </div>
             </div>
 
-            {/* Message */}
             <div className="form-group">
               <label htmlFor="message" className="form-label">
                 نص الرسالة أو الاستفسار <span className="required">*</span>
@@ -205,7 +202,7 @@ export default function ContactFormSection() {
               </div>
             </div>
 
-            {/* Submit Button */}
+        
             <button
               type="submit"
               disabled={status === "submitting"}
@@ -221,9 +218,9 @@ export default function ContactFormSection() {
           </form>
         </div>
 
-        {/* Left Column: Info, Hours, and Map */}
+     
         <div className="contact-sidebar">
-          {/* Working hours & Visit Card */}
+        
           <div className="contact-sidebar-card">
             <h3 className="sidebar-card-title">
               <Clock size={20} className="card-title-icon" />

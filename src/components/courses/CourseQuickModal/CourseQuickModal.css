@@ -1,0 +1,338 @@
+.course-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 33, 69, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: modalFadeIn 0.25s ease-out;
+  direction: rtl;
+}
+
+.course-modal-content {
+  background: #ffffff;
+  border-radius: var(--radius-card, 18px);
+  width: 100%;
+  max-width: 680px;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+  animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background: rgba(0, 0, 0, 0.85);
+  transform: scale(1.08);
+}
+
+/* Media Banner */
+.modal-media-banner {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  flex-shrink: 0;
+  background: #0b2145;
+}
+
+.modal-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-banner-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 33, 69, 0.2) 0%,
+    rgba(11, 33, 69, 0.85) 100%
+  );
+}
+
+.modal-banner-badges {
+  position: absolute;
+  bottom: 16px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.modal-category-badge {
+  background: #ffffff;
+  color: var(--color-primary, #0b2145);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 50px;
+}
+
+.modal-accent-badge {
+  background: var(--color-accent, #d7a637);
+  color: #0b2145;
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 50px;
+}
+
+/* Scrollable Body */
+.modal-scroll-body {
+  padding: 24px 26px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.modal-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.modal-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-primary, #0b2145);
+  margin: 0 0 4px;
+}
+
+.modal-subtitle {
+  font-size: 0.82rem;
+  color: var(--color-secondtext, #687385);
+  letter-spacing: 0.5px;
+}
+
+.modal-rating-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(215, 166, 55, 0.12);
+  padding: 6px 12px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.star-icon {
+  fill: #eab308;
+  color: #eab308;
+}
+
+.modal-rating-box strong {
+  color: var(--color-primary, #0b2145);
+  font-size: 0.92rem;
+}
+
+.modal-rating-box span {
+  color: var(--color-secondtext, #687385);
+  font-size: 0.78rem;
+}
+
+.modal-description {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: var(--color-secondtext, #687385);
+  margin: 0 0 20px;
+}
+
+/* Metrics */
+.modal-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  background: var(--color-surface, #f7f8fa);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 22px;
+}
+
+.modal-metric {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.metric-icon {
+  color: var(--color-accent, #d7a637);
+  flex-shrink: 0;
+}
+
+.modal-metric div {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-metric strong {
+  font-size: 0.84rem;
+  color: var(--color-primary, #0b2145);
+}
+
+.modal-metric span {
+  font-size: 0.78rem;
+  color: var(--color-secondtext, #687385);
+}
+
+/* Sections */
+.modal-section-block {
+  margin-bottom: 20px;
+}
+
+.modal-section-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--color-primary, #0b2145);
+  margin: 0 0 10px;
+}
+
+.modal-highlights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modal-highlights-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--color-primary, #0b2145);
+}
+
+.check-icon {
+  color: #16a34a;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.modal-syllabus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modal-syllabus-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid #edf0f5;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.unit-tag {
+  background: rgba(11, 33, 69, 0.08);
+  color: var(--color-primary, #0b2145);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.unit-title {
+  color: var(--color-secondtext, #687385);
+}
+
+/* Footer */
+.modal-footer {
+  display: flex;
+  gap: 12px;
+  padding: 16px 26px;
+  background: #ffffff;
+  border-top: 1px solid #edf0f5;
+  flex-shrink: 0;
+}
+
+.modal-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: var(--radius-button, 8px);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  flex: 1;
+}
+
+.modal-action-btn.primary {
+  background: var(--color-primary, #0b2145);
+  color: #ffffff;
+}
+
+.modal-action-btn.primary:hover {
+  background: var(--color-accent, #d7a637);
+  color: var(--color-primary, #0b2145);
+}
+
+.modal-action-btn.secondary {
+  background: rgba(215, 166, 55, 0.15);
+  color: #92640d;
+}
+
+.modal-action-btn.secondary:hover {
+  background: rgba(215, 166, 55, 0.25);
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideUp {
+  from {
+    transform: translateY(24px) scale(0.97);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-footer {
+    flex-direction: column;
+  }
+}
+
