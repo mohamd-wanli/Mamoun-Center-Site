@@ -103,7 +103,7 @@ export default function HeroSection() {
             </span>
             <span className="hero-badge-text">
               <strong>إرث من التميز والريادة</strong>
-              <small>أكثر من 65 عاماً من بناء الكفاءات</small>
+              <small>أكثر من 60 عاماً من بناء الكفاءات</small>
             </span>
           </div>
         </div>

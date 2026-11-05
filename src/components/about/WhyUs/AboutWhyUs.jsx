@@ -58,7 +58,7 @@ export default function AboutWhyUs() {
             لماذا نحن؟
           </span>
           <h2 className="section-title">
-            أسباب تجعل معهد المأمون
+            أسباب تجعل مركز المأمون
             <span className="section-title-accent"> خيارك الأفضل في التدريب والتميز</span>
           </h2>
           <p className="why-us-subtitle">

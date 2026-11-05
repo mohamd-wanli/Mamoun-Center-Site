@@ -1,4 +1,5 @@
 import { Landmark, Users, GraduationCap, MapPin, Award } from "lucide-react";
+import useCountUp from "../../../hooks/useCountUp";
 import "./StatsSection.css";
 
 const stats = [
@@ -7,58 +8,66 @@ const stats = [
     icon: Landmark,
     number: "60+",
     title: "سنة من التميز",
-    // subtitle: "Years of Excellence",
   },
   {
     id: 2,
     icon: Users,
     number: "1500+",
     title: "طالب ومتدرب",
-    // subtitle: "Students Enrolled",
   },
   {
     id: 3,
     icon: GraduationCap,
     number: "50+",
     title: "مدرب ومدرس خبير",
-    // subtitle: "Skilled Teachers",
   },
   {
     id: 4,
     icon: MapPin,
     number: "50+",
     title: "قاعات ومرافق حديثة",
-    // subtitle: "Acres Campus",
   },
   {
     id: 5,
     icon: Award,
     number: "98%",
     title: "نسبة النجاح والتفوق",
-    // subtitle: "Acceptance Rate",
   },
 ];
+
+function StatItem({ item }) {
+  const Icon = item.icon;
+  const [ref, count] = useCountUp(item.number, 1800);
+  const suffix = item.number.includes("+")
+    ? "+"
+    : item.number.includes("%")
+    ? "%"
+    : "";
+
+  return (
+    <div className="stat-item" ref={ref}>
+      <div className="stat-icon-wrap">
+        <Icon size={26} strokeWidth={1.8} />
+      </div>
+      <div className="stat-info">
+        <span className="stat-number">
+          {count}
+          {suffix}
+        </span>
+        <span className="stat-title">{item.title}</span>
+      </div>
+    </div>
+  );
+}
 
 export default function StatsSection() {
   return (
     <section className="stats-section">
       <div className="container">
         <div className="stats-banner">
-          {stats.map((item) => {
-            const Icon = item.icon;
-            return (
-              <div className="stat-item" key={item.id}>
-                <div className="stat-icon-wrap">
-                  <Icon size={26} strokeWidth={1.8} />
-                </div>
-                <div className="stat-info">
-                  <span className="stat-number">{item.number}</span>
-                  <span className="stat-title">{item.title}</span>
-                  <small className="stat-subtitle">{item.subtitle}</small>
-                </div>
-              </div>
-            );
-          })}
+          {stats.map((item) => (
+            <StatItem key={item.id} item={item} />
+          ))}
         </div>
       </div>
     </section>

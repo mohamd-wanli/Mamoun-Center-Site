@@ -30,7 +30,6 @@ export default function CTASection() {
       className={`cta-section section ${isVisible ? "cta--visible" : ""}`}
     >
       <div className="container cta-container">
-        {/* Left media */}
         <div className="cta-image-col">
           <div className="cta-image-frame">
             <img
@@ -41,7 +40,6 @@ export default function CTASection() {
           </div>
         </div>
 
-        {/* Right content */}
         <div className="cta-content-col">
           <span className="section-tag">التسجيل والقبول • ADMISSIONS</span>
           <h2 className="section-title">

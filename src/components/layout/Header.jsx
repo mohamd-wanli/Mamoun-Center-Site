@@ -47,7 +47,7 @@ export default function Header() {
           <span className="brand-text">
             <span className="brand-name">مركز المأمون الدولي</span>
 
-            <span className="brand-subtitle">للتدريب والتأهيل</span>
+            {/* <span className="brand-subtitle">للتدريب والتأهيل</span> */}
           </span>
         </Link>
         <button

@@ -8,7 +8,7 @@
 
 .courses-stats-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   background: #ffffff;
   padding: 24px 28px;
@@ -17,35 +17,16 @@
   border: 1px solid #edf0f5;
 }
 
-.courses-stat-item {
+.courses-stats-wrap .courses-stat-item {
   display: flex;
   align-items: center;
   gap: 16px;
   padding: 10px 14px;
   position: relative;
-
-  transform: translateY(20px);
-  transition:
-    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.6s,
-    transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s;
+  transition: transform 0.3s ease;
 }
 
-.courses-stat-item:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  left: -10px;
-  top: 15%;
-  height: 70%;
-  width: 1px;
-  background: #eef2f6;
-}
-
-.stats--visible .courses-stat-item {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.stat-icon-box {
+.courses-stats-wrap .stat-icon-box {
   width: 52px;
   height: 52px;
   border-radius: 12px;
@@ -58,46 +39,35 @@
   transition: all 0.3s ease;
 }
 
-.courses-stat-item:hover .stat-icon-box {
-  background: var(--color-primary, #141920);
+.courses-stats-wrap .courses-stat-item:hover .stat-icon-box {
+  background: var(--color-primary, #0b2145);
   color: var(--color-accent, #d7a637);
   transform: scale(1.08) rotate(-4deg);
 }
 
-.stat-info-box {
+.courses-stats-wrap .stat-info-box {
   display: flex;
   flex-direction: column;
 }
 
-.stat-number {
+.courses-stats-wrap .stat-number {
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--color-accent, #d7a637);
   line-height: 1.2;
 }
 
-.stat-title {
+.courses-stats-wrap .stat-title {
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--color-primary, #0b2145);
   margin-top: 2px;
 }
 
-.stat-sub {
+.courses-stats-wrap .stat-sub {
   font-size: 0.78rem;
   color: var(--color-secondtext, #687385);
   margin-top: 2px;
-}
-
-@media (max-width: 1024px) {
-  .courses-stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-
-  .courses-stat-item:nth-child(2)::after {
-    display: none;
-  }
 }
 
 @media (max-width: 600px) {
@@ -109,9 +79,5 @@
     grid-template-columns: 1fr;
     padding: 20px 18px;
     gap: 18px;
-  }
-
-  .courses-stat-item::after {
-    display: none !important;
   }
 }

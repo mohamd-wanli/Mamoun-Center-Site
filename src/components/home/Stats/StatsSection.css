@@ -1,12 +1,12 @@
 .stats-section {
   background: var(--color-primary, #0b2145);
-  padding-block: 40px;
+  padding: 36px 32px;
+  margin-inline: 32px;
+  border-radius: 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 18px;
-   padding: 26px 32px;
-   margin-inline: 32px;
-
+  direction: rtl;
+  box-shadow: 0 12px 32px rgba(11, 33, 69, 0.15);
 }
 
 .stats-banner {
@@ -16,71 +16,79 @@
   align-items: center;
 }
 
-.stat-item {
+.stats-section .stat-item {
   display: flex;
   align-items: center;
   gap: 14px;
 }
 
-.stat-icon-wrap {
+.stats-section .stat-icon-wrap {
   width: 52px;
   height: 52px;
   border-radius: 50%;
   border: 1.5px solid rgba(215, 166, 55, 0.45);
+  background: rgba(215, 166, 55, 0.1);
   color: var(--color-accent, #d7a637);
   display: grid;
   place-items: center;
   flex-shrink: 0;
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
 }
 
-.stat-item:hover .stat-icon-wrap {
+.stats-section .stat-item:hover .stat-icon-wrap {
   transform: scale(1.08);
   border-color: var(--color-accent, #d7a637);
+  background: rgba(215, 166, 55, 0.2);
 }
 
-.stat-info {
+.stats-section .stat-info {
   display: flex;
   flex-direction: column;
 }
 
-.stat-number {
-  font-size: 1.5rem;
+.stats-section .stat-number {
+  font-size: 1.65rem;
   font-weight: 800;
-  color: #ffffff;
+  color: #ffffff !important;
   line-height: 1.2;
+  letter-spacing: 0.5px;
 }
 
-.stat-title {
-  font-size: 0.82rem;
+.stats-section .stat-title {
+  font-size: 0.86rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.9);
-  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.92) !important;
+  margin-top: 4px;
+  line-height: 1.4;
 }
 
-.stat-subtitle {
-  font-size: 0.68rem;
-  color: rgba(255, 255, 255, 0.6);
+.stats-section .stat-subtitle {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.65) !important;
 }
 
 @media (max-width: 1024px) {
   .stats-banner {
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    gap: 24px;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .stats-section {
+    margin-inline: 16px;
+    padding: 24px 20px;
+  }
+
   .stats-banner {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .stats-banner {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 }

@@ -247,7 +247,7 @@ export default function ContactFormSection() {
             <div className="map-card-header">
               <MapPin size={20} className="card-title-icon" />
               <div>
-                <h4 className="map-location-title">موقع المعهد في دمشق</h4>
+                <h4 className="map-location-title">موقع مركز المأمون في دمشق</h4>
                 <p className="map-location-sub">
                   دمشق - جسر فكتوريا - بناء المأمون الدولي
                 </p>

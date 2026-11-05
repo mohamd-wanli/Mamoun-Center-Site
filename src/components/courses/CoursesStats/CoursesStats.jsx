@@ -1,5 +1,4 @@
 import { GraduationCap, Wrench, Award, Briefcase } from "lucide-react";
-import useScrollReveal from "../../../hooks/useScrollReveal";
 import "./CoursesStats.css";
 
 const stats = [
@@ -21,32 +20,23 @@ const stats = [
     label: "عاماً من الاعتماد والريادة",
     subtext: "شهادات موثقة تفتح لك سوق العمل",
   },
-  // {
-  //   icon: Briefcase,
-  //   value: "94%",
-  //   label: "نسبة توظيف الخريجين",
-  //   subtext: "إرشاد وتوجيه مهني مستمر",
-  // },
+  {
+    icon: Briefcase,
+    value: "94%",
+    label: "نسبة توظيف الخريجين",
+    subtext: "إرشاد وتوجيه مهني مستمر",
+  },
 ];
 
 export default function CoursesStats() {
-  const [sectionRef, isVisible] = useScrollReveal({ threshold: 0.1 });
-
   return (
-    <div
-      ref={sectionRef}
-      className={`courses-stats-wrap ${isVisible ? "stats--visible" : ""}`}
-    >
+    <div className="courses-stats-wrap">
       <div className="container">
         <div className="courses-stats-grid">
           {stats.map((item, index) => {
             const Icon = item.icon;
             return (
-              <div
-                key={index}
-                className="courses-stat-item"
-                style={{ transitionDelay: `${index * 0.1}s` }}
-              >
+              <div key={index} className="courses-stat-item">
                 <div className="stat-icon-box">
                   <Icon size={24} />
                 </div>
