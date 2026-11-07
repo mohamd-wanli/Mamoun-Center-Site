@@ -2,40 +2,34 @@ import { Link } from "react-router-dom";
 import { Play, Award, ArrowLeft, Sparkles, CheckCircle2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import "./HeroSection.css";
-import hero from "../../../assets/images/hero2.png";
+import hero from "../../../assets/images/hrco.png";
 import FloatingParticles from "../../common/FloatingParticles";
 
 export default function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-  
     const timer = setTimeout(() => setIsLoaded(true), 80);
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <section className={`hero ${isLoaded ? "hero--loaded" : ""}`}>
-      {/* Full-bleed background visual: no white mask or blocking split */}
       <div className="hero__visual" aria-hidden="true">
         <img
           src={hero}
           alt="مركز المأمون الدولي للتدريب والتأهيل"
           className="hero__visual-img"
         />
-        {/* Subtle dark-blue atmospheric scrim for crisp text contrast without dulling the neon glow */}
         <div className="hero__overlay-scrim" />
         <div className="hero__overlay-bottom" />
       </div>
 
-      {/* Floating particles inspired by KAMUI visual style */}
       <FloatingParticles count={20} color="rgba(215, 166, 55, 0.6)" />
 
-      {/* Subtle ambient lighting orbs */}
       <div className="hero-glow hero-glow--blue" aria-hidden="true" />
       <div className="hero-glow hero-glow--gold" aria-hidden="true" />
 
-      {/* Main hero content floating directly over the image */}
       <div className="container hero-content">
         <div className="hero-text">
           {/* Eyebrow badge */}
@@ -95,7 +89,6 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Floating legacy glass card */}
         <div className="hero-badge-wrap">
           <div className="hero-badge">
             <span className="hero-badge-icon">
