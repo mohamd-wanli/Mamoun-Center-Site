@@ -1,4 +1,11 @@
-import { Sparkles, CheckCircle2, ShieldCheck, Zap, Users, Award } from "lucide-react";
+import {
+  Sparkles,
+  CheckCircle2,
+  ShieldCheck,
+  Zap,
+  Users,
+  Award,
+} from "lucide-react";
 import useScrollReveal from "../../../hooks/useScrollReveal";
 import campusImg1 from "../../../assets/images/training-center.png";
 import campusImg2 from "../../../assets/images/aboutStory.jfif";
@@ -14,7 +21,6 @@ export default function ServicesIntro() {
     >
       <div className="container">
         <div className="services-intro-grid">
-          {/* Text & Value Column */}
           <div className="intro-text-col">
             <div className="intro-badge">
               <Sparkles size={16} />
@@ -27,9 +33,11 @@ export default function ServicesIntro() {
             </h2>
 
             <p className="intro-desc">
-              في مركز المأمون الدولي، لا نكتفي بتقديم الدورات التعليمية التقليدية، بل نوفر منظومة
-              خدمات متطورة تشمل تصميم المناهج حسب الطلب، تدريب فرق العمل المؤسسية، والاستشارات
-              المهنية المجانية، مدعومة بأحدث الورش التدريبية وشهادات معتمدة توثق تميزك في سوق العمل.
+              في مركز المأمون الدولي، لا نكتفي بتقديم الدورات التعليمية
+              التقليدية، بل نوفر منظومة خدمات متطورة تشمل تصميم المناهج حسب
+              الطلب، تدريب فرق العمل المؤسسية، والاستشارات المهنية المجانية،
+              مدعومة بأحدث الورش التدريبية وشهادات معتمدة توثق تميزك في سوق
+              العمل.
             </p>
 
             <div className="intro-highlights-grid">
@@ -65,7 +73,6 @@ export default function ServicesIntro() {
             </div>
           </div>
 
-          {/* Visual Showcase Collage Column */}
           <div className="intro-visual-col">
             <div className="intro-visual-stack">
               <div className="visual-frame visual-frame-main">

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Play, Award, ArrowLeft, Sparkles, CheckCircle2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import "./HeroSection.css";
-import hero from "../../../assets/images/te.png";
+import hero from "../../../assets/images/j.png";
 import FloatingParticles from "../../common/FloatingParticles";
 
 export default function HeroSection() {

@@ -20,7 +20,8 @@
   /* Scroll reveal */
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -161,7 +162,11 @@
 .visual-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(11, 33, 69, 0.4) 100%);
+  background: linear-gradient(
+    180deg,
+    transparent 40%,
+    rgba(11, 33, 69, 0.4) 100%
+  );
 }
 
 .intro-floating-stat {

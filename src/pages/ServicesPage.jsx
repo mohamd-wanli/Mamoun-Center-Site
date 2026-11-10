@@ -15,19 +15,14 @@ export default function ServicesPage() {
         breadcrumbs={[{ label: "خدماتنا" }]}
       />
 
-      {/* Intro overview card */}
       <ServicesIntro />
 
-      {/* 6 Core Services Grid */}
       <ServicesGrid />
 
-      {/* Trusted Partners and Organizations */}
       <PartnersSection />
 
-      {/* Official Damascus Branches */}
       <BranchesSection />
 
-      {/* Call to action */}
       <CTASection />
     </>
   );
