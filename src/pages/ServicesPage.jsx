@@ -1,5 +1,7 @@
 import PageHeader from "../components/common/PageHeader/PageHeader";
-import ServicesIntro from "../components/services/ServicesIntro/ServicesIntro";
+// import ServicesIntro from "../components/services/ServicesIntro/ServicesIntro";
+import Intro from "../components/services/ServicesIntro/Intro";
+
 import ServicesGrid from "../components/services/ServicesGrid/ServicesGrid";
 import PartnersSection from "../components/services/PartnersSection/PartnersSection";
 import BranchesSection from "../components/services/BranchesSection/BranchesSection";
@@ -15,7 +17,7 @@ export default function ServicesPage() {
         breadcrumbs={[{ label: "خدماتنا" }]}
       />
 
-      <ServicesIntro />
+      <Intro />
 
       <ServicesGrid />
 
