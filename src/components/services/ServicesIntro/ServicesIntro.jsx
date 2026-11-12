@@ -92,22 +92,12 @@ export default function ServicesIntro() {
                 />
               </div>
 
-              {/* Floating Stat Badge */}
-              <div className="intro-floating-stat">
-                <div className="floating-stat-icon">
-                  <Award size={22} />
-                </div>
-                <div>
-                  <strong>+60 عاماً</strong>
-                  <span>من التميز والريادة</span>
-                </div>
-              </div>
+          
 
-              {/* Floating Trust Badge */}
-              <div className="intro-floating-pill">
+              {/* <div className="intro-floating-pill">
                 <Users size={16} />
                 <span>+25 جهة ومنظمة تثق بنا</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -1,0 +1,275 @@
+/* Apple-grade Interactive Modal / Sheet - Brand Colors */
+.apple-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(11, 33, 69, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: appleModalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes appleModalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.apple-modal-container {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  background: #ffffff;
+  color: var(--color-text, #202938);
+  border-radius: 28px;
+  border: 1px solid rgba(11, 33, 69, 0.12);
+  box-shadow: 0 25px 60px -15px rgba(11, 33, 69, 0.25);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(11, 33, 69, 0.2) transparent;
+  animation: appleModalScaleUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes appleModalScaleUp {
+  from {
+    transform: scale(0.93) translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Close Button */
+.apple-modal-close {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(11, 33, 69, 0.15);
+  color: var(--color-primary, #0b2145);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.apple-modal-close:hover {
+  background: #ffffff;
+  transform: rotate(90deg);
+}
+
+/* Hero Visual */
+.apple-modal-hero {
+  position: relative;
+  height: 240px;
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+}
+
+.apple-modal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.65);
+}
+
+.apple-modal-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 33, 69, 0.2) 0%,
+    rgba(11, 33, 69, 0.9) 100%
+  );
+}
+
+.apple-modal-hero-meta {
+  position: absolute;
+  bottom: 20px;
+  right: 24px;
+  left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 2;
+}
+
+.apple-modal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: rgba(215, 166, 55, 0.3);
+  border: 1px solid rgba(215, 166, 55, 0.6);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  backdrop-filter: blur(8px);
+}
+
+.apple-modal-sub {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: #cbd5e1;
+  text-transform: uppercase;
+}
+
+.apple-modal-title {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+/* Body */
+.apple-modal-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.apple-modal-sec-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary, #0b2145);
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eef2f6;
+  padding-bottom: 6px;
+}
+
+.apple-modal-text {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--color-secondtext, #687385);
+}
+
+.apple-modal-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.apple-modal-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.92rem;
+  color: var(--color-text, #202938);
+  background: var(--color-surface, #f7f8fa);
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.apple-modal-check {
+  color: var(--color-accent, #d7a637);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Footer / Actions */
+.apple-modal-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid #eef2f6;
+}
+
+.apple-modal-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  background: var(--color-primary, #0b2145);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(11, 33, 69, 0.15);
+  transition: all 0.25s ease;
+}
+
+.apple-modal-primary-btn:hover {
+  background: var(--color-accent, #d7a637);
+  color: #081731;
+  transform: translateY(-2px);
+}
+
+.apple-modal-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  background: #25d366;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+  transition: all 0.25s ease;
+}
+
+.apple-modal-wa-btn:hover {
+  background: #20ba59;
+  transform: translateY(-2px);
+}
+
+.apple-modal-call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 9999px;
+  background: #f1f5f9;
+  border: 1px solid #dbe2ea;
+  color: var(--color-primary, #0b2145);
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.apple-modal-call-btn:hover {
+  background: #e2e8f0;
+}
+
+@media (max-width: 640px) {
+  .apple-modal-footer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .apple-modal-primary-btn,
+  .apple-modal-wa-btn,
+  .apple-modal-call-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

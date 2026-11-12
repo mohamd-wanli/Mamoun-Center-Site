@@ -1,0 +1,149 @@
+/* Apple-Style Experience / 4 Pillars - Brand Colors */
+.apple-experience-section {
+  background: #ffffff;
+  color: var(--color-text, #202938);
+  padding: 85px 0;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.apple-exp-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 55px;
+}
+
+.apple-exp-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent, #d7a637);
+  margin-bottom: 14px;
+}
+
+.apple-exp-title {
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--color-primary, #0b2145);
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.apple-exp-sub {
+  font-size: 1.05rem;
+  color: var(--color-secondtext, #687385);
+  line-height: 1.7;
+}
+
+/* 4-Pillar Grid */
+.apple-exp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.apple-exp-card {
+  position: relative;
+  background: var(--color-surface, #f7f8fa);
+  border: 1px solid rgba(11, 33, 69, 0.08);
+  border-radius: 24px;
+  padding: 32px 26px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.apple-exp-card:hover {
+  background: #ffffff;
+  border-color: var(--color-accent, #d7a637);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(11, 33, 69, 0.07);
+}
+
+.apple-exp-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.apple-exp-card-num {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: rgba(11, 33, 69, 0.18);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.apple-exp-card:hover .apple-exp-card-num {
+  color: var(--color-accent, #d7a637);
+}
+
+.apple-exp-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary, #0b2145);
+  border: 1px solid rgba(11, 33, 69, 0.1);
+  box-shadow: 0 2px 8px rgba(11, 33, 69, 0.05);
+  transition: all 0.3s ease;
+}
+
+.apple-exp-card:hover .apple-exp-card-icon {
+  background: var(--color-primary, #0b2145);
+  color: var(--color-accent, #d7a637);
+  transform: scale(1.05);
+}
+
+.apple-exp-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-primary, #0b2145);
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.apple-exp-card-desc {
+  font-size: 0.88rem;
+  color: var(--color-secondtext, #687385);
+  line-height: 1.7;
+}
+
+.apple-exp-card-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-accent, #d7a637), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.apple-exp-card:hover .apple-exp-card-indicator {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .apple-exp-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .apple-experience-section {
+    padding: 60px 0;
+  }
+
+  .apple-exp-grid {
+    grid-template-columns: 1fr;
+  }
+}
