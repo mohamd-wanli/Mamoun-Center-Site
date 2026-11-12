@@ -10,7 +10,7 @@ export default function ServicesPage() {
   return (
     <>
       <PageHeader
-        tag="خدماتنا وحلولنا التدريبية • OUR SERVICES"
+        tag="خدماتنا وحلولنا التدريبية "
         title="خدمات تدريبية واستشارية متكاملة"
         subtitle="نفتخر بتقديم مجموعة شاملة من البرامج المخصصة، وتدريب الشركات والمؤسسات، والشهادات المهنية المعتمدة دولياً."
         breadcrumbs={[{ label: "خدماتنا" }]}

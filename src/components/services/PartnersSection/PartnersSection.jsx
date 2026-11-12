@@ -21,23 +21,28 @@ export default function PartnersSection() {
       }`}
     >
       <div className="container">
-        {/* Header */}
         <div className="partners-header">
           <span className="section-tag">
-            <Handshake size={15} style={{ verticalAlign: "middle", marginLeft: 6 }} />
+            <Handshake
+              size={15}
+              style={{ verticalAlign: "middle", marginLeft: 6 }}
+            />
             شركاء النجاح والاعتماد
           </span>
           <h2 className="section-title">
             جهات ومؤسسات محلية ودولية
-            <span className="section-title-accent"> استفادت من خدماتنا الاستشارية</span>
+            <span className="section-title-accent">
+              {" "}
+              استفادت من خدماتنا الاستشارية
+            </span>
           </h2>
           <p className="partners-subtitle">
-            سجل حافل بالشراكات الناجحة مع كبرى المنظمات الإنسانية الدولية، المؤسسات
-            الحكومية، والشركات الاقتصادية الرائدة في سوريا والوطن العربي.
+            سجل حافل بالشراكات الناجحة مع كبرى المنظمات الإنسانية الدولية،
+            المؤسسات الحكومية، والشركات الاقتصادية الرائدة في سوريا والوطن
+            العربي.
           </p>
         </div>
 
-        {/* Filter Tabs */}
         <div className="partners-tabs-nav">
           {clientCategories.map((tab) => {
             const isActive = activeTab === tab.id;
@@ -55,7 +60,6 @@ export default function PartnersSection() {
           })}
         </div>
 
-        {/* Partners Grid */}
         <div className="partners-grid">
           {filteredPartners.map((item, index) => (
             <div
@@ -67,9 +71,9 @@ export default function PartnersSection() {
                 {item.category === "intl" ? (
                   <Globe size={20} />
                 ) : item.category === "regional" ? (
-                  <ShieldCheck size={20} />
+                  <Globe size={20} />
                 ) : (
-                  <Building size={20} />
+                  <Globe size={20} />
                 )}
               </div>
               <div className="partner-details">
@@ -83,4 +87,3 @@ export default function PartnersSection() {
     </section>
   );
 }
-

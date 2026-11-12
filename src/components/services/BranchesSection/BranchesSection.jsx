@@ -14,10 +14,8 @@ export default function BranchesSection() {
       }`}
     >
       <div className="container">
-        {/* Header */}
         <div className="branches-header">
           <span className="section-tag">
-            <Compass size={15} style={{ verticalAlign: "middle", marginLeft: 6 }} />
             فروعنا ومراكز التدريب
           </span>
           <h2 className="section-title">
@@ -29,7 +27,6 @@ export default function BranchesSection() {
           </p>
         </div>
 
-        {/* 2-Card Branch Grid with Visual Media */}
         <div className="branches-grid">
           {branchesData.map((branch) => (
             <div
@@ -38,7 +35,6 @@ export default function BranchesSection() {
                 branch.isPrimary ? "branch-card--primary" : ""
               }`}
             >
-              {/* Branch Campus Image */}
               <div className="branch-media-box">
                 <img
                   src={branch.image}

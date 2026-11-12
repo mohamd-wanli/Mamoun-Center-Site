@@ -7,8 +7,7 @@ import {
   Award,
 } from "lucide-react";
 import useScrollReveal from "../../../hooks/useScrollReveal";
-import campusImg1 from "../../../assets/images/training-center.png";
-import campusImg2 from "../../../assets/images/aboutStory.jfif";
+import campusImg1 from "../../../assets/images/hr.png";
 import "./ServicesIntro.css";
 
 export default function ServicesIntro() {
@@ -22,11 +21,6 @@ export default function ServicesIntro() {
       <div className="container">
         <div className="services-intro-grid">
           <div className="intro-text-col">
-            <div className="intro-badge">
-              <Sparkles size={16} />
-              <span>حلول تدريبية واستشارية متكاملة</span>
-            </div>
-
             <h2 className="intro-title">
               نلهم العقول ونبني الكفاءات
               <span className="intro-accent"> للأفراد والمؤسسات</span>
@@ -84,19 +78,12 @@ export default function ServicesIntro() {
                 <div className="visual-overlay" />
               </div>
 
-              <div className="visual-frame visual-frame-sub">
+              {/* <div className="visual-frame visual-frame-sub">
                 <img
                   src={campusImg2}
                   alt="قاعات ورش العمل"
                   className="intro-img"
                 />
-              </div>
-
-          
-
-              {/* <div className="intro-floating-pill">
-                <Users size={16} />
-                <span>+25 جهة ومنظمة تثق بنا</span>
               </div> */}
             </div>
           </div>

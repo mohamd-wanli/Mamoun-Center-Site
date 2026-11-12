@@ -35,10 +35,9 @@ export default function ServicesGrid() {
       }`}
     >
       <div className="container">
-        {/* Section Header */}
         <div className="services-section-header">
           <span className="section-tag">
-            <Sparkles size={15} style={{ verticalAlign: "middle", marginLeft: 6 }} />
+            {/* <Sparkles size={15} style={{ verticalAlign: "middle", marginLeft: 6 }} /> */}
             ماذا نقدم في مركز المأمون؟
           </span>
           <h2 className="section-title">
@@ -51,7 +50,6 @@ export default function ServicesGrid() {
           </p>
         </div>
 
-        {/* 3x2 Image-Rich Grid */}
         <div className="services-cards-grid">
           {coreServices.map((service, index) => {
             const Icon = iconMap[service.icon] || Award;
@@ -64,7 +62,6 @@ export default function ServicesGrid() {
                   "--service-accent": service.themeColor || "#d7a637",
                 }}
               >
-                {/* Image Header with Badge */}
                 <div className="service-media-wrap">
                   <img
                     src={service.image}
@@ -76,14 +73,10 @@ export default function ServicesGrid() {
                   <span className="service-tag-badge">{service.tag}</span>
                 </div>
 
-                {/* Overlapping Icon Circle */}
                 <div className="service-icon-anchor">
-                  <div className="service-icon-box">
-                    <Icon size={24} />
-                  </div>
+                  
                 </div>
 
-                {/* Card Content Body */}
                 <div className="service-card-body">
                   <h3 className="service-title">{service.title}</h3>
                   <span className="service-subtitle">{service.subtitle}</span>
@@ -101,7 +94,6 @@ export default function ServicesGrid() {
                     ))}
                   </ul>
 
-                  {/* Card Actions */}
                   <div className="service-card-footer">
                     <Link to="/contact" className="service-action-btn">
                       <span>طلب الخدمة</span>

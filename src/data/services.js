@@ -4,13 +4,18 @@ import aboutStoryImg from "../assets/images/aboutStory.jfif";
 import ctaImg from "../assets/images/cta.jfif";
 import about4Img from "../assets/images/about4.jfif";
 import phoneImg from "../assets/images/phone.jfif";
+import service1 from "../assets/images/service1.jfif";
+import service2 from "../assets/images/service2.jfif";
+import cta2 from "../assets/images/cta2.jfif";
+import te from "../assets/images/te.png";
+import j from "../assets/images/j.png";
 
 export const coreServices = [
   {
     id: "custom-programs",
     icon: "Sliders",
     tag: "برامج مخصصة",
-    themeColor: "#d7a637", // Gold / Amber
+    themeColor: "#d7a637", 
     image: trainingImg2,
     title: "تصميم البرامج التدريبية حسب الطلب",
     subtitle: "Custom Training Programs",
@@ -26,8 +31,8 @@ export const coreServices = [
     id: "hands-on-training",
     icon: "Wrench",
     tag: "تطبيق واقعي 100%",
-    themeColor: "#2563eb", // Royal Blue
-    image: trainingImg1,
+    themeColor: "#2563eb", 
+    image: service1,
     title: "تدريب عملي تطبيقي ومختبرات متقدمة",
     subtitle: "Hands-on Practical Training",
     description: "المركز مجهز بالكامل بأحدث الورش والمعدات والمختبرات الاحترافية اللازمة لتنفيذ البرامج التدريبية المختلفة ومحاكاة بيئة العمل الميدانية الفعلية.",
@@ -59,7 +64,7 @@ export const coreServices = [
     icon: "FileText",
     tag: "محتوى حصري ومحدث",
     themeColor: "#0891b2", // Cyan / Teal
-    image: phoneImg,
+    image: service2,
     title: "محتوى تدريبي متكامل وحقائب احترافية",
     subtitle: "Comprehensive Training Modules",
     description: "ملف تدريبي شامل وموثق يوضع بين يدي كل متدرب، يشمل الدروس العملية، الملاحظات الهندسية والفنية، المخططات، والنماذج التطبيقية الدقيقة.",
@@ -75,7 +80,7 @@ export const coreServices = [
     icon: "Headphones",
     tag: "استشارة مجانية",
     themeColor: "#e11d48", // Crimson Rose
-    image: ctaImg,
+    image: cta2,
     title: "استشارات ما قبل التسجيل والتوجيه المهني",
     subtitle: "Pre-Enrollment Career Guidance",
     description: "نوفر جلسات استشارية فردية مجانية مع نخبة من خبرائنا لمساعدتك على تحديد شغفك واختيار الدورة الأكثر ملاءمة لأهدافك وخبراتك وسوق العمل.",
@@ -112,14 +117,12 @@ export const clientCategories = [
 ];
 
 export const partnersData = [
-  // International Organizations
   { name: "منظمة الهلال الأحمر السوري", category: "intl", tag: "منظمة إنسانية دولية" },
   { name: "المجلس الدنماركي للاجئين (DRC)", category: "intl", tag: "منظمة دولية" },
   { name: "المجلس النرويجي للاجئين (NRC)", category: "intl", tag: "منظمة دولية" },
   { name: "بطريركية الروم الأرثوذكس", category: "intl", tag: "مؤسسة أهلية وتنموية" },
   { name: "راهبات دير الراعي الصالح", category: "intl", tag: "منظمة تنموية" },
 
-  // National Enterprises & Institutions
   { name: "مؤسسة الطيران العربية السورية", category: "national", tag: "قطاع حكومي" },
   { name: "المؤسسة العامة للاتصالات", category: "national", tag: "قطاع الاتصالات" },
   { name: "المؤسسة العربية للإعلان", category: "national", tag: "قطاع الإعلام والإعلان" },
@@ -129,7 +132,6 @@ export const partnersData = [
   { name: "مؤسسة الخط الحديدي الحجازي", category: "national", tag: "قطاع النقل والخدمات" },
   { name: "مجموعة ماس الاقتصادية", category: "national", tag: "قطاع الاستثمار والأعمال" },
 
-  // Regional & Arab Partners
   { name: "وزارة المالية - الـسـودان", category: "regional", tag: "قطاع حكومي" },
   { name: "ديوان الضرائب - الـسـودان", category: "regional", tag: "مؤسسة مالية" },
   { name: "الأمانة العامة لديوان الزكاة - الـسـودان", category: "regional", tag: "هيئة حكومية" },
@@ -149,7 +151,7 @@ export const branchesData = [
     name: "فرع فكتوريا (التدريب التقني)",
     location: "دمشق - فكتوريا - خلف وزارة السياحة",
     specialty: "متخصص في برامج صيانة الأجهزة والتقنيات الحديثة والتدريب الإلكتروني المتطور.",
-    image: trainingImg1,
+    image: te,
     phones: ["0112212226", "0112245987", "0931682500"],
     hours: "من السبت إلى الخميس: 9:00 ص – 8:00 م",
     isPrimary: true,
@@ -159,7 +161,7 @@ export const branchesData = [
     name: "فرع الحلبوني (التدريب الفني والحرفي)",
     location: "دمشق - الحلبوني - مقابل جامع الحلبوني",
     specialty: "متخصص في برامج تصميم الأزياء، الخياطة الراقية، والحلاقة والتجميل الشامل.",
-    image: trainingImg2,
+    image: j,
     phones: ["0112242499", "0112251366", "0966382224"],
     hours: "من السبت إلى الخميس: 9:00 ص – 8:00 م",
     isPrimary: false,
