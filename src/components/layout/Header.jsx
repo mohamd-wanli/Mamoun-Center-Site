@@ -41,13 +41,11 @@ export default function Header() {
           className="brand"
         >
           <span className="brand-mark">
-            {/* <GraduationCap size={32} strokeWidth={1.7} /> */}
             <img src="/mic.png" />
           </span>
           <span className="brand-text">
             <span className="brand-name">مركز المأمون الدولي</span>
 
-            {/* <span className="brand-subtitle">للتدريب والتأهيل</span> */}
           </span>
         </Link>
         <button
