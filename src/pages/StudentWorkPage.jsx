@@ -1,6 +1,5 @@
 import { useState, useMemo } from "react";
 import PageHeader from "../components/common/PageHeader/PageHeader";
-import WorkStats from "../components/studentWork/WorkStats/WorkStats";
 import WorkFilterNav from "../components/studentWork/WorkFilterNav/WorkFilterNav";
 import WorkGalleryGrid from "../components/studentWork/WorkGalleryGrid/WorkGalleryGrid";
 import WorkLightboxModal from "../components/studentWork/WorkLightboxModal/WorkLightboxModal";
@@ -46,14 +45,14 @@ export default function StudentWorkPage() {
       />
 
       <div className="container" style={{ position: "relative" }}>
-
+{/* 
         <WorkFilterNav
           activeCategory={activeCategory}
           setActiveCategory={setActiveCategory}
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
           totalResults={filteredProjects.length}
-        />
+        /> */}
 
         <WorkGalleryGrid
           projects={filteredProjects}
