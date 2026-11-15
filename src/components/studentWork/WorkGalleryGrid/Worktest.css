@@ -1,0 +1,14 @@
+.work-gallery-wrapper {
+  position: relative;
+  padding-top: 55px;
+  padding-bottom: 70px;
+}
+.work-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.project-card{
+    border-radius: 16px;
+    
+}
