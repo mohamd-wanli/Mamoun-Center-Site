@@ -2,8 +2,6 @@ import { useState, useMemo } from "react";
 import PageHeader from "../components/common/PageHeader/PageHeader";
 import WorkGalleryGrid from "../components/studentWork/WorkGalleryGrid/WorkGalleryGrid";
 import WorkLightboxModal from "../components/studentWork/WorkLightboxModal/WorkLightboxModal";
-import SuccessStories from "../components/studentWork/SuccessStories/SuccessStories";
-import ExhibitionBanner from "../components/studentWork/ExhibitionBanner/ExhibitionBanner";
 import CTASection from "../components/home/CTA/CTASection";
 import { studentProjects, workCategories } from "../data/traineesWork";
 
@@ -36,10 +34,6 @@ export default function StudentWorkPage() {
           onSelectProject={(proj) => setSelectedProject(proj)}
         />
       </div>
-
-      <SuccessStories />
-
-      <ExhibitionBanner />
 
       <CTASection />
 

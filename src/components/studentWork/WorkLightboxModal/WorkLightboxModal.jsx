@@ -1,6 +1,14 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { X, User, Calendar, Award, CheckCircle, ArrowLeft, Tag } from "lucide-react";
+import {
+  X,
+  User,
+  Calendar,
+  Award,
+  CheckCircle,
+  ArrowLeft,
+  Tag,
+} from "lucide-react";
 import "./WorkLightboxModal.css";
 
 export default function WorkLightboxModal({ project, onClose }) {
@@ -27,7 +35,6 @@ export default function WorkLightboxModal({ project, onClose }) {
         role="dialog"
         aria-modal="true"
       >
-        {/* Close Button */}
         <button
           className="lightbox-close-btn"
           onClick={onClose}
@@ -37,7 +44,6 @@ export default function WorkLightboxModal({ project, onClose }) {
         </button>
 
         <div className="lightbox-grid">
-          {/* Media Column */}
           <div className="lightbox-media-col">
             <img
               src={project.image}
@@ -45,12 +51,13 @@ export default function WorkLightboxModal({ project, onClose }) {
               className="lightbox-img"
             />
             <div className="lightbox-media-badges">
-              <span className="lightbox-cat-badge">{project.categoryLabel}</span>
+              <span className="lightbox-cat-badge">
+                {project.categoryLabel}
+              </span>
               <span className="lightbox-year-badge">{project.year}</span>
             </div>
           </div>
 
-          {/* Details Column */}
           <div className="lightbox-details-col">
             <div className="lightbox-author-box">
               <div className="lightbox-avatar">
@@ -69,11 +76,13 @@ export default function WorkLightboxModal({ project, onClose }) {
               <p className="desc-text">{project.description}</p>
             </div>
 
-            {/* Techniques */}
             {project.tags && (
               <div className="lightbox-skills-box">
                 <span className="skills-lbl">
-                  <Tag size={14} style={{ verticalAlign: "middle", marginLeft: 4 }} />
+                  <Tag
+                    size={14}
+                    style={{ verticalAlign: "middle", marginLeft: 4 }}
+                  />
                   التقنيات والأدوات المستخدمة:
                 </span>
                 <div className="skills-chips">
@@ -86,7 +95,6 @@ export default function WorkLightboxModal({ project, onClose }) {
               </div>
             )}
 
-            {/* Modal Actions */}
             <div className="lightbox-actions-row">
               <Link
                 to="/courses"
