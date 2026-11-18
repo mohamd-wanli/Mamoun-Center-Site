@@ -12,7 +12,7 @@ const CourseGrid = ({ programs }) => {
           description={program.description}
           linkText={program.linkText}
           path={program.path}
-          style={{ transitionDelay: `${index * 130}ms` }}
+          style={{ "--course-reveal-delay": `${Math.min(index, 4) * 80}ms` }}
         />
       ))}
     </div>

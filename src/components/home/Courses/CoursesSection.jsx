@@ -5,7 +5,7 @@ import CourseGrid from "../../courses/CourseGrid";
 import useScrollReveal from "../../../hooks/useScrollReveal";
 
 export default function CoursesSection() {
-  const [sectionRef, isVisible] = useScrollReveal({ threshold: 0.12 });
+  const [sectionRef, isVisible] = useScrollReveal({ threshold: 0 });
 
   return (
     <section

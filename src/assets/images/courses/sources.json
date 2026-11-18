@@ -1,0 +1,279 @@
+{
+  "license": "https://www.pexels.com/license/",
+  "downloadedOn": "2026-11-18",
+  "images": [
+    {
+      "course": "photography",
+      "file": "photography.jpg",
+      "source": "https://www.pexels.com/photo/person-holding-a-digital-camera-7779230/",
+      "photographer": "Ron Lach",
+      "download": "https://images.pexels.com/photos/7779230/pexels-photo-7779230.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "mens-barbering",
+      "file": "mens-barbering.jpg",
+      "source": "https://www.pexels.com/photo/a-barber-cutting-a-client-s-hair-7518731/",
+      "photographer": "Pavel Danilyuk",
+      "download": "https://images.pexels.com/photos/7518731/pexels-photo-7518731.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "advanced-mens-barbering",
+      "file": "advanced-mens-barbering.jpg",
+      "source": "https://www.pexels.com/photo/a-barber-using-a-razor-blade-12464841/",
+      "photographer": "izzet çakallı",
+      "download": "https://images.pexels.com/photos/12464841/pexels-photo-12464841.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "theoretical-accounting",
+      "file": "theoretical-accounting.jpg",
+      "source": "https://www.pexels.com/photo/financial-analysis-with-calculator-and-documents-33175651/",
+      "photographer": "Bia Limova",
+      "download": "https://images.pexels.com/photos/33175651/pexels-photo-33175651.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "practical-accounting",
+      "file": "practical-accounting.jpg",
+      "source": "https://www.pexels.com/photo/person-using-a-calculator-and-a-laptop-8296991/",
+      "photographer": "Mikhail Nilov",
+      "download": "https://images.pexels.com/photos/8296991/pexels-photo-8296991.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "graphic-design",
+      "file": "graphic-design.jpg",
+      "source": "https://www.pexels.com/photo/digital-design-process-with-tablet-and-stylus-30397433/",
+      "photographer": "Jakub Zerdzicki",
+      "download": "https://images.pexels.com/photos/30397433/pexels-photo-30397433.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "motion-graphic-design",
+      "file": "motion-graphic-design.jpg",
+      "source": "https://www.pexels.com/photo/man-using-editing-tools-on-dual-monitors-29475620/",
+      "photographer": "Sulaiman Khan",
+      "download": "https://images.pexels.com/photos/29475620/pexels-photo-29475620.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "womens-hair-styling",
+      "file": "womens-hair-styling.jpg",
+      "source": "https://www.pexels.com/photo/a-client-having-her-hair-cut-by-the-hair-stylist-8834077/",
+      "photographer": "Kampus Production",
+      "download": "https://images.pexels.com/photos/8834077/pexels-photo-8834077.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "hair-color-techniques",
+      "file": "hair-color-techniques.jpg",
+      "source": "https://www.pexels.com/photo/close-up-of-hair-coloring-process-in-salon-29546551/",
+      "photographer": "Doğan Alpaslan Demir",
+      "download": "https://images.pexels.com/photos/29546551/pexels-photo-29546551.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82&crop=bottom"
+    },
+    {
+      "course": "professional-chignon",
+      "file": "professional-chignon.jpg",
+      "source": "https://www.pexels.com/photo/a-hairstylist-fixing-a-bride-s-hair-11894622/",
+      "photographer": "Ксения",
+      "download": "https://images.pexels.com/photos/11894622/pexels-photo-11894622.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "comprehensive-beauty",
+      "file": "comprehensive-beauty.jpg",
+      "source": "https://www.pexels.com/photo/cheerful-black-woman-applying-cosmetic-product-to-client-6953622/",
+      "photographer": "George Milton",
+      "download": "https://images.pexels.com/photos/6953622/pexels-photo-6953622.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "nail-gel",
+      "file": "nail-gel.jpg",
+      "source": "https://www.pexels.com/photo/a-person-applying-nail-polish-6135686/",
+      "photographer": "Gabriel Puyén",
+      "download": "https://images.pexels.com/photos/6135686/pexels-photo-6135686.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "skin-care",
+      "file": "skin-care.jpg",
+      "source": "https://www.pexels.com/photo/a-woman-having-a-facial-treatment-6663368/",
+      "photographer": "Arina Krasnikova",
+      "download": "https://images.pexels.com/photos/6663368/pexels-photo-6663368.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "specialized-makeup",
+      "file": "specialized-makeup.jpg",
+      "source": "https://www.pexels.com/photo/professional-makeup-application-in-a-studio-setting-32117490/",
+      "photographer": "Paul Espinoza",
+      "download": "https://images.pexels.com/photos/32117490/pexels-photo-32117490.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "lash-extensions",
+      "file": "lash-extensions.jpg",
+      "source": "https://www.pexels.com/photo/close-up-shot-of-a-person-getting-an-eyelash-extensions-5128234/",
+      "photographer": "Nataliya Vaitkevich",
+      "download": "https://images.pexels.com/photos/5128234/pexels-photo-5128234.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "womens-tailoring",
+      "file": "womens-tailoring.jpg",
+      "source": "https://www.pexels.com/photo/woman-checking-a-shirt-7776137/",
+      "photographer": "Ron Lach",
+      "download": "https://images.pexels.com/photos/7776137/pexels-photo-7776137.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "evening-bridal-tailoring",
+      "file": "evening-bridal-tailoring.jpg",
+      "source": "https://www.pexels.com/photo/focused-female-dressmaker-creating-wedding-dress-in-workshop-3984870/",
+      "photographer": "Gustavo Fring",
+      "download": "https://images.pexels.com/photos/3984870/pexels-photo-3984870.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "moulage",
+      "file": "moulage.jpg",
+      "source": "https://www.pexels.com/photo/woman-wrapping-a-tailoring-mannequin-with-a-cloth-8516205/",
+      "photographer": "Yaroslav Shuraev",
+      "download": "https://images.pexels.com/photos/8516205/pexels-photo-8516205.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "haute-couture",
+      "file": "haute-couture.jpg",
+      "source": "https://www.pexels.com/photo/white-dress-with-embroidery-pattern-6045287/",
+      "photographer": "Skylar Kang",
+      "download": "https://images.pexels.com/photos/6045287/pexels-photo-6045287.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "fashion-illustration",
+      "file": "fashion-illustration.jpg",
+      "source": "https://www.pexels.com/photo/unrecognizable-woman-drawing-sketch-of-cloth-7147480/",
+      "photographer": "Michael Burrows",
+      "download": "https://images.pexels.com/photos/7147480/pexels-photo-7147480.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "mens-tailoring",
+      "file": "mens-tailoring.jpg",
+      "source": "https://www.pexels.com/photo/a-man-doing-tailoring-6765062/",
+      "photographer": "Tima Miroshnichenko",
+      "download": "https://images.pexels.com/photos/6765062/pexels-photo-6765062.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "childrens-tailoring",
+      "file": "childrens-tailoring.jpg",
+      "source": "https://www.pexels.com/photo/cozy-children-s-clothing-on-wooden-rack-28259747/",
+      "photographer": "Ruxanda Scutelnic",
+      "download": "https://images.pexels.com/photos/28259747/pexels-photo-28259747.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "fashion-sewing",
+      "file": "fashion-sewing.jpg",
+      "source": "https://www.pexels.com/photo/dressmaker-with-her-mannequin-3984854/",
+      "photographer": "Gustavo Fring",
+      "download": "https://images.pexels.com/photos/3984854/pexels-photo-3984854.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "sewing-stitching",
+      "file": "sewing-stitching.jpg",
+      "source": "https://www.pexels.com/photo/sewing-machine-in-close-up-photography-11019761/",
+      "photographer": "Neil Yonamine",
+      "download": "https://images.pexels.com/photos/11019761/pexels-photo-11019761.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "administrative-leadership",
+      "file": "administrative-leadership.jpg",
+      "source": "https://www.pexels.com/photo/business-partners-having-a-meeting-at-the-office-7433898/",
+      "photographer": "Vlada Karpovich",
+      "download": "https://images.pexels.com/photos/7433898/pexels-photo-7433898.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "human-resources",
+      "file": "human-resources.jpg",
+      "source": "https://www.pexels.com/photo/candidate-having-an-interview-5439143/",
+      "photographer": "Tima Miroshnichenko",
+      "download": "https://images.pexels.com/photos/5439143/pexels-photo-5439143.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "solar-energy-systems",
+      "file": "solar-energy-systems.jpg",
+      "source": "https://www.pexels.com/photo/solar-technician-installing-solar-panel-8853502/",
+      "photographer": "Los Muertos Crew",
+      "download": "https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "surveillance-systems",
+      "file": "surveillance-systems.jpg",
+      "source": "https://www.pexels.com/photo/a-close-up-shot-of-a-security-camera-9942069/",
+      "photographer": "Brett Jordan",
+      "download": "https://images.pexels.com/photos/9942069/pexels-photo-9942069.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "autotronics",
+      "file": "autotronics.jpg",
+      "source": "https://www.pexels.com/photo/man-industry-car-vehicle-8985448/",
+      "photographer": "Artem Podrez",
+      "download": "https://images.pexels.com/photos/8985448/pexels-photo-8985448.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "icdl",
+      "file": "icdl.jpg",
+      "source": "https://www.pexels.com/photo/a-man-working-in-his-office-9301399/",
+      "photographer": "Mikhail Nilov",
+      "download": "https://images.pexels.com/photos/9301399/pexels-photo-9301399.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "ccna-network-administration",
+      "file": "ccna-network-administration.jpg",
+      "source": "https://www.pexels.com/photo/close-up-photo-of-ethernet-cables-on-network-switch-6466143/",
+      "photographer": "Sergei Starostin",
+      "download": "https://images.pexels.com/photos/6466143/pexels-photo-6466143.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "html-css-javascript",
+      "file": "html-css-javascript.jpg",
+      "source": "https://www.pexels.com/photo/lines-of-code-2653362/",
+      "photographer": "Harold Vasquez",
+      "download": "https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "php-mysql",
+      "file": "php-mysql.jpg",
+      "source": "https://www.pexels.com/photo/php-screengrab-270348/",
+      "photographer": "Pixabay",
+      "download": "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "laravel",
+      "file": "laravel.jpg",
+      "source": "https://www.pexels.com/photo/computer-c-code-276452/",
+      "photographer": "Pixabay",
+      "download": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "flutter",
+      "file": "flutter.jpg",
+      "source": "https://www.pexels.com/photo/a-close-up-shot-of-a-smartphone-with-an-open-app-12605419/",
+      "photographer": "Egor Komarov",
+      "download": "https://images.pexels.com/photos/12605419/pexels-photo-12605419.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "cybersecurity",
+      "file": "cybersecurity.jpg",
+      "source": "https://www.pexels.com/photo/person-using-computer-5380603/",
+      "photographer": "Tima Miroshnichenko",
+      "download": "https://images.pexels.com/photos/5380603/pexels-photo-5380603.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "windows-server",
+      "file": "windows-server.jpg",
+      "source": "https://www.pexels.com/photo/server-racks-on-data-center-4508751/",
+      "photographer": "Brett Sayles",
+      "download": "https://images.pexels.com/photos/4508751/pexels-photo-4508751.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "autocad",
+      "file": "autocad.jpg",
+      "source": "https://www.pexels.com/photo/closeup-of-a-man-drawing-a-floor-plan-11269740/",
+      "photographer": "Pilan Filmes",
+      "download": "https://images.pexels.com/photos/11269740/pexels-photo-11269740.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    },
+    {
+      "course": "3ds-max",
+      "file": "3ds-max.jpg",
+      "source": "https://www.pexels.com/photo/3d-modern-interior-design-in-minimalist-style-36444551/",
+      "photographer": "Mahmoud Ramadan",
+      "download": "https://images.pexels.com/photos/36444551/pexels-photo-36444551.jpeg?auto=compress&cs=tinysrgb&fm=jpg&fit=crop&w=1200&h=800&q=82"
+    }
+  ]
+}

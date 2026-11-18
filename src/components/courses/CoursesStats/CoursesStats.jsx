@@ -1,4 +1,4 @@
-import { GraduationCap, Wrench, Award, Briefcase } from "lucide-react";
+import { GraduationCap, Wrench, Award } from "lucide-react";
 import "./CoursesStats.css";
 
 const stats = [
@@ -19,12 +19,6 @@ const stats = [
     value: "+60",
     label: "عاماً من الاعتماد والريادة",
     subtext: "شهادات موثقة تفتح لك سوق العمل",
-  },
-  {
-    icon: Briefcase,
-    value: "94%",
-    label: "نسبة توظيف الخريجين",
-    subtext: "إرشاد وتوجيه مهني مستمر",
   },
 ];
 
