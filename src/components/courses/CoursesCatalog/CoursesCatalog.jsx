@@ -79,8 +79,8 @@ export default function CoursesCatalog({ programs, onQuickView }) {
 
               <div className="program-meta-chips">
                 <div className="meta-chip">
-                  <Clock size={14} className="chip-icon" />
-                  <span>{program.duration}</span>
+                  {/* <Clock size={14} className="chip-icon" />
+                  <span>{program.duration}</span> */}
                 </div>
                 <div className="meta-chip">
                   <Layers size={14} className="chip-icon" />
