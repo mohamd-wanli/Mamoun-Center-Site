@@ -4,6 +4,8 @@ import AboutSection from "../components/home/About/AboutSection";
 import CoursesSection from "../components/home/Courses/CoursesSection";
 import StatsSection from "../components/home/Stats/StatsSection";
 import CTASection from "../components/home/CTA/CTASection";
+import HomeHighlights from "../components/home/Highlights/HomeHighlights";
+import MotivationBanner from "../components/home/Motivation/MotivationBanner";
 
 export default function HomePage() {
   return (
@@ -11,8 +13,10 @@ export default function HomePage() {
       <HeroSection />
       <BenefitsBar />
       <AboutSection />
+      <MotivationBanner />
       <CoursesSection />
       <StatsSection />
+      <HomeHighlights />
       <CTASection />
     </>
   );

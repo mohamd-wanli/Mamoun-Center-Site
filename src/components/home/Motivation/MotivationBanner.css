@@ -1,0 +1,39 @@
+.motivation-banner {
+  padding-block: 28px;
+  background:
+    radial-gradient(ellipse at top left, rgba(215, 166, 55, 0.16), transparent 65%),
+    linear-gradient(110deg, #132e53, var(--color-primary, #0b2145));
+  border-block: 1px solid rgba(215, 166, 55, 0.3);
+  color: #fff;
+}
+
+.motivation-banner__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.motivation-banner__icon {
+  flex-shrink: 0;
+  color: #f0c359;
+}
+
+.motivation-banner p {
+  margin: 0;
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.8;
+  text-wrap: balance;
+}
+
+.motivation-banner strong {
+  color: #f0c359;
+  font-weight: 800;
+}
+
+@media (max-width: 540px) {
+  .motivation-banner { padding-block: 22px; }
+  .motivation-banner__content { flex-direction: column; gap: 8px; }
+}

@@ -1,7 +1,6 @@
 .hero {
   position: relative;
-  min-height: calc(100vh - 10px);
-  max-height: 720px;
+  min-height: clamp(460px, 70vh, 600px);
   padding-top: 32px;
   padding-bottom: 48px;
   display: flex;
