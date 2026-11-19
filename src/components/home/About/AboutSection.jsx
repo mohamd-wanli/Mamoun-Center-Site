@@ -1,16 +1,14 @@
 import {
-  Award,
   Users,
   Trophy,
   GraduationCap,
-  Heart,
   Globe,
   ArrowLeft,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import "./AboutSection.css";
-import campusImg from "../../../assets/images/about4.jfif";
 import useScrollReveal from "../../../hooks/useScrollReveal";
+import center from "../../../assets/images/center.png";
 
 export default function AboutSection() {
   const [sectionRef, isVisible] = useScrollReveal({ threshold: 0.1 });
@@ -21,7 +19,6 @@ export default function AboutSection() {
       ref={sectionRef}
     >
       <div className="container about-grid">
-        {/* Left Column: Text & Stats */}
         <div className="about-content">
           <span className="section-tag">من نحن </span>
           <h2 className="section-title">
@@ -75,17 +72,15 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Center Column: Campus Image */}
         <div className="about-image-wrap">
           <img
-            src={campusImg}
+            src={center}
             alt="حرم مركز المأمون الدولي"
             className="about-image"
           />
         </div>
 
-        {/* Right Column: Stat Cards Stack */}
-        <div className="about-cards-stack">
+        {/* <div className="about-cards-stack">
           <div className="metric-card" style={{ transitionDelay: "0.2s" }}>
             <div className="metric-card-icon">
               <GraduationCap size={28} />
@@ -115,7 +110,7 @@ export default function AboutSection() {
               <p>شراكة واعتماد دولي</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -10,7 +10,6 @@
   align-items: center;
 }
 
-/* ---- Scroll-reveal animations ---- */
 
 .about-content {
   opacity: 0;
@@ -25,7 +24,7 @@
 }
 
 .about-image-wrap {
-  width: 100%;
+  width: 200%;
   height: 380px;
   border-radius: 20px;
   overflow: hidden;
@@ -79,7 +78,6 @@
   border-color: rgba(215, 166, 55, 0.35);
 }
 
-/* ---- Section shared styles ---- */
 
 .section-tag {
   display: inline-block;
@@ -127,7 +125,6 @@
   transition: all 0.25s ease;
 }
 
-/* Shimmer on about button */
 .about-btn::before {
   content: "";
   position: absolute;
@@ -265,7 +262,6 @@
   color: var(--color-muted, #687385);
 }
 
-/* ---- Responsive ---- */
 
 @media (max-width: 1024px) {
   .about-grid {
