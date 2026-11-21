@@ -7,7 +7,7 @@ export const studentOpinions = [
   { id: 4, name: "تجربة توضيحية", course: "إدارة الأعمال", quote: "الأمثلة والنقاشات العملية جعلت المفاهيم أسهل، وساعدتني على التفكير بطريقة أكثر تنظيماً في بيئة العمل.", sample: true },
 ];
 
-// News entries: { id, title, summary, date: "YYYY-MM-DD", path }.
+// Published news entries: { id, title, summary, date: "YYYY-MM-DD", path?, image?, imageAlt?, category?, featured? }.
 export const centerNews = [];
 
 export const centerAwards = [

@@ -12,14 +12,6 @@
 .home-opinion-card figcaption span { display: block; margin-top: 4px; color: #64748b; font-weight: 400; }
 .home-content-placeholder { color: #64748b; }
 .home-sample-note { color: #64748b; font-size: .875rem; margin: 8px 0 0; }
-.home-news { padding: 28px 20px; border-bottom: 1px solid #e4e9f0; }
-.home-news-layout { display: grid; grid-template-columns: 1fr 3fr; align-items: center; gap: 32px; }
-.home-news .home-compact-heading { margin-bottom: 0; }
-.home-news-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
-.home-news-item { border-inline-start: 3px solid #d7a637; padding-inline-start: 20px; }
-.home-news-item h3 { margin: 0 0 8px; font-size: 1rem; }
-.home-news-item p { margin: 0; font-size: 1rem; line-height: 1.7; }
-.home-news-item time { display: block; margin-bottom: 6px; color: #64748b; font-size: .875rem; }
 .home-awards-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
 .home-award-card { margin: 0; text-align: center; min-width: 0; }
 /* The original caption is preserved in the asset; readable text is repeated below. */
@@ -33,7 +25,6 @@
 }
 @media (max-width: 600px) {
   .home-opinions, .home-awards { padding: 30px 16px; }
-  .home-news-layout { grid-template-columns: 1fr; gap: 20px; }
   .home-opinions-grid { grid-template-columns: 1fr; gap: 12px; }
   .home-opinion-card { padding: 16px; }
   .home-awards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }

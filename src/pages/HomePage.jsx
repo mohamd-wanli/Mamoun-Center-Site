@@ -1,3 +1,4 @@
+import NewsSection from "../components/home/News/NewsSection";
 import HeroSection from "../components/home/Hero/HeroSection";
 import BenefitsBar from "../components/home/BenefitsBar/BenefitsBar";
 import AboutSection from "../components/home/About/AboutSection";
@@ -15,6 +16,7 @@ export default function HomePage() {
       <AboutSection />
       <MotivationBanner />
       <CoursesSection />
+      <NewsSection />
       <StatsSection />
       <HomeHighlights />
       <CTASection />

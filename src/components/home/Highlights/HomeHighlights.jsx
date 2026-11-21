@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
-import { Quote, Newspaper, Trophy } from "lucide-react";
-import { studentOpinions, centerNews, centerAwards } from "../../../data/homeHighlights";
+import { Quote, Trophy } from "lucide-react";
+import { studentOpinions, centerAwards } from "../../../data/homeHighlights";
 import "./HomeHighlights.css";
 
 export default function HomeHighlights() {
@@ -21,24 +20,6 @@ export default function HomeHighlights() {
                 <figcaption>{opinion.name || "بانتظار إضافة رأي الطالب"}{opinion.course && <span>{opinion.course}</span>}</figcaption>
               </figure>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="home-news" aria-labelledby="home-news-title">
-        <div className="container home-news-layout">
-          <header className="home-compact-heading">
-            <span><Newspaper size={20} aria-hidden="true" /> من داخل المركز</span>
-            <h2 id="home-news-title">آخر الأخبار</h2>
-          </header>
-          <div className="home-news-list">
-            {centerNews.length ? centerNews.slice(0, 2).map((news) => (
-              <article className="home-news-item" key={news.id}>
-                {news.date && <time dateTime={news.date}>{new Date(`${news.date}T12:00:00`).toLocaleDateString("ar-SY")}</time>}
-                <h3>{news.path ? <Link to={news.path}>{news.title}</Link> : news.title}</h3>
-                <p>{news.summary}</p>
-              </article>
-            )) : <div className="home-news-item"><h3>أخبار المركز وفعالياته</h3><p className="home-content-placeholder">سيتم نشر آخر أخبار المركز هنا عند توفرها.</p></div>}
           </div>
         </div>
       </section>
