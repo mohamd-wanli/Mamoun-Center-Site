@@ -1,6 +1,6 @@
 import Preferences from "./Preferences";
 import { t } from "../../i18n/index.js";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, NavLink } from "../../i18n/navigation.jsx";
 import { useState, useEffect } from "react";
 
@@ -47,20 +47,9 @@ export default function Header() {
           </span>
           <span className="brand-text">
             <span className="brand-name"> {t("مركز المأمون الدولي")} </span>
-
           </span>
         </Link>
-        <Preferences />
-        <button
-          type="button"
-          className="mobile-menu-button"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label={isMenuOpen ? t("إغلاق القائمة") : t("فتح القائمة")}
-          aria-expanded={isMenuOpen}
-          aria-controls="main-navigation"
-        >
-          {isMenuOpen ? <X size={25} /> : <Menu size={25} />}
-        </button>
+
         <nav
           id="main-navigation"
           className={`main-nav ${isMenuOpen ? "main-nav--open" : ""}`}
@@ -79,16 +68,31 @@ export default function Header() {
                 style={{ animationDelay: `${i * 60}ms` }}
               >
                 <span> {link.label}</span>
-                {/* {link.hasDropdown && (
-                  <ChevronDown size={14} className="main-nav-chevron" />
-                )} */}
               </NavLink>
             ))}
           </div>
 
-          <Link to="/courses" className="header-cta" onClick={closeMenu}>
-             {t("استكشف الدورات")} </Link>
+          <Link to="/courses" className="header-cta header-cta--mobile" onClick={closeMenu}>
+            {t("استكشف الدورات")}
+          </Link>
         </nav>
+
+        <div className="header-actions">
+          <Preferences />
+          <Link to="/courses" className="header-cta header-cta--desktop" onClick={closeMenu}>
+            {t("استكشف الدورات")}
+          </Link>
+          <button
+            type="button"
+            className="mobile-menu-button"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? t("إغلاق القائمة") : t("فتح القائمة")}
+            aria-expanded={isMenuOpen}
+            aria-controls="main-navigation"
+          >
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
     </header>
   );

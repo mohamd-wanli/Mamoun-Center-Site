@@ -34,10 +34,10 @@ export default function Preferences() {
         href={localizedPath(location.pathname, nextLanguage) + location.search + location.hash}
         onClick={() => { try { localStorage.setItem("mic-language", nextLanguage); } catch { /* Optional. */ } }}
         aria-label={language === "ar" ? "Switch to English" : "التبديل إلى العربية"}>
-        <Globe size={17} aria-hidden="true" /><span>{nextLanguage === "en" ? "English" : "العربية"}</span>
+        <Globe size={14} aria-hidden="true" /><span>{nextLanguage === "en" ? "English" : "العربية"}</span>
       </a>
       <label className="theme-control">
-        <ThemeIcon size={17} aria-hidden="true" />
+        <ThemeIcon size={14} aria-hidden="true" />
         <span className="sr-only">{language === "en" ? "Color theme" : "مظهر الموقع"}</span>
         <select value={theme} onChange={(event) => setTheme(event.target.value)}>
           <option value="system">{language === "en" ? "System" : "النظام"}</option>
