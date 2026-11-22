@@ -40,7 +40,7 @@ export default function Preferences() {
         <ThemeIcon size={14} aria-hidden="true" />
         <span className="sr-only">{language === "en" ? "Color theme" : "مظهر الموقع"}</span>
         <select value={theme} onChange={(event) => setTheme(event.target.value)}>
-          <option value="system">{language === "en" ? "System" : "النظام"}</option>
+          {/* <option value="system">{language === "en" ? "System" : "النظام"}</option> */}
           <option value="light">{language === "en" ? "Light" : "فاتح"}</option>
           <option value="dark">{language === "en" ? "Dark" : "داكن"}</option>
         </select>
