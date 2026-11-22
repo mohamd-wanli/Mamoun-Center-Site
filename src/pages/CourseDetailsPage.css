@@ -282,7 +282,7 @@
 .sidebar-cert-badge {
   position: absolute;
   bottom: 12px;
-  right: 14px;
+  inset-inline-start: 14px;
   background: rgba(11, 33, 69, 0.85);
   backdrop-filter: blur(6px);
   color: #ffffff;

@@ -209,7 +209,7 @@
 .intro-floating-pill {
   position: absolute;
   bottom: 15px;
-  right: 15px;
+  inset-inline-start: 15px;
   background: rgba(var(--surface-rgb), 0.95);
   backdrop-filter: blur(8px);
   color: var(--text-heading);

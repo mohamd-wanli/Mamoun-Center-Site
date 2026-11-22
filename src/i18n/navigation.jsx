@@ -1,14 +1,12 @@
 import { forwardRef } from "react";
 import { Link as RouterLink, NavLink as RouterNavLink, Navigate as RouterNavigate } from "react-router-dom";
 import { language } from "./index";
+import { localizedPath as pathForLanguage } from "./paths";
 
 export * from "react-router-dom";
 
 export function localizedPath(to, lang = language) {
-  if (typeof to === "object" && to !== null) return { ...to, pathname: localizedPath(to.pathname, lang) };
-  if (typeof to !== "string" || !to.startsWith("/") || to.startsWith("//")) return to;
-  const path = to.replace(/^\/en(?=\/|$|[?#])/, "") || "/";
-  return lang === "en" ? `/en${path}` : path;
+  return pathForLanguage(to, lang);
 }
 
 export const Link = forwardRef(function Link({ to, ...props }, ref) {

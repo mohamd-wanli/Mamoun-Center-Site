@@ -53,7 +53,7 @@
 .apple-modal-close {
   position: absolute;
   top: 18px;
-  left: 18px;
+  inset-inline-end: 18px;
   z-index: 10;
   width: 36px;
   height: 36px;

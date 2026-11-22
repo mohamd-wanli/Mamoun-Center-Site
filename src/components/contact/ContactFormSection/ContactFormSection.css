@@ -126,7 +126,7 @@
 
 .input-icon {
   position: absolute;
-  right: 14px;
+  inset-inline-start: 14px;
   color: var(--text-muted);
   pointer-events: none;
   transition: color 0.25s ease;

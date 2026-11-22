@@ -25,7 +25,7 @@
 
 .courses-search-box .search-icon {
   position: absolute;
-  right: 16px;
+  inset-inline-start: 16px;
   color: var(--text-muted);
   pointer-events: none;
 }
@@ -51,7 +51,7 @@
 
 .clear-search-btn {
   position: absolute;
-  left: 14px;
+  inset-inline-end: 14px;
   background: transparent;
   border: none;
   color: var(--text-muted);

@@ -83,7 +83,7 @@
 .branch-overlay-badge {
   position: absolute;
   bottom: 14px;
-  right: 16px;
+  inset-inline-start: 16px;
   color: #ffffff;
   font-weight: 800;
   font-size: 1.05rem;
@@ -99,7 +99,7 @@
 .primary-pill {
   position: absolute;
   top: 14px;
-  left: 14px;
+  inset-inline-end: 14px;
   font-size: 0.74rem;
   font-weight: 800;
   background: var(--color-accent, #d7a637);
