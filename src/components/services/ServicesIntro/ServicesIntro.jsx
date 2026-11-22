@@ -1,3 +1,4 @@
+import { t } from "../../../i18n/index.js";
 import {
   Sparkles,
   CheckCircle2,
@@ -22,17 +23,11 @@ export default function ServicesIntro() {
         <div className="services-intro-grid">
           <div className="intro-text-col">
             <h2 className="intro-title">
-              نلهم العقول ونبني الكفاءات
-              <span className="intro-accent"> للأفراد والمؤسسات</span>
+               {t("نلهم العقول ونبني الكفاءات")} <span className="intro-accent">  {t("للأفراد والمؤسسات")} </span>
             </h2>
 
             <p className="intro-desc">
-              في مركز المأمون الدولي، لا نكتفي بتقديم الدورات التعليمية
-              التقليدية، بل نوفر منظومة خدمات متطورة تشمل تصميم المناهج حسب
-              الطلب، تدريب فرق العمل المؤسسية، والاستشارات المهنية المجانية،
-              مدعومة بأحدث الورش التدريبية وشهادات معتمدة توثق تميزك في سوق
-              العمل.
-            </p>
+               {t("في مركز المأمون الدولي، لا نكتفي بتقديم الدورات التعليمية التقليدية، بل نوفر منظومة خدمات متطورة تشمل تصميم المناهج حسب الطلب، تدريب فرق العمل المؤسسية، والاستشارات المهنية المجانية، مدعومة بأحدث الورش التدريبية وشهادات معتمدة توثق تميزك في سوق العمل.")} </p>
 
             <div className="intro-highlights-grid">
               <div className="intro-highlight-item">
@@ -40,8 +35,8 @@ export default function ServicesIntro() {
                   <CheckCircle2 size={18} />
                 </div>
                 <div>
-                  <strong>مرونة كاملة في التصميم</strong>
-                  <p>تفصيل البرامج والمناهج وفق احتياجات المتدرب أو الشركة.</p>
+                  <strong> {t("مرونة كاملة في التصميم")} </strong>
+                  <p> {t("تفصيل البرامج والمناهج وفق احتياجات المتدرب أو الشركة.")} </p>
                 </div>
               </div>
 
@@ -50,8 +45,8 @@ export default function ServicesIntro() {
                   <ShieldCheck size={18} />
                 </div>
                 <div>
-                  <strong>اعتمادات رسمية ودولية</strong>
-                  <p>شهادات معترف بها تفتح لك آفاق التوظيف والعمل المباشر.</p>
+                  <strong> {t("اعتمادات رسمية ودولية")} </strong>
+                  <p> {t("شهادات معترف بها تفتح لك آفاق التوظيف والعمل المباشر.")} </p>
                 </div>
               </div>
 
@@ -60,8 +55,8 @@ export default function ServicesIntro() {
                   <Zap size={18} />
                 </div>
                 <div>
-                  <strong>تجهيز عملي تطبيقي 100%</strong>
-                  <p>مختبرات وقاعات مجهزة بأحدث المعدات والأجهزة الاحترافية.</p>
+                  <strong> {t("تجهيز عملي تطبيقي 100%")} </strong>
+                  <p> {t("مختبرات وقاعات مجهزة بأحدث المعدات والأجهزة الاحترافية.")} </p>
                 </div>
               </div>
             </div>
@@ -72,7 +67,7 @@ export default function ServicesIntro() {
               <div className="visual-frame visual-frame-main">
                 <img
                   src={campusImg1}
-                  alt="بيئة التدريب في مركز المأمون"
+                  alt={t("بيئة التدريب في مركز المأمون")}
                   className="intro-img"
                 />
                 <div className="visual-overlay" />

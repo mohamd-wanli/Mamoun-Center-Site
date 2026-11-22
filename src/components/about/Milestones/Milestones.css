@@ -1,7 +1,7 @@
 .milestones-section {
-  background: var(--color-surface, #f7f8fa);
+  background: var(--color-surface, var(--surface-soft));
   position: relative;
-  direction: rtl;
+  direction: inherit;
   overflow: hidden;
 }
 
@@ -13,7 +13,7 @@
 
 .milestones-subtitle {
   font-size: 0.98rem;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   line-height: 1.8;
   margin: 0;
 }
@@ -50,14 +50,14 @@
 }
 
 .timeline-item-right {
-  margin-right: auto;
-  padding-left: 45px;
+  margin-inline-start: auto;
+  padding-inline-end: 45px;
   transform: translateX(30px);
 }
 
 .timeline-item-left {
-  margin-left: auto;
-  padding-right: 45px;
+  margin-inline-end: auto;
+  padding-inline-start: 45px;
   justify-content: flex-end;
   transform: translateX(-30px);
 }
@@ -74,8 +74,8 @@
   height: 34px;
   border-radius: 50%;
   background: var(--color-primary, #0b2145);
-  color: var(--color-accent, #d7a637);
-  border: 3px solid #ffffff;
+  color: var(--color-accent, var(--text-accent));
+  border: 3px solid var(--border-default);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,14 +95,14 @@
 .timeline-item:hover .timeline-dot {
   transform: scale(1.15);
   background: var(--color-accent, #d7a637);
-  color: var(--color-primary, #0b2145);
+  color: #0b2145;
 }
 
 .timeline-card {
-  background: #ffffff;
+  background: var(--surface-card);
   border-radius: var(--radius-card, 14px);
   padding: 24px 26px;
-  border: 1px solid #edf0f5;
+  border: 1px solid var(--border-default);
   box-shadow: 0 8px 22px rgba(11, 33, 69, 0.05);
   width: 100%;
   transition: all 0.3s ease;
@@ -123,7 +123,7 @@
   display: inline-flex;
   align-items: center;
   background: rgba(215, 166, 55, 0.12);
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   font-weight: 800;
   font-size: 0.85rem;
   padding: 4px 12px;
@@ -134,13 +134,13 @@
 .timeline-title {
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   margin: 0 0 10px;
 }
 
 .timeline-desc {
   font-size: 0.88rem;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   line-height: 1.7;
   margin: 0;
 }
@@ -154,10 +154,10 @@
 
   .timeline-item {
     width: 100%;
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-    padding-right: 55px !important;
-    padding-left: 0 !important;
+    margin-inline-start: 0 !important;
+    margin-inline-end: 0 !important;
+    padding-inline-start: 55px !important;
+    padding-inline-end: 0 !important;
     transform: translateX(-20px) !important;
   }
 

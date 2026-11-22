@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { t } from "../../../i18n/index.js";
+import { Link } from "../../../i18n/navigation.jsx";
 import { Play, Award, ArrowLeft, Sparkles, CheckCircle2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import "./HeroSection.css";
@@ -18,7 +19,7 @@ export default function HeroSection() {
       <div className="hero__visual" aria-hidden="true">
         <img
           src={hero}
-          alt="مركز المأمون الدولي للتدريب والتأهيل"
+          alt={t("مركز المأمون الدولي للتدريب والتأهيل")}
           className="hero__visual-img"
         />
         <div className="hero__overlay-scrim" />
@@ -44,31 +45,26 @@ export default function HeroSection() {
           <div className="hero-title-reveal">
             <h1>
               <span className="hero-title-line hero-title-line--1">
-                نُلهم العقول،
-              </span>
+                 {t("نُلهم العقول،")} </span>
               <br />
               <span className="hero-title-line hero-title-line--2 hero-title-gradient">
-                نصنع المستقبل.
-              </span>
+                 {t("نصنع المستقبل.")} </span>
             </h1>
           </div>
 
           <p className="hero-description">
-            بيئة تدريبية رائدة تجمع بين التقنيات المتطورة والخبرة العملية
-            العريقة، لنُمكّنك من اكتساب المهارات الاحترافية وصناعة مستقبلك في
-            سوق العمل بثقة واقتدار.
-          </p>
+             {t("بيئة تدريبية رائدة تجمع بين التقنيات المتطورة والخبرة العملية العريقة، لنُمكّنك من اكتساب المهارات الاحترافية وصناعة مستقبلك في سوق العمل بثقة واقتدار.")} </p>
 
           <div className="hero-actions">
             <Link to="/courses" className="button button-primary">
-              <span>اكتشف برامجنا التدريبية</span>
+              <span> {t("اكتشف برامجنا التدريبية")} </span>
               <ArrowLeft size={16} strokeWidth={2.4} />
             </Link>
             <Link to="/contact" className="button button-glass">
               <span className="button-icon-play">
                 <Play size={14} fill="currentColor" />
               </span>
-              <span>تواصل معنا</span>
+              <span> {t("تواصل معنا")} </span>
             </Link>
           </div>
 
@@ -76,15 +72,15 @@ export default function HeroSection() {
           <div className="hero-highlights">
             <div className="hero-highlight-item">
               <CheckCircle2 size={15} className="hero-highlight-icon" />
-              <span>شهادات معتمدة دولياً</span>
+              <span> {t("شهادات معتمدة دولياً")} </span>
             </div>
             <div className="hero-highlight-item">
               <CheckCircle2 size={15} className="hero-highlight-icon" />
-              <span>مدربون وخبراء معتمدون</span>
+              <span> {t("مدربون وخبراء معتمدون")} </span>
             </div>
             <div className="hero-highlight-item">
               <CheckCircle2 size={15} className="hero-highlight-icon" />
-              <span>تطبيق عملي 100%</span>
+              <span> {t("تطبيق عملي 100%")} </span>
             </div>
           </div>
         </div>
@@ -95,8 +91,8 @@ export default function HeroSection() {
               <Award size={26} strokeWidth={2} />
             </span>
             <span className="hero-badge-text">
-              <strong>إرث من التميز والريادة</strong>
-              <small>أكثر من 60 عاماً من بناء الكفاءات</small>
+              <strong> {t("إرث من التميز والريادة")} </strong>
+              <small> {t("أكثر من 60 عاماً من بناء الكفاءات")} </small>
             </span>
           </div>
         </div>

@@ -1,5 +1,6 @@
+import { t } from "../i18n/index.js";
 import { useState } from "react";
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useParams, Link, Navigate } from "../i18n/navigation.jsx";
 import {
   Clock,
   Award,
@@ -57,11 +58,11 @@ export default function CourseDetailsPage() {
     <div className="course-details-page">
       {/* Dynamic Header */}
       <PageHeader
-        tag={`برنامج تدريبي معتمد • ${program.categoryLabel}`}
+        tag={t("برنامج تدريبي معتمد • {{value0}}", { value0: program.categoryLabel })}
         title={program.title}
         subtitle={program.subtitle}
         breadcrumbs={[
-          { label: "الدورات والبرامج", path: "/courses" },
+          { label: t("الدورات والبرامج"), path: "/courses" },
           { label: program.title },
         ]}
       />
@@ -74,8 +75,7 @@ export default function CourseDetailsPage() {
             <div className="details-card">
               <h2 className="details-section-title">
                 <Sparkles size={20} className="title-icon" />
-                نظرة عامة عن البرنامج
-              </h2>
+                 {t("نظرة عامة عن البرنامج")} </h2>
               <p className="details-overview-text">{program.description}</p>
 
               {/* Fast Feature Chips */}
@@ -83,7 +83,7 @@ export default function CourseDetailsPage() {
                 <div className="details-chip">
                   <Clock size={16} className="chip-ico" />
                   <div>
-                    <span className="chip-lbl">المدة التدريبية</span>
+                    <span className="chip-lbl"> {t("المدة التدريبية")} </span>
                     <strong>{program.duration}</strong>
                   </div>
                 </div>
@@ -91,7 +91,7 @@ export default function CourseDetailsPage() {
                 <div className="details-chip">
                   <Layers size={16} className="chip-ico" />
                   <div>
-                    <span className="chip-lbl">الساعات المعتمدة</span>
+                    <span className="chip-lbl"> {t("الساعات المعتمدة")} </span>
                     <strong>{program.hours}</strong>
                   </div>
                 </div>
@@ -99,7 +99,7 @@ export default function CourseDetailsPage() {
                 <div className="details-chip">
                   <Award size={16} className="chip-ico" />
                   <div>
-                    <span className="chip-lbl">طبيعة التدريب</span>
+                    <span className="chip-lbl"> {t("طبيعة التدريب")} </span>
                     <strong>{program.practicalPercentage}</strong>
                   </div>
                 </div>
@@ -107,7 +107,7 @@ export default function CourseDetailsPage() {
                 <div className="details-chip">
                   <Users size={16} className="chip-ico" />
                   <div>
-                    <span className="chip-lbl">المستوى</span>
+                    <span className="chip-lbl"> {t("المستوى")} </span>
                     <strong>{program.level}</strong>
                   </div>
                 </div>
@@ -119,8 +119,7 @@ export default function CourseDetailsPage() {
               <div className="details-card">
                 <h2 className="details-section-title">
                   <CheckCircle2 size={20} className="title-icon" />
-                  ماذا ستكتسب وتتقن في هذه الدورة؟
-                </h2>
+                   {t("ماذا ستكتسب وتتقن في هذه الدورة؟")} </h2>
                 <div className="details-learn-grid">
                   {program.highlights.map((h, i) => (
                     <div key={i} className="learn-item">
@@ -139,12 +138,9 @@ export default function CourseDetailsPage() {
               <div className="details-card">
                 <h2 className="details-section-title">
                   <Calendar size={20} className="title-icon" />
-                  المنهاج التدريبي والمحاور التفصيلية
-                </h2>
+                   {t("المنهاج التدريبي والمحاور التفصيلية")} </h2>
                 <p className="syllabus-intro">
-                  خطة تدريبية متكاملة مقسمة إلى محاور تدرجية تنقلك من المفاهيم الأساسية
-                  إلى أسرار الاحتراف المهني:
-                </p>
+                   {t("خطة تدريبية متكاملة مقسمة إلى محاور تدرجية تنقلك من المفاهيم الأساسية إلى أسرار الاحتراف المهني:")} </p>
 
                 <div className="syllabus-accordion">
                   {program.syllabus.map((module, idx) => {
@@ -224,22 +220,20 @@ export default function CourseDetailsPage() {
                 <div className="sidebar-rating-strip">
                   <Star size={16} className="star-filled" />
                   <strong>{program.rating}</strong>
-                  <span>({program.reviewsCount} تقييم متدرب)</span>
+                  <span>({program.reviewsCount}  {t("تقييم متدرب)")} </span>
                 </div>
 
                 <div className="sidebar-divider" />
 
                 <h3 className="sidebar-enroll-title">
-                  حجز مقعد في هذه الدورة
-                </h3>
+                   {t("حجز مقعد في هذه الدورة")} </h3>
                 <p className="sidebar-enroll-sub">
-                  المقاعد محدودة لضمان أعلى مستويات التدريب العملي الفردي.
-                </p>
+                   {t("المقاعد محدودة لضمان أعلى مستويات التدريب العملي الفردي.")} </p>
 
                 {enrollStatus === "success" && (
                   <div className="details-enroll-success">
                     <CheckCircle size={20} />
-                    <span>تم تسجيل طلبك بنجاح! سنتواصل معك للتأكيد.</span>
+                    <span> {t("تم تسجيل طلبك بنجاح! سنتواصل معك للتأكيد.")} </span>
                   </div>
                 )}
 
@@ -247,7 +241,7 @@ export default function CourseDetailsPage() {
                   <input
                     type="text"
                     required
-                    placeholder="الاسم الكامل"
+                    placeholder={t("الاسم الكامل")}
                     value={formData.name}
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
@@ -258,7 +252,7 @@ export default function CourseDetailsPage() {
                     type="tel"
                     required
                     dir="ltr"
-                    placeholder="رقم الهاتف أو الواتساب"
+                    placeholder={t("رقم الهاتف أو الواتساب")}
                     value={formData.phone}
                     onChange={(e) =>
                       setFormData({ ...formData, phone: e.target.value })
@@ -267,7 +261,7 @@ export default function CourseDetailsPage() {
                   />
                   <textarea
                     rows="2"
-                    placeholder="ملاحظات أو التوقيت المفضل (اختياري)..."
+                    placeholder={t("ملاحظات أو التوقيت المفضل (اختياري)...")}
                     value={formData.notes}
                     onChange={(e) =>
                       setFormData({ ...formData, notes: e.target.value })
@@ -282,25 +276,24 @@ export default function CourseDetailsPage() {
                   >
                     <span>
                       {enrollStatus === "submitting"
-                        ? "جارٍ الحجز..."
-                        : "حجز المقعد الآن"}
+                        ? t("جارٍ الحجز...")
+                        : t("حجز المقعد الآن")}
                     </span>
                     <Send size={16} />
                   </button>
                 </form>
 
                 <div className="sidebar-whatsapp-row">
-                  <span>أو تواصل فورياً عبر واتساب:</span>
+                  <span> {t("أو تواصل فورياً عبر واتساب:")} </span>
                   <a
                     href={`https://wa.me/963966382224?text=${encodeURIComponent(
-                      `مرحباً، أود الاستفسار والتسجيل في دورة: ${program.title}`
+                      t("مرحباً، أود الاستفسار والتسجيل في دورة: {{value0}}", { value0: program.title })
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="sidebar-whatsapp-btn"
                   >
-                    محادثة واتساب مباشرة
-                  </a>
+                     {t("محادثة واتساب مباشرة")} </a>
                 </div>
               </div>
             </div>
@@ -311,10 +304,9 @@ export default function CourseDetailsPage() {
         {relatedPrograms.length > 0 && (
           <div className="related-courses-section">
             <div className="related-header">
-              <h3 className="related-title">برامج تدريبية أخرى قد تهمك</h3>
+              <h3 className="related-title"> {t("برامج تدريبية أخرى قد تهمك")} </h3>
               <Link to="/courses" className="view-all-link">
-                عرض جميع البرامج ←
-              </Link>
+                 {t("عرض جميع البرامج ←")} </Link>
             </div>
 
             <div className="related-grid">

@@ -1,3 +1,4 @@
+import { t } from "../../../i18n/index.js";
 import { GraduationCap, Wrench, Award } from "lucide-react";
 import "./CoursesStats.css";
 
@@ -5,20 +6,20 @@ const stats = [
   {
     icon: GraduationCap,
     value: "+30",
-    label: "برنامج وتخصص مهني",
-    subtext: "مناهج معتمدة ومطورة دورياً",
+    label: t("برنامج وتخصص مهني"),
+    subtext: t("مناهج معتمدة ومطورة دورياً"),
   },
   {
     icon: Wrench,
     value: "100%",
-    label: "تدريب عملي تطبيقي",
-    subtext: "ورش ومختبرات تخصصية مجهزة",
+    label: t("تدريب عملي تطبيقي"),
+    subtext: t("ورش ومختبرات تخصصية مجهزة"),
   },
   {
     icon: Award,
     value: "+60",
-    label: "عاماً من الاعتماد والريادة",
-    subtext: "شهادات موثقة تفتح لك سوق العمل",
+    label: t("عاماً من الاعتماد والريادة"),
+    subtext: t("شهادات موثقة تفتح لك سوق العمل"),
   },
 ];
 

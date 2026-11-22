@@ -32,7 +32,7 @@
 }
 
 .topbar-item svg {
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   flex-shrink: 0;
 }
 
@@ -41,7 +41,7 @@ a.topbar-item:hover {
 }
 
 a.topbar-item:hover svg {
-  color: var(--color-accent-light, #f0c359);
+  color: var(--color-accent-light, var(--text-accent));
 }
 
 @media (max-width: 768px) {

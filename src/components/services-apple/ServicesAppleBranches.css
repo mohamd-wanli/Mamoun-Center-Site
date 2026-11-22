@@ -1,9 +1,9 @@
 /* Apple-Style Campuses & Locations - Brand Colors */
 .apple-branches-section {
-  background: #ffffff;
-  color: var(--color-text, #202938);
+  background: var(--surface-card);
+  color: var(--color-text, var(--text-heading));
   padding: 90px 0;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid var(--border-default);
 }
 
 .apple-branches-header {
@@ -23,7 +23,7 @@
   border-radius: 9999px;
   background: rgba(215, 166, 55, 0.14);
   border: 1px solid rgba(215, 166, 55, 0.3);
-  color: #b3821a;
+  color: var(--text-accent);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -34,13 +34,13 @@
   font-size: clamp(2rem, 3.4vw, 2.9rem);
   font-weight: 800;
   line-height: 1.25;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   margin-bottom: 16px;
 }
 
 .apple-branches-subtitle {
   font-size: 1.05rem;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   line-height: 1.75;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .apple-branch-card {
-  background: #ffffff;
+  background: var(--surface-card);
   border: 1px solid rgba(11, 33, 69, 0.09);
   border-radius: 28px;
   overflow: hidden;
@@ -130,7 +130,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #ffffff;
+  background: var(--surface-card);
   box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
   animation: appleLivePulse 1.8s infinite;
 }
@@ -152,9 +152,9 @@
   align-items: center;
   padding: 5px 12px;
   border-radius: 9999px;
-  background: #ffffff;
+  background: var(--surface-card);
   border: 1px solid rgba(11, 33, 69, 0.12);
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   font-size: 0.75rem;
   font-weight: 700;
   backdrop-filter: blur(8px);
@@ -173,14 +173,14 @@
 .apple-branch-name {
   font-size: 1.35rem;
   font-weight: 800;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   line-height: 1.35;
 }
 
 .apple-branch-specialty {
   font-size: 0.92rem;
   line-height: 1.65;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
 }
 
 /* Location Box */
@@ -189,7 +189,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  background: var(--color-surface, #f7f8fa);
+  background: var(--color-surface, var(--surface-soft));
   border: 1px solid rgba(11, 33, 69, 0.07);
   padding: 12px 16px;
   border-radius: 14px;
@@ -200,12 +200,12 @@
   align-items: center;
   gap: 8px;
   font-size: 0.88rem;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   font-weight: 600;
 }
 
 .apple-loc-icon {
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   flex-shrink: 0;
 }
 
@@ -215,9 +215,9 @@
   gap: 5px;
   padding: 6px 12px;
   border-radius: 8px;
-  background: #ffffff;
-  border: 1px solid #dbe2ea;
-  color: var(--color-primary, #0b2145);
+  background: var(--surface-card);
+  border: 1px solid var(--border-default);
+  color: var(--text-heading);
   font-size: 0.78rem;
   font-weight: 700;
   cursor: pointer;
@@ -226,7 +226,7 @@
 }
 
 .apple-copy-btn:hover {
-  background: #f1f5f9;
+  background: var(--surface-soft);
   border-color: var(--color-primary, #0b2145);
 }
 
@@ -242,11 +242,11 @@
   align-items: center;
   gap: 8px;
   font-size: 0.86rem;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
 }
 
 .apple-hours-icon {
-  color: #64748b;
+  color: var(--text-muted);
   flex-shrink: 0;
 }
 
@@ -256,7 +256,7 @@
   flex-direction: column;
   gap: 8px;
   padding-top: 8px;
-  border-top: 1px solid #eef2f6;
+  border-top: 1px solid var(--border-default);
 }
 
 .apple-phones-label {
@@ -264,7 +264,7 @@
   align-items: center;
   gap: 6px;
   font-size: 0.8rem;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   font-weight: 600;
 }
 
@@ -277,9 +277,9 @@
 .apple-phone-pill {
   padding: 6px 14px;
   border-radius: 9999px;
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  color: var(--color-primary, #0b2145);
+  background: var(--surface-soft);
+  border: 1px solid var(--border-default);
+  color: var(--text-heading);
   font-size: 0.82rem;
   font-weight: 700;
   text-decoration: none;

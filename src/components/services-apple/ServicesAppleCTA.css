@@ -1,6 +1,6 @@
 /* Apple-Style CTA Section - Brand Navy & Gold Colors */
 .apple-cta-section {
-  background: var(--color-surface, #f7f8fa);
+  background: var(--color-surface, var(--surface-soft));
   padding: 70px 0 90px;
 }
 
@@ -43,9 +43,9 @@
   gap: 8px;
   padding: 6px 18px;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(var(--surface-rgb), 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #f0c359;
+  color: var(--text-accent);
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -61,7 +61,7 @@
 }
 
 .apple-cta-gradient {
-  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #f0c359 100%);
+  background: linear-gradient(135deg, var(--surface-card) 0%, var(--surface-soft) 50%, #f0c359 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -112,8 +112,8 @@
   gap: 10px;
   padding: 14px 32px;
   border-radius: 9999px;
-  background: #ffffff;
-  color: var(--color-primary, #0b2145);
+  background: var(--surface-card);
+  color: var(--text-heading);
   font-weight: 800;
   font-size: 0.95rem;
   text-decoration: none;
@@ -124,7 +124,7 @@
 .apple-cta-btn-primary:hover {
   transform: translateY(-2px);
   background: var(--color-accent, #d7a637);
-  color: #081731;
+  color: #0b2145;
   box-shadow: 0 14px 30px rgba(215, 166, 55, 0.4);
 }
 
@@ -155,7 +155,7 @@
   gap: 8px;
   padding: 14px 24px;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(var(--surface-rgb), 0.1);
   border: 1px solid rgba(255, 255, 255, 0.22);
   color: #f8fafc;
   font-weight: 600;
@@ -167,7 +167,7 @@
 }
 
 .apple-cta-btn-call:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(var(--surface-rgb), 0.2);
   transform: translateY(-2px);
 }
 

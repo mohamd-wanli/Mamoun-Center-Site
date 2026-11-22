@@ -5,7 +5,7 @@
   border-radius: 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  direction: rtl;
+  direction: inherit;
   box-shadow: 0 12px 32px rgba(11, 33, 69, 0.15);
 }
 
@@ -28,7 +28,7 @@
   border-radius: 50%;
   border: 1.5px solid rgba(215, 166, 55, 0.45);
   background: rgba(215, 166, 55, 0.1);
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   display: grid;
   place-items: center;
   flex-shrink: 0;

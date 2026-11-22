@@ -1,3 +1,4 @@
+import { t } from "../i18n/index.js";
 import PageHeader from "../components/common/PageHeader/PageHeader";
 import ContactCards from "../components/contact/ContactCards/ContactCards";
 import ContactFormSection from "../components/contact/ContactFormSection/ContactFormSection";
@@ -7,10 +8,10 @@ export default function ContactPage() {
   return (
     <>
       <PageHeader
-        tag="تواصل معنا "
-        title="يسعدنا تواصلك مع مركز المأمون الدولي"
-        subtitle="فريقنا جاهز للإجابة على استفساراتك، مساعدتك في اختيار الدورة التدريبية الأنسب، واستقبال طلبات التسجيل."
-        breadcrumbs={[{ label: "اتصل بنا" }]}
+        tag={t("تواصل معنا")}
+        title={t("يسعدنا تواصلك مع مركز المأمون الدولي")}
+        subtitle={t("فريقنا جاهز للإجابة على استفساراتك، مساعدتك في اختيار الدورة التدريبية الأنسب، واستقبال طلبات التسجيل.")}
+        breadcrumbs={[{ label: t("اتصل بنا") }]}
       />
       <ContactCards />
       <ContactFormSection />

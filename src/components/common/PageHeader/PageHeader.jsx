@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { t } from "../../../i18n/index.js";
+import { Link } from "../../../i18n/navigation.jsx";
 import { ChevronLeft } from "lucide-react";
 import FloatingParticles from "../FloatingParticles";
 import "./PageHeader.css";
@@ -18,8 +19,7 @@ export default function PageHeader({
         {breadcrumbs && breadcrumbs.length > 0 && (
           <nav className="page-hero-breadcrumbs" aria-label="Breadcrumb">
             <Link to="/" className="breadcrumb-item">
-              الرئيسية
-            </Link>
+               {t("الرئيسية")} </Link>
             {breadcrumbs.map((crumb, idx) => (
               <span key={idx} className="breadcrumb-wrapper">
                 <ChevronLeft size={14} className="breadcrumb-separator" />

@@ -1,3 +1,4 @@
+import { t } from "../../i18n/index.js";
 import React, { useState } from "react";
 import { MapPin, Phone, Clock, Copy, Check, Compass } from "lucide-react";
 import { branchesData } from "../../data/services";
@@ -23,10 +24,9 @@ export default function ServicesAppleBranches() {
             <Compass size={15} />
             <span>CAMPUSES & LOCATIONS</span>
           </div>
-          <h2 className="apple-branches-title">مراكزنا وفروعنا التدريبية</h2>
+          <h2 className="apple-branches-title"> {t("مراكزنا وفروعنا التدريبية")} </h2>
           <p className="apple-branches-subtitle">
-            موقعان استراتيجيان في قلب دمشق، مجهزان بأعلى التقنيات والورش لتقديم تدريب مهني غير مسبوق.
-          </p>
+             {t("موقعان استراتيجيان في قلب دمشق، مجهزان بأعلى التقنيات والورش لتقديم تدريب مهني غير مسبوق.")} </p>
         </div>
 
         {/* Branches Grid */}
@@ -55,11 +55,10 @@ export default function ServicesAppleBranches() {
                   <div className="apple-branch-overlay-pills">
                     <span className="apple-status-live">
                       <span className="apple-status-pulse" />
-                      مفتوح لاستقبالكم
-                    </span>
+                       {t("مفتوح لاستقبالكم")} </span>
 
                     {branch.isPrimary && (
-                      <span className="apple-primary-badge">المقر الرئيسي</span>
+                      <span className="apple-primary-badge"> {t("المقر الرئيسي")} </span>
                     )}
                   </div>
                 </div>
@@ -80,17 +79,17 @@ export default function ServicesAppleBranches() {
                       type="button"
                       className={`apple-copy-btn ${isCopied ? "apple-copy-btn--copied" : ""}`}
                       onClick={() => handleCopyAddress(branch.id, branch.location)}
-                      title="نسخ العنوان"
+                      title={t("نسخ العنوان")}
                     >
                       {isCopied ? (
                         <>
                           <Check size={14} />
-                          <span>تم النسخ</span>
+                          <span> {t("تم النسخ")} </span>
                         </>
                       ) : (
                         <>
                           <Copy size={14} />
-                          <span>نسخ</span>
+                          <span> {t("نسخ")} </span>
                         </>
                       )}
                     </button>
@@ -106,8 +105,7 @@ export default function ServicesAppleBranches() {
                   <div className="apple-branch-phones">
                     <span className="apple-phones-label">
                       <Phone size={14} />
-                      هواتف التواصل المباشر:
-                    </span>
+                       {t("هواتف التواصل المباشر:")} </span>
                     <div className="apple-phone-pills">
                       {branch.phones.map((phone, pIdx) => (
                         <a

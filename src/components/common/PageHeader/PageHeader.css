@@ -5,7 +5,7 @@
   padding: 40px 0px 65px;
 
   overflow: hidden;
-  direction: rtl;
+  direction: inherit;
   text-align: center;
 }
 
@@ -33,7 +33,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(var(--surface-rgb), 0.08);
   border: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -56,11 +56,11 @@
 }
 
 .breadcrumb-item:hover {
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
 }
 
 .breadcrumb-current {
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   font-weight: 700;
 }
 
@@ -74,7 +74,7 @@
   font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.08em;
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   background: rgba(215, 166, 55, 0.12);
   border: 1px solid rgba(215, 166, 55, 0.28);
   padding: 4px 14px;

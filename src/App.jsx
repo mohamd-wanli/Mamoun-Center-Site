@@ -1,4 +1,4 @@
-import { RouterProvider } from "react-router-dom";
+import { RouterProvider } from "./i18n/navigation.jsx";
 import { router } from "./app/router";
 
 export default function App() {

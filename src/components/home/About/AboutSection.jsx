@@ -1,3 +1,4 @@
+import { t } from "../../../i18n/index.js";
 import {
   Users,
   Trophy,
@@ -5,7 +6,7 @@ import {
   Globe,
   ArrowLeft,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "../../../i18n/navigation.jsx";
 import "./AboutSection.css";
 import useScrollReveal from "../../../hooks/useScrollReveal";
 import center from "../../../assets/images/center.png";
@@ -20,22 +21,17 @@ export default function AboutSection() {
     >
       <div className="container about-grid">
         <div className="about-content">
-          <span className="section-tag">من نحن </span>
+          <span className="section-tag"> {t("من نحن")} </span>
           <h2 className="section-title">
-            التميز في التعليم والتدريب
-            <span className="section-title-accent">
+             {t("التميز في التعليم والتدريب")} <span className="section-title-accent">
               {" "}
-              وبناء الشخصية للمستقبل
-            </span>
+               {t("وبناء الشخصية للمستقبل")} </span>
           </h2>
           <p className="about-description">
-            في مركز المأمون الدولي، نؤمن بتطوير متدربين واثقين ومؤهلين وقادرين
-            على إحداث تأثير إيجابي في سوق العمل والمجتمع عبر أحدث المناهج
-            المعتمدة والتدريب التطبيقي.
-          </p>
+             {t("في مركز المأمون الدولي، نؤمن بتطوير متدربين واثقين ومؤهلين وقادرين على إحداث تأثير إيجابي في سوق العمل والمجتمع عبر أحدث المناهج المعتمدة والتدريب التطبيقي.")} </p>
 
           <Link to="/about" className="about-btn">
-            <span>اعرف المزيد عنا </span>
+            <span> {t("اعرف المزيد عنا")} </span>
             <ArrowLeft size={16} />
           </Link>
 
@@ -46,7 +42,7 @@ export default function AboutSection() {
               </div>
               <div className="quick-stat-info">
                 <strong>+60</strong>
-                <span>عاماً من التميز</span>
+                <span> {t("عاماً من التميز")} </span>
               </div>
             </div>
 
@@ -56,7 +52,7 @@ export default function AboutSection() {
               </div>
               <div className="quick-stat-info">
                 <strong>+1500</strong>
-                <span>طالب ومتدرب سنوياً</span>
+                <span> {t("طالب ومتدرب سنوياً")} </span>
               </div>
             </div>
 
@@ -66,7 +62,7 @@ export default function AboutSection() {
               </div>
               <div className="quick-stat-info">
                 <strong>+25</strong>
-                <span>جوائز واعتمادات</span>
+                <span> {t("جوائز واعتمادات")} </span>
               </div>
             </div>
           </div>
@@ -75,7 +71,7 @@ export default function AboutSection() {
         <div className="about-image-wrap">
           <img
             src={center}
-            alt="حرم مركز المأمون الدولي"
+            alt={t("حرم مركز المأمون الدولي")}
             className="about-image"
           />
         </div>

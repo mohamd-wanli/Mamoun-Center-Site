@@ -1,3 +1,4 @@
+import { t } from "../../../i18n/index.js";
 import { User, Eye, Sparkles, ArrowUpRight, Layers } from "lucide-react";
 import "./WorkGalleryGrid.css";
 
@@ -12,19 +13,17 @@ export default function WorkGalleryGrid({
     <div className="work-gallery-wrapper">
       <div className="gallery-header-bar">
         <div className="gallery-header-text">
-          <h2 className="gallery-title">معرض المشاريع الحية بأيدي متدربينا</h2>
+          <h2 className="gallery-title"> {t("معرض المشاريع الحية بأيدي متدربينا")} </h2>
           <p className="gallery-desc">
-            تصفح نماذج واقعية من مشاريع التخرج المنفذة داخل ورش ومعامل المعهد，
-            والتي تجسد الجاهزية الكاملة لسوق العمل.
-          </p>
+             {t("تصفح نماذج واقعية من مشاريع التخرج المنفذة داخل ورش ومعامل المعهد， والتي تجسد الجاهزية الكاملة لسوق العمل.")} </p>
         </div>
       </div>
 
       {!projects || projects.length === 0 ? (
         <div className="work-empty-state">
           <Sparkles size={40} className="empty-ico" />
-          <h3>لم يتم العثور على مشاريع في هذا القسم</h3>
-          <p>اختر قسماً آخر أو اعرض جميع الأعمال لاستكشاف مشاريع المتدربين.</p>
+          <h3> {t("لم يتم العثور على مشاريع في هذا القسم")} </h3>
+          <p> {t("اختر قسماً آخر أو اعرض جميع الأعمال لاستكشاف مشاريع المتدربين.")} </p>
         </div>
       ) : (
         <div className="work-gallery-grid">
@@ -53,7 +52,7 @@ export default function WorkGalleryGrid({
                 <div className="project-hover-action">
                   <span className="preview-pill">
                     <Eye size={16} />
-                    <span>معاينة تفاصيل العمل</span>
+                    <span> {t("معاينة تفاصيل العمل")} </span>
                   </span>
                 </div>
               </div>
@@ -85,7 +84,7 @@ export default function WorkGalleryGrid({
 
                 <div className="project-footer">
                   <span className="project-view-link">
-                    <span>عرض المشروع كاملاً</span>
+                    <span> {t("عرض المشروع كاملاً")} </span>
                     <ArrowUpRight size={16} className="view-arrow" />
                   </span>
                 </div>

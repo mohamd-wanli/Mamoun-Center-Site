@@ -132,7 +132,7 @@
   gap: 8px;
   padding: 5px 14px;
   margin-bottom: 16px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(var(--surface-rgb), 0.08);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(215, 166, 55, 0.35);
@@ -156,7 +156,7 @@
 }
 
 .hero-pill-icon {
-  color: #f0c359;
+  color: var(--text-accent);
   animation: heroSparkle 3s ease-in-out infinite;
 }
 
@@ -164,11 +164,11 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(var(--surface-rgb), 0.4);
 }
 
 .hero-pill-highlight {
-  color: #f0c359;
+  color: var(--text-accent);
   font-weight: 800;
 }
 
@@ -215,7 +215,7 @@
 .hero-title-gradient {
   background: linear-gradient(
     135deg,
-    #fff3c4 0%,
+    var(--surface-raised) 0%,
     #f0c359 38%,
     #d7a637 72%,
     #f59e0b 100%
@@ -291,7 +291,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.3),
+    rgba(var(--surface-rgb), 0.3),
     transparent
   );
   transform: skewX(-20deg);
@@ -306,7 +306,7 @@
 .button-primary {
   background: linear-gradient(135deg, #f0c359 0%, #d7a637 50%, #c49126 100%);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #061224;
+  color: #0b2145;
   box-shadow:
     0 6px 20px rgba(215, 166, 55, 0.35),
     inset 0 1px 0 rgba(255, 255, 255, 0.35);
@@ -315,11 +315,11 @@
 .button-primary:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 10px 28px rgba(215, 166, 55, 0.55);
-  color: #061224;
+  color: var(--text-heading);
 }
 
 .button-glass {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(var(--surface-rgb), 0.08);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1.5px solid rgba(255, 255, 255, 0.25);
@@ -330,7 +330,7 @@
 }
 
 .button-glass:hover {
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(var(--surface-rgb), 0.16);
   border-color: #f0c359;
   transform: translateY(-2px);
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.32);
@@ -342,7 +342,7 @@
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease;
-  color: #f0c359;
+  color: var(--text-accent);
 }
 
 .button-glass:hover .button-icon-play {
@@ -453,7 +453,7 @@
   border-radius: 50%;
   background: rgba(215, 166, 55, 0.2);
   border: 1px solid rgba(215, 166, 55, 0.4);
-  color: #f0c359;
+  color: var(--text-accent);
   flex-shrink: 0;
   transition:
     transform 0.3s ease,

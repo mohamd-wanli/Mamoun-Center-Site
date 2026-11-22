@@ -1,5 +1,6 @@
+import { t } from "../../../i18n/index.js";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "../../../i18n/navigation.jsx";
 import {
   X,
   User,
@@ -38,7 +39,7 @@ export default function WorkLightboxModal({ project, onClose }) {
         <button
           className="lightbox-close-btn"
           onClick={onClose}
-          aria-label="إغلاق النافذة"
+          aria-label={t("إغلاق النافذة")}
         >
           <X size={20} />
         </button>
@@ -72,7 +73,7 @@ export default function WorkLightboxModal({ project, onClose }) {
             <h2 className="lightbox-title">{project.title}</h2>
 
             <div className="lightbox-desc-box">
-              <h5 className="desc-title">تفاصيل المشروع والمهام المنجزة:</h5>
+              <h5 className="desc-title"> {t("تفاصيل المشروع والمهام المنجزة:")} </h5>
               <p className="desc-text">{project.description}</p>
             </div>
 
@@ -81,10 +82,9 @@ export default function WorkLightboxModal({ project, onClose }) {
                 <span className="skills-lbl">
                   <Tag
                     size={14}
-                    style={{ verticalAlign: "middle", marginLeft: 4 }}
+                    style={{ verticalAlign: "middle", marginInlineEnd: 4 }}
                   />
-                  التقنيات والأدوات المستخدمة:
-                </span>
+                   {t("التقنيات والأدوات المستخدمة:")} </span>
                 <div className="skills-chips">
                   {project.tags.map((tag, idx) => (
                     <span key={idx} className="skill-chip">
@@ -101,7 +101,7 @@ export default function WorkLightboxModal({ project, onClose }) {
                 className="lightbox-main-btn"
                 onClick={onClose}
               >
-                <span>استكشف الدورة التدريبية</span>
+                <span> {t("استكشف الدورة التدريبية")} </span>
                 <ArrowLeft size={16} />
               </Link>
               <Link
@@ -109,7 +109,7 @@ export default function WorkLightboxModal({ project, onClose }) {
                 className="lightbox-sub-btn"
                 onClick={onClose}
               >
-                <span>استفسار وتسجيل</span>
+                <span> {t("استفسار وتسجيل")} </span>
               </Link>
             </div>
           </div>

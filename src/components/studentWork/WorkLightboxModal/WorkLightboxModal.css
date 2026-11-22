@@ -10,11 +10,11 @@
   justify-content: center;
   padding: 20px;
   animation: modalFadeIn 0.25s ease-out;
-  direction: rtl;
+  direction: inherit;
 }
 
 .lightbox-content {
-  background: #ffffff;
+  background: var(--surface-card);
   border-radius: var(--radius-card, 18px);
   width: 100%;
   max-width: 860px;
@@ -80,8 +80,8 @@
 }
 
 .lightbox-cat-badge {
-  background: #ffffff;
-  color: var(--color-primary, #0b2145);
+  background: var(--surface-card);
+  color: var(--text-heading);
   font-weight: 700;
   font-size: 0.82rem;
   padding: 5px 14px;
@@ -108,10 +108,10 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  background: var(--color-surface, #f7f8fa);
+  background: var(--color-surface, var(--surface-soft));
   padding: 12px 16px;
   border-radius: 12px;
-  border: 1px solid #edf0f5;
+  border: 1px solid var(--border-default);
   margin-bottom: 20px;
 }
 
@@ -120,7 +120,7 @@
   height: 44px;
   border-radius: 50%;
   background: rgba(215, 166, 55, 0.15);
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,18 +131,18 @@
   margin: 0 0 2px;
   font-size: 1.05rem;
   font-weight: 800;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
 }
 
 .author-course {
   font-size: 0.8rem;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
 }
 
 .lightbox-title {
   font-size: 1.3rem;
   font-weight: 800;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   line-height: 1.4;
   margin: 0 0 16px;
 }
@@ -155,14 +155,14 @@
   margin: 0 0 8px;
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
 }
 
 .desc-text {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.75;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
 }
 
 .lightbox-skills-box {
@@ -173,7 +173,7 @@
   display: block;
   font-size: 0.84rem;
   font-weight: 700;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   margin-bottom: 10px;
 }
 
@@ -188,7 +188,7 @@
   align-items: center;
   gap: 6px;
   background: rgba(215, 166, 55, 0.12);
-  color: #92640d;
+  color: var(--text-accent);
   padding: 5px 12px;
   border-radius: 6px;
   font-size: 0.8rem;
@@ -196,7 +196,7 @@
 }
 
 .skill-chip svg {
-  color: #16a34a;
+  color: var(--text-heading);
 }
 
 /* Actions */
@@ -205,7 +205,7 @@
   gap: 12px;
   margin-top: auto;
   padding-top: 18px;
-  border-top: 1px solid #edf0f5;
+  border-top: 1px solid var(--border-default);
 }
 
 .lightbox-main-btn {
@@ -226,7 +226,7 @@
 
 .lightbox-main-btn:hover {
   background: var(--color-accent, #d7a637);
-  color: var(--color-primary, #0b2145);
+  color: #0b2145;
 }
 
 .lightbox-sub-btn {
@@ -236,7 +236,7 @@
   padding: 11px 18px;
   border-radius: var(--radius-button, 8px);
   background: rgba(215, 166, 55, 0.15);
-  color: #92640d;
+  color: var(--text-accent);
   font-size: 0.88rem;
   font-weight: 700;
   text-decoration: none;

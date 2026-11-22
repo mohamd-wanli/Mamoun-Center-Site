@@ -1,3 +1,4 @@
+import { t } from "../i18n/index.js";
 import PageHeader from "../components/common/PageHeader/PageHeader";
 import ServicesIntro from "../components/services/ServicesIntro/ServicesIntro";
 
@@ -10,10 +11,10 @@ export default function ServicesPage() {
   return (
     <>
       <PageHeader
-        tag="خدماتنا وحلولنا التدريبية "
-        title="خدمات تدريبية واستشارية متكاملة"
-        subtitle="نفتخر بتقديم مجموعة شاملة من البرامج المخصصة، وتدريب الشركات والمؤسسات، والشهادات المهنية المعتمدة دولياً."
-        breadcrumbs={[{ label: "خدماتنا" }]}
+        tag={t("خدماتنا وحلولنا التدريبية")}
+        title={t("خدمات تدريبية واستشارية متكاملة")}
+        subtitle={t("نفتخر بتقديم مجموعة شاملة من البرامج المخصصة، وتدريب الشركات والمؤسسات، والشهادات المهنية المعتمدة دولياً.")}
+        breadcrumbs={[{ label: t("خدماتنا") }]}
       />
 
       <ServicesIntro />

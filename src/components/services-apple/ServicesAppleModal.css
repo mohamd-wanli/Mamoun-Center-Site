@@ -27,8 +27,8 @@
   width: 100%;
   max-width: 680px;
   max-height: 90vh;
-  background: #ffffff;
-  color: var(--color-text, #202938);
+  background: var(--surface-card);
+  color: var(--color-text, var(--text-heading));
   border-radius: 28px;
   border: 1px solid rgba(11, 33, 69, 0.12);
   box-shadow: 0 25px 60px -15px rgba(11, 33, 69, 0.25);
@@ -58,11 +58,11 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(var(--surface-rgb), 0.85);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(11, 33, 69, 0.15);
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,7 +72,7 @@
 }
 
 .apple-modal-close:hover {
-  background: #ffffff;
+  background: var(--surface-card);
   transform: rotate(90deg);
 }
 
@@ -154,16 +154,16 @@
 .apple-modal-sec-title {
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   margin-bottom: 10px;
-  border-bottom: 1px solid #eef2f6;
+  border-bottom: 1px solid var(--border-default);
   padding-bottom: 6px;
 }
 
 .apple-modal-text {
   font-size: 0.95rem;
   line-height: 1.8;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
 }
 
 .apple-modal-features {
@@ -177,15 +177,15 @@
   align-items: flex-start;
   gap: 12px;
   font-size: 0.92rem;
-  color: var(--color-text, #202938);
-  background: var(--color-surface, #f7f8fa);
+  color: var(--color-text, var(--text-heading));
+  background: var(--color-surface, var(--surface-soft));
   padding: 12px 16px;
   border-radius: 12px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border-default);
 }
 
 .apple-modal-check {
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   flex-shrink: 0;
   margin-top: 1px;
 }
@@ -197,7 +197,7 @@
   flex-wrap: wrap;
   gap: 12px;
   padding-top: 20px;
-  border-top: 1px solid #eef2f6;
+  border-top: 1px solid var(--border-default);
 }
 
 .apple-modal-primary-btn {
@@ -217,7 +217,7 @@
 
 .apple-modal-primary-btn:hover {
   background: var(--color-accent, #d7a637);
-  color: #081731;
+  color: #0b2145;
   transform: translateY(-2px);
 }
 
@@ -247,9 +247,9 @@
   gap: 8px;
   padding: 12px 18px;
   border-radius: 9999px;
-  background: #f1f5f9;
-  border: 1px solid #dbe2ea;
-  color: var(--color-primary, #0b2145);
+  background: var(--surface-soft);
+  border: 1px solid var(--border-default);
+  color: var(--text-heading);
   font-weight: 600;
   font-size: 0.88rem;
   text-decoration: none;
@@ -257,7 +257,7 @@
 }
 
 .apple-modal-call-btn:hover {
-  background: #e2e8f0;
+  background: var(--surface-soft);
 }
 
 @media (max-width: 640px) {

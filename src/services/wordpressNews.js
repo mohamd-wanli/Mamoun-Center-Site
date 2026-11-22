@@ -1,3 +1,4 @@
+import { t } from "../i18n/index.js";
 // Only public, published content is requested. Never put credentials in this client.
 function plainText(html = "") {
   if (!html) return "";
@@ -46,13 +47,13 @@ export async function fetchWordPressNews({ siteUrl, categorySlug = "news", signa
     const summary = plainText(post.excerpt?.rendered);
     return {
       id: post.id,
-      title: plainText(post.title?.rendered) || "أخبار المركز",
+      title: plainText(post.title?.rendered) || t("أخبار المركز"),
       summary: summary.length > 220 ? `${summary.slice(0, 217)}…` : summary,
       date: post.date?.slice(0, 10),
       path: publicUrl(post.link),
       image: publicUrl(media?.source_url),
       imageAlt: media?.alt_text || "",
-      category: "أخبار المركز",
+      category: t("أخبار المركز"),
     };
   });
 }

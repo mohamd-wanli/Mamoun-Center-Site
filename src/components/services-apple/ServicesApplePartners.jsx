@@ -1,3 +1,4 @@
+import { t } from "../../i18n/index.js";
 import React, { useState } from "react";
 import { Handshake, Building, Globe2, Landmark } from "lucide-react";
 import { partnersData, clientCategories } from "../../data/services";
@@ -26,11 +27,9 @@ export default function ServicesApplePartners() {
             <span>ENTERPRISE & PARTNERSHIPS</span>
           </div>
           <h2 className="apple-partners-title">
-            شركاء النجاح والجهات المعتمدة
-          </h2>
+             {t("شركاء النجاح والجهات المعتمدة")} </h2>
           <p className="apple-partners-subtitle">
-            نفخر بتأهيل وتدريب كوادر كبرى المنظمات الدولية، المؤسسات الحكومية، والشركات الصناعية في الشرق الأوسط.
-          </p>
+             {t("نفخر بتأهيل وتدريب كوادر كبرى المنظمات الدولية، المؤسسات الحكومية، والشركات الصناعية في الشرق الأوسط.")} </p>
 
           {/* Segmented Filter */}
           <div className="apple-partners-filters" role="tablist">
@@ -79,10 +78,9 @@ export default function ServicesApplePartners() {
         {/* Bottom Proof Note */}
         <div className="apple-partners-footnote">
           <p>
-            هل تمثل شركة أو منظمة وتبحث عن برنامج تأهيلي مخصص لكوادر عملك؟{" "}
+             {t("هل تمثل شركة أو منظمة وتبحث عن برنامج تأهيلي مخصص لكوادر عملك؟")} {" "}
             <a href="tel:0112212226" className="apple-footnote-link">
-              تواصل مع إدارة التدريب المؤسسي &larr;
-            </a>
+               {t("تواصل مع إدارة التدريب المؤسسي &larr;")} </a>
           </p>
         </div>
       </div>

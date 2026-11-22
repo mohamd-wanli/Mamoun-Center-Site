@@ -1,3 +1,4 @@
+import { t } from "../../../i18n/index.js";
 import { useState } from "react";
 import {
   User,
@@ -65,29 +66,23 @@ export default function ContactFormSection() {
             <span className="section-tag">
               <Sparkles
                 size={14}
-                style={{ verticalAlign: "middle", marginLeft: 6 }}
+                style={{ verticalAlign: "middle", marginInlineEnd: 6 }}
               />
-              نموذج الاستفسار والتسجيل
-            </span>
+               {t("نموذج الاستفسار والتسجيل")} </span>
             <h2 className="section-title">
-              أرسل لنا استفسارك
-              <span className="section-title-accent"> وسنتواصل معك فوراً</span>
+               {t("أرسل لنا استفسارك")} <span className="section-title-accent">  {t("وسنتواصل معك فوراً")} </span>
             </h2>
             <p className="contact-form-intro">
-              هل لديك سؤال حول دورة معينة أو ترغب في استشارة مهنية؟ املأ
-              البيانات أدناه وسيقوم مستشارنا التعليمي بالرد عليك خلال ساعات
-              العمل.
-            </p>
+               {t("هل لديك سؤال حول دورة معينة أو ترغب في استشارة مهنية؟ املأ البيانات أدناه وسيقوم مستشارنا التعليمي بالرد عليك خلال ساعات العمل.")} </p>
           </div>
 
           {status === "success" && (
             <div className="contact-alert-success">
               <CheckCircle size={22} className="alert-icon" />
               <div>
-                <strong>تم استلام رسالتك بنجاح!</strong>
+                <strong> {t("تم استلام رسالتك بنجاح!")} </strong>
                 <p>
-                  شكراً لتواصلك معنا، سيقوم فريق المأمون بالرد عليك في أقرب وقت.
-                </p>
+                   {t("شكراً لتواصلك معنا، سيقوم فريق المأمون بالرد عليك في أقرب وقت.")} </p>
               </div>
             </div>
           )}
@@ -97,7 +92,7 @@ export default function ContactFormSection() {
            
               <div className="form-group">
                 <label htmlFor="fullName" className="form-label">
-                  الاسم الكامل <span className="required">*</span>
+                   {t("الاسم الكامل")} <span className="required">*</span>
                 </label>
                 <div className="input-wrap">
                   <User size={18} className="input-icon" />
@@ -106,7 +101,7 @@ export default function ContactFormSection() {
                     id="fullName"
                     name="fullName"
                     required
-                    placeholder="مثال: أحمد محمد"
+                    placeholder={t("مثال: أحمد محمد")}
                     value={formData.fullName}
                     onChange={handleChange}
                     className="form-input"
@@ -117,7 +112,7 @@ export default function ContactFormSection() {
               
               <div className="form-group">
                 <label htmlFor="phone" className="form-label">
-                  رقم الهاتف أو الواتساب <span className="required">*</span>
+                   {t("رقم الهاتف أو الواتساب")} <span className="required">*</span>
                 </label>
                 <div className="input-wrap">
                   <Phone size={18} className="input-icon" />
@@ -140,7 +135,7 @@ export default function ContactFormSection() {
            
               <div className="form-group">
                 <label htmlFor="email" className="form-label">
-                  البريد الإلكتروني <span className="optional">(اختياري)</span>
+                   {t("البريد الإلكتروني")} <span className="optional"> {t("(اختياري)")} </span>
                 </label>
                 <div className="input-wrap">
                   <Mail size={18} className="input-icon" />
@@ -158,8 +153,7 @@ export default function ContactFormSection() {
 
               <div className="form-group">
                 <label htmlFor="course" className="form-label">
-                  الدورة أو المجال المطلوب
-                </label>
+                   {t("الدورة أو المجال المطلوب")} </label>
                 <div className="input-wrap">
                   <BookOpen size={18} className="input-icon" />
                   <select
@@ -169,15 +163,14 @@ export default function ContactFormSection() {
                     onChange={handleChange}
                     className="form-input form-select"
                   >
-                    <option value="">اختر الدورة التدريبية...</option>
+                    <option value=""> {t("اختر الدورة التدريبية...")} </option>
                     {programs.map((prog) => (
                       <option key={prog.id} value={prog.title}>
                         {prog.title} ({prog.subtitle})
                       </option>
                     ))}
-                    <option value="استفسار عام">
-                      استفسار عام / خدمات أخرى
-                    </option>
+                    <option value={t("استفسار عام")}>
+                       {t("استفسار عام / خدمات أخرى")} </option>
                   </select>
                 </div>
               </div>
@@ -185,7 +178,7 @@ export default function ContactFormSection() {
 
             <div className="form-group">
               <label htmlFor="message" className="form-label">
-                نص الرسالة أو الاستفسار <span className="required">*</span>
+                 {t("نص الرسالة أو الاستفسار")} <span className="required">*</span>
               </label>
               <div className="input-wrap textarea-wrap">
                 <MessageSquare size={18} className="input-icon textarea-icon" />
@@ -194,7 +187,7 @@ export default function ContactFormSection() {
                   name="message"
                   rows="4"
                   required
-                  placeholder="اكتب هنا تفاصيل استفسارك أو الوقت المفضل لديك للاتصال..."
+                  placeholder={t("اكتب هنا تفاصيل استفسارك أو الوقت المفضل لديك للاتصال...")}
                   value={formData.message}
                   onChange={handleChange}
                   className="form-input form-textarea"
@@ -211,7 +204,7 @@ export default function ContactFormSection() {
               }`}
             >
               <span>
-                {status === "submitting" ? "جارٍ الإرسال..." : "إرسال الرسالة"}
+                {status === "submitting" ? t("جارٍ الإرسال...") : t("إرسال الرسالة")}
               </span>
               <Send size={18} className="btn-icon" />
             </button>
@@ -224,22 +217,19 @@ export default function ContactFormSection() {
           <div className="contact-sidebar-card">
             <h3 className="sidebar-card-title">
               <Clock size={20} className="card-title-icon" />
-              أوقات الاستقبال والتسجيل
-            </h3>
+               {t("أوقات الاستقبال والتسجيل")} </h3>
             <ul className="hours-list">
               <li className="hours-item">
-                <span className="days">من السبت إلى الخميس:</span>
-                <span className="time">9:00 صباحاً – 8:00 مساءً</span>
+                <span className="days"> {t("من السبت إلى الخميس:")} </span>
+                <span className="time"> {t("9:00 صباحاً – 8:00 مساءً")} </span>
               </li>
               <li className="hours-item hours-item-off">
-                <span className="days">يوم الجمعة:</span>
-                <span className="time">عطلة أسبوعية</span>
+                <span className="days"> {t("يوم الجمعة:")} </span>
+                <span className="time"> {t("عطلة أسبوعية")} </span>
               </li>
             </ul>
             <p className="hours-note">
-              * قسم التسجيل مفتوح طوال أيام الأسبوع لاستقبال المتدربين والإجابة
-              على كافة الاستفسارات.
-            </p>
+               {t("* قسم التسجيل مفتوح طوال أيام الأسبوع لاستقبال المتدربين والإجابة على كافة الاستفسارات.")} </p>
           </div>
 
           {/* Map Preview */}
@@ -247,16 +237,15 @@ export default function ContactFormSection() {
             <div className="map-card-header">
               <MapPin size={20} className="card-title-icon" />
               <div>
-                <h4 className="map-location-title">موقع مركز المأمون في دمشق</h4>
+                <h4 className="map-location-title"> {t("موقع مركز المأمون في دمشق")} </h4>
                 <p className="map-location-sub">
-                  دمشق - جسر فكتوريا - بناء المأمون الدولي
-                </p>
+                   {t("دمشق - جسر فكتوريا - بناء المأمون الدولي")} </p>
               </div>
             </div>
 
             <div className="map-embed-frame">
               <iframe
-                title="موقع مركز المأمون الدولي"
+                title={t("موقع مركز المأمون الدولي")}
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.6853683833215!2d36.2941198!3d33.5137233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1518e05a8f4c3bbf%3A0x6b7724212953258c!2z2KzYs9ixINmB2YPYqtmI2LHZitin2Iwg2K_Zhdi02YLYjCDYs9mI2LHZitin!5e0!3m2!1sar!2s!4v1700000000000!5m2!1sar!2s"
                 width="100%"
                 height="240"
@@ -273,8 +262,7 @@ export default function ContactFormSection() {
               rel="noopener noreferrer"
               className="open-map-link"
             >
-              فتح في خرائط Google
-              <span className="arrow-left">←</span>
+               {t("فتح في خرائط Google")} <span className="arrow-left">←</span>
             </a>
           </div>
         </div>

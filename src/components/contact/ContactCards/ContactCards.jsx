@@ -1,3 +1,4 @@
+import { t } from "../../../i18n/index.js";
 import { Phone, MessageCircle, Mail, MapPin, Clock } from "lucide-react";
 import useScrollReveal from "../../../hooks/useScrollReveal";
 import "./ContactCards.css";
@@ -5,37 +6,37 @@ import "./ContactCards.css";
 const contactMethods = [
   {
     icon: Phone,
-    title: "الاتصال الهاتفي المباشر",
-    subtitle: "فريق الاستقبال مستعد للإجابة على جميع استفساراتكم",
+    title: t("الاتصال الهاتفي المباشر"),
+    subtitle: t("فريق الاستقبال مستعد للإجابة على جميع استفساراتكم"),
     primaryAction: "+0112245987",
     href: "tel:0112245987",
-    badge: "متاح خلال أوقات الدوام",
+    badge: t("متاح خلال أوقات الدوام"),
   },
   {
     icon: MessageCircle,
-    title: "محادثة واتساب سريعة",
-    subtitle: "تواصل مع قسم التسجيل والاستفسارات الفورية",
-    primaryAction: "راسلنا على واتساب",
+    title: t("محادثة واتساب سريعة"),
+    subtitle: t("تواصل مع قسم التسجيل والاستفسارات الفورية"),
+    primaryAction: t("راسلنا على واتساب"),
     href: "https://wa.me/963966382224",
     target: "_blank",
-    badge: "رد فوري",
+    badge: t("رد فوري"),
     isAccent: true,
   },
   {
     icon: Mail,
-    title: "البريد الإلكتروني",
-    subtitle: "للاستفسارات الرسمية، الشراكات والشهادات",
+    title: t("البريد الإلكتروني"),
+    subtitle: t("للاستفسارات الرسمية، الشراكات والشهادات"),
     primaryAction: "info@mamouncom.com",
     href: "mailto:info@mamouncom.com",
-    badge: "دعم رسمي",
+    badge: t("دعم رسمي"),
   },
   {
     icon: MapPin,
-    title: "زيارة مقر المركز",
-    subtitle: "دمشق - بالقرب من جسر فكتوريا، مجمع المأمون",
-    primaryAction: "عرض على الخريطة",
+    title: t("زيارة مقر المركز"),
+    subtitle: t("دمشق - بالقرب من جسر فكتوريا، مجمع المأمون"),
+    primaryAction: t("عرض على الخريطة"),
     href: "#map-section",
-    badge: "السبت - الخميس",
+    badge: t("السبت - الخميس"),
   },
 ];
 

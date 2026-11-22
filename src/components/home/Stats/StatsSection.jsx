@@ -1,3 +1,4 @@
+import { t } from "../../../i18n/index.js";
 import { Landmark, Users, GraduationCap, MapPin, Award } from "lucide-react";
 import useCountUp from "../../../hooks/useCountUp";
 import "./StatsSection.css";
@@ -7,31 +8,31 @@ const stats = [
     id: 1,
     icon: Landmark,
     number: "60+",
-    title: "سنة من التميز",
+    title: t("سنة من التميز"),
   },
   {
     id: 2,
     icon: Users,
     number: "1500+",
-    title: "طالب ومتدرب",
+    title: t("طالب ومتدرب"),
   },
   {
     id: 3,
     icon: GraduationCap,
     number: "50+",
-    title: "مدرب ومدرس خبير",
+    title: t("مدرب ومدرس خبير"),
   },
   {
     id: 4,
     icon: MapPin,
     number: "50+",
-    title: "قاعات ومرافق حديثة",
+    title: t("قاعات ومرافق حديثة"),
   },
   {
     id: 5,
     icon: Award,
     number: "98%",
-    title: "نسبة النجاح والتفوق",
+    title: t("نسبة النجاح والتفوق"),
   },
 ];
 

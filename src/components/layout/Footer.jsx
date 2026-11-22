@@ -1,5 +1,6 @@
+import { t } from "../../i18n/index.js";
 import { MapPin, Phone, Mail, ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "../../i18n/navigation.jsx";
 import "./Footer.css";
 
 function FacebookIcon() {
@@ -52,17 +53,15 @@ export default function Footer() {
           <div className="footer-col footer-col-brand">
             <div className="footer-brand">
               <span className="footer-brand-logo">
-                <img src="/mic.png" alt="شعار المركز" />
+                <img src="/mic.png" alt={t("شعار المركز")} />
               </span>
               <div className="footer-brand-text">
-                <h3>مركز المأمون الدولي</h3>
+                <h3> {t("مركز المأمون الدولي")} </h3>
                 {/* <span>BRIGHT FUTURE INTERNATIONAL</span> */}
               </div>
             </div>
             <p className="footer-tagline">
-              نلهم العقول، نصنع المستقبل. بيئة تدريبية وتعليمية متكاملة تهدف إلى
-              تنمية المهارات الأكاديمية والمهنية.
-            </p>
+               {t("نلهم العقول، نصنع المستقبل. بيئة تدريبية وتعليمية متكاملة تهدف إلى تنمية المهارات الأكاديمية والمهنية.")} </p>
             <div className="footer-socials">
               <a
                 href="https://www.facebook.com/MamounInternationalCenter"
@@ -103,53 +102,53 @@ export default function Footer() {
           </div>
 
           <div className="footer-col">
-            <h4 className="footer-col-title">روابط سريعة </h4>
+            <h4 className="footer-col-title"> {t("روابط سريعة")} </h4>
             <ul className="footer-links">
               <li>
-                <Link to="/">الرئيسية (Home)</Link>
+                <Link to="/"> {t("الرئيسية (Home)")} </Link>
               </li>
               <li>
-                <Link to="/about">عن المركز (About Us)</Link>
+                <Link to="/about"> {t("عن المركز (About Us)")} </Link>
               </li>
               <li>
-                <Link to="/courses">البرامج والدورات (Academics)</Link>
+                <Link to="/courses"> {t("البرامج والدورات (Academics)")} </Link>
               </li>
               <li>
-                <Link to="/services">خدماتنا (Campus Life)</Link>
+                <Link to="/services"> {t("خدماتنا (Campus Life)")} </Link>
               </li>
               <li>
-                <Link to="/student-work">أعمال الطلاب (Events)</Link>
+                <Link to="/student-work"> {t("أعمال الطلاب (Events)")} </Link>
               </li>
               <li>
-                <Link to="/contact">اتصل بنا (Contact Us)</Link>
+                <Link to="/contact"> {t("اتصل بنا (Contact Us)")} </Link>
               </li>
             </ul>
           </div>
 
           <div className="footer-col">
-            <h4 className="footer-col-title">المصادر </h4>
+            <h4 className="footer-col-title"> {t("المصادر")} </h4>
             <ul className="footer-links">
               <li>
-                <Link to="/student-work">بوابة المتدرب (Portal)</Link>
+                <Link to="/student-work"> {t("بوابة المتدرب (Portal)")} </Link>
               </li>
               <li>
-                <Link to="/contact">تسجيل الدخول (Login)</Link>
+                <Link to="/contact"> {t("تسجيل الدخول (Login)")} </Link>
               </li>
               <li>
-                <Link to="/courses">التقويم التدريبي (Calendar)</Link>
+                <Link to="/courses"> {t("التقويم التدريبي (Calendar)")} </Link>
               </li>
               <li>
-                <Link to="/about">السياسات والشروط (Policies)</Link>
+                <Link to="/about"> {t("السياسات والشروط (Policies)")} </Link>
               </li>
             </ul>
           </div>
 
           <div className="footer-col">
-            <h4 className="footer-col-title">تواصل معنا </h4>
+            <h4 className="footer-col-title"> {t("تواصل معنا")} </h4>
             <ul className="footer-contact-list">
               <li>
                 <MapPin size={18} className="contact-icon" />
-                <span>دمشق - جسر فكتوريا - مبنى المأمون</span>
+                <span> {t("دمشق - جسر فكتوريا - مبنى المأمون")} </span>
               </li>
               <li>
                 <Phone size={18} className="contact-icon" />
@@ -157,7 +156,7 @@ export default function Footer() {
               </li>
               <li>
                 <MapPin size={18} className="contact-icon" />
-                <span>دمشق - الحلبوني - مبنى المأمون</span>
+                <span> {t("دمشق - الحلبوني - مبنى المأمون")} </span>
               </li>
               <li>
                 <Phone size={18} className="contact-icon" />
@@ -196,9 +195,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
           <p>
-            © 2026  مركز المأمون الدولي. جميع
-            الحقوق محفوظة.
-          </p>
+             {t("© 2026 مركز المأمون الدولي. جميع الحقوق محفوظة.")} </p>
         </div>
       </div>
     </footer>

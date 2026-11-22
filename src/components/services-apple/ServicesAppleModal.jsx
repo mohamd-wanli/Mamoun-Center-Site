@@ -1,5 +1,6 @@
+import { t } from "../../i18n/index.js";
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "../../i18n/navigation.jsx";
 import { X, CheckCircle, MessageCircle, ArrowLeft, Sparkles, PhoneCall } from "lucide-react";
 import "./ServicesAppleModal.css";
 
@@ -23,7 +24,7 @@ export default function ServicesAppleModal({ service, onClose }) {
   if (!service) return null;
 
   const whatsappMessage = encodeURIComponent(
-    `مرحباً، أود الاستفسار والحصول على مزيد من التفاصيل حول خدمة: ${service.title}`
+    t("مرحباً، أود الاستفسار والحصول على مزيد من التفاصيل حول خدمة: {{value0}}", { value0: service.title })
   );
 
   return (
@@ -46,7 +47,7 @@ export default function ServicesAppleModal({ service, onClose }) {
           type="button"
           className="apple-modal-close"
           onClick={onClose}
-          aria-label="إغلاق النافذة"
+          aria-label={t("إغلاق النافذة")}
         >
           <X size={18} />
         </button>
@@ -74,12 +75,12 @@ export default function ServicesAppleModal({ service, onClose }) {
         {/* Modal Body */}
         <div className="apple-modal-body">
           <div className="apple-modal-section">
-            <h4 className="apple-modal-sec-title">نبذة تفصيلية عن الخدمة</h4>
+            <h4 className="apple-modal-sec-title"> {t("نبذة تفصيلية عن الخدمة")} </h4>
             <p className="apple-modal-text">{service.description}</p>
           </div>
 
           <div className="apple-modal-section">
-            <h4 className="apple-modal-sec-title">أبرز المزايا والمخرجات</h4>
+            <h4 className="apple-modal-sec-title"> {t("أبرز المزايا والمخرجات")} </h4>
             <div className="apple-modal-features">
               {service.features.map((feature, idx) => (
                 <div key={idx} className="apple-modal-feature-item">
@@ -99,7 +100,7 @@ export default function ServicesAppleModal({ service, onClose }) {
               className="apple-modal-primary-btn"
               onClick={onClose}
             >
-              <span>طلب الخدمة / التسجيل</span>
+              <span> {t("طلب الخدمة / التسجيل")} </span>
               <ArrowLeft size={16} />
             </Link>
 
@@ -110,12 +111,12 @@ export default function ServicesAppleModal({ service, onClose }) {
               className="apple-modal-wa-btn"
             >
               <MessageCircle size={18} />
-              <span>استفسار فوري عبر واتساب</span>
+              <span> {t("استفسار فوري عبر واتساب")} </span>
             </a>
 
             <a href="tel:0112212226" className="apple-modal-call-btn">
               <PhoneCall size={17} />
-              <span>اتصال مباشر</span>
+              <span> {t("اتصال مباشر")} </span>
             </a>
           </div>
         </div>

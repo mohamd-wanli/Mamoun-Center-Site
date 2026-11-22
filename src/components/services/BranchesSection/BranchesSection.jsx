@@ -1,3 +1,4 @@
+import { t } from "../../../i18n/index.js";
 import { MapPin, Phone, Clock, Compass, Sparkles } from "lucide-react";
 import { branchesData } from "../../../data/services";
 import useScrollReveal from "../../../hooks/useScrollReveal";
@@ -16,15 +17,12 @@ export default function BranchesSection() {
       <div className="container">
         <div className="branches-header">
           <span className="section-tag">
-            فروعنا ومراكز التدريب
-          </span>
+             {t("فروعنا ومراكز التدريب")} </span>
           <h2 className="section-title">
-            مواقع مجهزة بأحدث الورش
-            <span className="section-title-accent"> في قلب العاصمة دمشق</span>
+             {t("مواقع مجهزة بأحدث الورش")} <span className="section-title-accent">  {t("في قلب العاصمة دمشق")} </span>
           </h2>
           <p className="branches-subtitle">
-            نوفر فرعين متخصصين لتغطية التدريب التقني والحرفي مع سهولة الوصول والمواصلات.
-          </p>
+             {t("نوفر فرعين متخصصين لتغطية التدريب التقني والحرفي مع سهولة الوصول والمواصلات.")} </p>
         </div>
 
         <div className="branches-grid">
@@ -48,7 +46,7 @@ export default function BranchesSection() {
                   {branch.name}
                 </span>
                 {branch.isPrimary && (
-                  <span className="primary-pill">الفرع التقني الرئيسي</span>
+                  <span className="primary-pill"> {t("الفرع التقني الرئيسي")} </span>
                 )}
               </div>
 
@@ -69,9 +67,8 @@ export default function BranchesSection() {
 
                 <div className="branch-phones-block">
                   <span className="phones-label">
-                    <Phone size={15} style={{ verticalAlign: "middle", marginLeft: 6 }} />
-                    أرقام التواصل المباشرة:
-                  </span>
+                    <Phone size={15} style={{ verticalAlign: "middle", marginInlineEnd: 6 }} />
+                     {t("أرقام التواصل المباشرة:")} </span>
                   <div className="phones-chips-row">
                     {branch.phones.map((phone, pIdx) => (
                       <a

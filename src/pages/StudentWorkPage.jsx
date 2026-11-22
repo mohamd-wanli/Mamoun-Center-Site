@@ -1,3 +1,4 @@
+import { t } from "../i18n/index.js";
 import { useState, useMemo } from "react";
 import PageHeader from "../components/common/PageHeader/PageHeader";
 import WorkGalleryGrid from "../components/studentWork/WorkGalleryGrid/WorkGalleryGrid";
@@ -19,10 +20,10 @@ export default function StudentWorkPage() {
   return (
     <>
       <PageHeader
-        tag="إبداعات طلابنا"
-        title="معرض إبداعات ومشاريع المتدربين"
-        subtitle="شاهد ثمرة التدريب العملي المباشر ونماذج حية من مشاريع التخرج وقصص نجاح خريجينا في كبرى التخصصات المهنية والتقنية."
-        breadcrumbs={[{ label: "أعمال المتدربين" }]}
+        tag={t("إبداعات طلابنا")}
+        title={t("معرض إبداعات ومشاريع المتدربين")}
+        subtitle={t("شاهد ثمرة التدريب العملي المباشر ونماذج حية من مشاريع التخرج وقصص نجاح خريجينا في كبرى التخصصات المهنية والتقنية.")}
+        breadcrumbs={[{ label: t("أعمال المتدربين") }]}
       />
 
       <div className="container" style={{ position: "relative" }}>

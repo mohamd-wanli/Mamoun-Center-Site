@@ -1,5 +1,6 @@
+import { t } from "../../../i18n/index.js";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "../../../i18n/navigation.jsx";
 import "./CoursesSection.css";
 import { programs, courseCategories } from "../../../data/courses.js";
 import CourseGrid from "../../courses/CourseGrid";
@@ -19,11 +20,11 @@ export default function CoursesSection() {
       <div className="container">
         <div className="course-section-header">
           <div className="course-badge-wrap">
-            <span className="course-section-subtitle">البرامج والدورات</span>
+            <span className="course-section-subtitle"> {t("البرامج والدورات")} </span>
           </div>
 
           <h2 className="course-section-title">
-            استكشف دوراتنا <span>التدريبية</span>
+             {t("استكشف دوراتنا")} <span> {t("التدريبية")} </span>
           </h2>
 
           <div className="course-title-divider">
@@ -33,27 +34,25 @@ export default function CoursesSection() {
           </div>
 
           <p className="course-section-description">
-            مناهج أكاديمية وتطبيقية شاملة صُممت بعناية فائقة لتلهم وتصقل مهارات
-            كل متدرب، وتفتح آفاقاً واسعة للتميز والريادة في سوق العمل.
-          </p>
+             {t("مناهج أكاديمية وتطبيقية شاملة صُممت بعناية فائقة لتلهم وتصقل مهارات كل متدرب، وتفتح آفاقاً واسعة للتميز والريادة في سوق العمل.")} </p>
         </div>
 
-        <div className="home-course-filters" role="group" aria-label="تصفية الدورات حسب التخصص">
+        <div className="home-course-filters" role="group" aria-label={t("تصفية الدورات حسب التخصص")}>
           {courseCategories.map((item) => (
             <button key={item.id} type="button" aria-pressed={category === item.id}
               aria-controls="home-course-results" onClick={() => setCategory(item.id)}>
-              {item.id === "all" ? "مختارات من الدورات" : item.label}
+              {item.id === "all" ? t("مختارات من الدورات") : item.label}
             </button>
           ))}
         </div>
         <div id="home-course-results">
-          <p className="home-course-count" role="status">عرض {visiblePrograms.length} من {matchingPrograms.length} دورة</p>
+          <p className="home-course-count" role="status"> {t("عرض")} {visiblePrograms.length}  {t("من")} {matchingPrograms.length}  {t("دورة")} </p>
           <CourseGrid programs={visiblePrograms} />
         </div>
 
         <div className="course-section-footer">
           <Link to="/courses" className="view-all-btn">
-            <span>عرض جميع البرامج التدريبية</span>
+            <span> {t("عرض جميع البرامج التدريبية")} </span>
           </Link>
         </div>
       </div>

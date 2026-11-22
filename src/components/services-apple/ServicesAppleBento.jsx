@@ -1,3 +1,4 @@
+import { t } from "../../i18n/index.js";
 import React, { useState } from "react";
 import {
   Sliders,
@@ -24,10 +25,10 @@ const iconMap = {
 };
 
 const filterTabs = [
-  { id: "all", label: "كافة الخدمات" },
-  { id: "individual", label: "للأفراد والمهنيين" },
-  { id: "corporate", label: "للشركات والمؤسسات" },
-  { id: "accredited", label: "الاعتمادات والاستشارات" },
+  { id: "all", label: t("كافة الخدمات") },
+  { id: "individual", label: t("للأفراد والمهنيين") },
+  { id: "corporate", label: t("للشركات والمؤسسات") },
+  { id: "accredited", label: t("الاعتمادات والاستشارات") },
 ];
 
 export default function ServicesAppleBento({ onSelectService }) {
@@ -68,11 +69,9 @@ export default function ServicesAppleBento({ onSelectService }) {
             <span>PORTFOLIO & SOLUTIONS</span>
           </div>
           <h2 className="apple-bento-title">
-            حلول متكاملة تُبنى حول طموحك المهني.
-          </h2>
+             {t("حلول متكاملة تُبنى حول طموحك المهني.")} </h2>
           <p className="apple-bento-subtitle">
-            نضع بين يديك منظومة تدريبية متطورة تلبي احتياجات سوق العمل العصري، للأفراد والمؤسسات بأعلى معايير الإتقان.
-          </p>
+             {t("نضع بين يديك منظومة تدريبية متطورة تلبي احتياجات سوق العمل العصري، للأفراد والمؤسسات بأعلى معايير الإتقان.")} </p>
 
           {/* Apple Segmented Control Tabs */}
           <div className="apple-segmented-nav" role="tablist">
@@ -149,9 +148,9 @@ export default function ServicesAppleBento({ onSelectService }) {
                       type="button"
                       className="apple-card-cta"
                       onClick={() => onSelectService(service)}
-                      aria-label={`عرض تفاصيل ${service.title}`}
+                      aria-label={t("عرض تفاصيل {{value0}}", { value0: service.title })}
                     >
-                      <span>استكشف تفاصيل الخدمة</span>
+                      <span> {t("استكشف تفاصيل الخدمة")} </span>
                       <ArrowLeft size={16} className="apple-cta-arrow" />
                     </button>
 
@@ -159,8 +158,8 @@ export default function ServicesAppleBento({ onSelectService }) {
                       type="button"
                       className="apple-quick-action"
                       onClick={() => onSelectService(service)}
-                      title="نظرة سريعة"
-                      aria-label="نظرة سريعة"
+                      title={t("نظرة سريعة")}
+                      aria-label={t("نظرة سريعة")}
                     >
                       <ExternalLink size={15} />
                     </button>

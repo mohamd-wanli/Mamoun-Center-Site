@@ -1,3 +1,4 @@
+import { t } from "../../../i18n/index.js";
 import { Compass, Hammer, Trophy, Briefcase, Sparkles } from "lucide-react";
 import useScrollReveal from "../../../hooks/useScrollReveal";
 import "./LearningJourney.css";
@@ -6,26 +7,26 @@ const steps = [
   {
     step: "01",
     icon: Compass,
-    title: "اختيار المسار والاستشارة المجانية",
-    desc: "جلسة إرشاد وتوجيه مع مستشارينا لتحديد البرنامج الأنسب لشغفك وخلفيتك وأهدافك المهنية.",
+    title: t("اختيار المسار والاستشارة المجانية"),
+    desc: t("جلسة إرشاد وتوجيه مع مستشارينا لتحديد البرنامج الأنسب لشغفك وخلفيتك وأهدافك المهنية."),
   },
   {
     step: "02",
     icon: Hammer,
-    title: "تدريب تطبيقي مكثف في الورش",
-    desc: "ممارسة عملية مباشرة خطوة بخطوة تحت إشراف نخبة من كبار المدربين والمحترفين في المهنة.",
+    title: t("تدريب تطبيقي مكثف في الورش"),
+    desc: t("ممارسة عملية مباشرة خطوة بخطوة تحت إشراف نخبة من كبار المدربين والمحترفين في المهنة."),
   },
   {
     step: "03",
     icon: Trophy,
-    title: "تنفيذ مشروع التخرج المتكامل",
-    desc: "إنجاز أعمال حقيقية تثبت إتقانك لكافة المحاور، لتكون نواة قوية لمعرض أعمالك (Portfolio).",
+    title: t("تنفيذ مشروع التخرج المتكامل"),
+    desc: t("إنجاز أعمال حقيقية تثبت إتقانك لكافة المحاور، لتكون نواة قوية لمعرض أعمالك (Portfolio)."),
   },
   {
     step: "04",
     icon: Briefcase,
-    title: "الشهادة المعتمدة وسوق العمل",
-    desc: "استلام شهادتك المهنية الموثقة والانطلاق بثقة إلى التوظيف المباشر أو تأسيس مشروعك الخاص.",
+    title: t("الشهادة المعتمدة وسوق العمل"),
+    desc: t("استلام شهادتك المهنية الموثقة والانطلاق بثقة إلى التوظيف المباشر أو تأسيس مشروعك الخاص."),
   },
 ];
 
@@ -42,16 +43,13 @@ export default function LearningJourney() {
       <div className="container">
         <div className="journey-header">
           <span className="section-tag">
-            <Sparkles size={15} style={{ verticalAlign: "middle", marginLeft: 6 }} />
-            مسار التعلم والإنجاز
-          </span>
+            <Sparkles size={15} style={{ verticalAlign: "middle", marginInlineEnd: 6 }} />
+             {t("مسار التعلم والإنجاز")} </span>
           <h2 className="section-title">
-            كيف تبني مستقبلك المهني
-            <span className="section-title-accent"> في 4 خطوات واضحة؟</span>
+             {t("كيف تبني مستقبلك المهني")} <span className="section-title-accent">  {t("في 4 خطوات واضحة؟")} </span>
           </h2>
           <p className="journey-subtitle">
-            منهجية تدريبية متكاملة مصممة لنقلك من مرحلة الشغف إلى الاحتراف والإنتاجية الكاملة.
-          </p>
+             {t("منهجية تدريبية متكاملة مصممة لنقلك من مرحلة الشغف إلى الاحتراف والإنتاجية الكاملة.")} </p>
         </div>
 
         <div className="journey-steps-grid">

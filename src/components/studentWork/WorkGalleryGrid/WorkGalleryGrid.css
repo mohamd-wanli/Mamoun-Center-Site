@@ -2,7 +2,7 @@
 .work-gallery-wrapper {
   padding-top: 55px;
   padding-bottom: 70px;
-  direction: rtl;
+  direction: inherit;
   position: relative;
 }
 
@@ -13,7 +13,7 @@
   gap: 30px;
   margin-bottom: 28px;
   padding-bottom: 24px;
-  border-bottom: 1px solid #edf0f5;
+  border-bottom: 1px solid var(--border-default);
 }
 
 .gallery-header-text {
@@ -26,7 +26,7 @@
   gap: 8px;
   font-size: 0.82rem;
   font-weight: 800;
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   background: rgba(215, 166, 55, 0.12);
   border: 1px solid rgba(215, 166, 55, 0.28);
   padding: 4px 14px;
@@ -37,14 +37,14 @@
 .gallery-title {
   font-size: clamp(1.6rem, 2.4vw, 2.1rem);
   font-weight: 800;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   line-height: 1.35;
   margin: 0 0 10px;
 }
 
 .gallery-desc {
   font-size: 0.95rem;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   line-height: 1.75;
   margin: 0;
 }
@@ -53,26 +53,26 @@
 .work-empty-state {
   text-align: center;
   padding: 60px 20px;
-  background: #ffffff;
+  background: var(--surface-card);
   border-radius: var(--radius-card, 16px);
-  border: 1px dashed #cbd5e1;
+  border: 1px dashed var(--border-default);
   max-width: 540px;
   margin: 30px auto;
 }
 
 .empty-ico {
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   margin-bottom: 14px;
 }
 
 .work-empty-state h3 {
   font-size: 1.3rem;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   margin: 0 0 8px;
 }
 
 .work-empty-state p {
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   font-size: 0.95rem;
   margin: 0;
 }
@@ -84,9 +84,9 @@
 }
 
 .project-card {
-  background: #ffffff;
+  background: var(--surface-card);
   border-radius: var(--radius-card, 16px);
-  border: 1px solid #edf0f5;
+  border: 1px solid var(--border-default);
   box-shadow: 0 8px 24px rgba(11, 33, 69, 0.05);
   overflow: hidden;
   display: flex;
@@ -145,9 +145,9 @@
 }
 
 .project-cat-badge {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(var(--surface-rgb), 0.92);
   backdrop-filter: blur(6px);
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   font-size: 0.78rem;
   font-weight: 700;
   padding: 4px 12px;
@@ -184,8 +184,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #ffffff;
-  color: var(--color-primary, #0b2145);
+  background: var(--surface-card);
+  color: var(--text-heading);
   padding: 10px 20px;
   border-radius: 50px;
   font-size: 0.88rem;
@@ -201,7 +201,7 @@
 
 .preview-pill:hover {
   background: var(--color-accent, #d7a637);
-  color: var(--color-primary, #0b2145);
+  color: #0b2145;
 }
 
 .project-body {
@@ -223,7 +223,7 @@
   height: 38px;
   border-radius: 50%;
   background: rgba(215, 166, 55, 0.15);
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -237,25 +237,25 @@
 
 .student-name {
   font-size: 0.95rem;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
 }
 
 .program-name {
   font-size: 0.78rem;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
 }
 
 .project-title {
   font-size: 1.15rem;
   font-weight: 800;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   line-height: 1.45;
   margin: 0 0 10px;
 }
 
 .project-desc {
   font-size: 0.88rem;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   line-height: 1.65;
   margin: 0 0 16px;
   display: -webkit-box;
@@ -275,16 +275,16 @@
 .project-tag-pill {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--color-secondtext, #687385);
-  background: var(--color-surface, #f7f8fa);
+  color: var(--color-secondtext, var(--text-muted));
+  background: var(--color-surface, var(--surface-soft));
   padding: 3px 10px;
   border-radius: 4px;
-  border: 1px solid #edf0f5;
+  border: 1px solid var(--border-default);
 }
 
 .project-footer {
   padding-top: 14px;
-  border-top: 1px solid #edf0f5;
+  border-top: 1px solid var(--border-default);
 }
 
 .project-view-link {
@@ -293,12 +293,12 @@
   justify-content: space-between;
   font-size: 0.88rem;
   font-weight: 700;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   transition: color 0.2s ease;
 }
 
 .project-card:hover .project-view-link {
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
 }
 
 .view-arrow {

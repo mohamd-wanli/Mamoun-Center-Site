@@ -2,7 +2,7 @@
   position: relative;
   margin-top: -32px;
   z-index: 10;
-  direction: rtl;
+  direction: inherit;
   margin-bottom: 45px;
 }
 
@@ -10,11 +10,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  background: #ffffff;
+  background: var(--surface-card);
   padding: 24px 28px;
   border-radius: var(--radius-card, 16px);
   box-shadow: 0 14px 38px rgba(11, 33, 69, 0.08);
-  border: 1px solid #edf0f5;
+  border: 1px solid var(--border-default);
 }
 
 .courses-stats-wrap .courses-stat-item {
@@ -31,7 +31,7 @@
   height: 52px;
   border-radius: 12px;
   background: rgba(11, 33, 69, 0.06);
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,7 +41,7 @@
 
 .courses-stats-wrap .courses-stat-item:hover .stat-icon-box {
   background: var(--color-primary, #0b2145);
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   transform: scale(1.08) rotate(-4deg);
 }
 
@@ -53,20 +53,20 @@
 .courses-stats-wrap .stat-number {
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   line-height: 1.2;
 }
 
 .courses-stats-wrap .stat-title {
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   margin-top: 2px;
 }
 
 .courses-stats-wrap .stat-sub {
   font-size: 0.78rem;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   margin-top: 2px;
 }
 

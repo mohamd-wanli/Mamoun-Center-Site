@@ -1,3 +1,4 @@
+import { t } from "../../../i18n/index.js";
 import {
   Sliders,
   Wrench,
@@ -10,7 +11,7 @@ import {
   Sparkles,
   MessageCircle,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "../../../i18n/navigation.jsx";
 import { coreServices } from "../../../data/services";
 import useScrollReveal from "../../../hooks/useScrollReveal";
 import "./ServicesGrid.css";
@@ -37,17 +38,13 @@ export default function ServicesGrid() {
       <div className="container">
         <div className="services-section-header">
           <span className="section-tag">
-            {/* <Sparkles size={15} style={{ verticalAlign: "middle", marginLeft: 6 }} /> */}
-            ماذا نقدم في مركز المأمون؟
-          </span>
+            {/* <Sparkles size={15} style={{ verticalAlign: "middle", marginInlineEnd: 6 }} /> */}
+             {t("ماذا نقدم في مركز المأمون؟")} </span>
           <h2 className="section-title">
-            خدمات تدريبية متخصصة
-            <span className="section-title-accent"> مدعومة بأحدث الورش والمختبرات</span>
+             {t("خدمات تدريبية متخصصة")} <span className="section-title-accent">  {t("مدعومة بأحدث الورش والمختبرات")} </span>
           </h2>
           <p className="services-header-desc">
-            حلول متكاملة تغطي كافة مراحل التعلم والتطوير، من التوجيه والاستشارة وحتى منح الشهادة
-            المعتمدة والانطلاق نحو سوق العمل.
-          </p>
+             {t("حلول متكاملة تغطي كافة مراحل التعلم والتطوير، من التوجيه والاستشارة وحتى منح الشهادة المعتمدة والانطلاق نحو سوق العمل.")} </p>
         </div>
 
         <div className="services-cards-grid">
@@ -96,18 +93,18 @@ export default function ServicesGrid() {
 
                   <div className="service-card-footer">
                     <Link to="/contact" className="service-action-btn">
-                      <span>طلب الخدمة</span>
+                      <span> {t("طلب الخدمة")} </span>
                       <ArrowLeft size={16} className="btn-arrow" />
                     </Link>
 
                     <a
                       href={`https://wa.me/963944000111?text=${encodeURIComponent(
-                        `مرحباً، أود الاستفسار عن خدمة: ${service.title}`
+                        t("مرحباً، أود الاستفسار عن خدمة: {{value0}}", { value0: service.title })
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="service-whatsapp-btn"
-                      title="استفسار فوري عبر واتساب"
+                      title={t("استفسار فوري عبر واتساب")}
                     >
                       <MessageCircle size={18} />
                     </a>

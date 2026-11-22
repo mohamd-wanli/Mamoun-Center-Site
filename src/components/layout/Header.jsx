@@ -1,16 +1,18 @@
+import Preferences from "./Preferences";
+import { t } from "../../i18n/index.js";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink } from "../../i18n/navigation.jsx";
 import { useState, useEffect } from "react";
 
 import "./Header.css";
 
 const navLinks = [
-  { label: "الرئيسية", path: "/" },
-  { label: "عن المركز", path: "/about" },
-  { label: "الدورات", path: "/courses", hasDropdown: true },
-  { label: "خدماتنا", path: "/services" },
-  { label: "أعمال المتدربين", path: "/student-work" },
-  { label: "اتصل بنا", path: "/contact" },
+  { label: t("الرئيسية"), path: "/" },
+  { label: t("عن المركز"), path: "/about" },
+  { label: t("الدورات"), path: "/courses", hasDropdown: true },
+  { label: t("خدماتنا"), path: "/services" },
+  { label: t("أعمال المتدربين"), path: "/student-work" },
+  { label: t("اتصل بنا"), path: "/contact" },
 ];
 
 export default function Header() {
@@ -36,23 +38,24 @@ export default function Header() {
       <div className="container inner-header">
         <Link
           to="/"
-          aria-label="مركز المأمون الدولي - الرئيسية"
+          aria-label={t("مركز المأمون الدولي - الرئيسية")}
           onClick={closeMenu}
           className="brand"
         >
           <span className="brand-mark">
-            <img src="/mic.png" />
+            <img src="/mic.png" alt={t("شعار المركز")} />
           </span>
           <span className="brand-text">
-            <span className="brand-name">مركز المأمون الدولي</span>
+            <span className="brand-name"> {t("مركز المأمون الدولي")} </span>
 
           </span>
         </Link>
+        <Preferences />
         <button
           type="button"
           className="mobile-menu-button"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label={isMenuOpen ? "إغلاق القائمة" : "فتح القائمة"}
+          aria-label={isMenuOpen ? t("إغلاق القائمة") : t("فتح القائمة")}
           aria-expanded={isMenuOpen}
           aria-controls="main-navigation"
         >
@@ -61,7 +64,7 @@ export default function Header() {
         <nav
           id="main-navigation"
           className={`main-nav ${isMenuOpen ? "main-nav--open" : ""}`}
-          aria-label="التنقل الرئيسي"
+          aria-label={t("التنقل الرئيسي")}
         >
           <div className="main-nav-links">
             {navLinks.map((link, i) => (
@@ -84,8 +87,7 @@ export default function Header() {
           </div>
 
           <Link to="/courses" className="header-cta" onClick={closeMenu}>
-            استكشف الدورات
-          </Link>
+             {t("استكشف الدورات")} </Link>
         </nav>
       </div>
     </header>

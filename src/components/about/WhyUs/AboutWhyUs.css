@@ -1,7 +1,7 @@
 .why-us-section {
-  background-color: #ffffff;
+  background-color: var(--surface-card);
   position: relative;
-  direction: rtl;
+  direction: inherit;
 }
 
 .why-us-header {
@@ -12,7 +12,7 @@
 
 .why-us-subtitle {
   font-size: 0.98rem;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   line-height: 1.8;
   margin: 0;
 }
@@ -27,10 +27,10 @@
   display: flex;
   align-items: flex-start;
   gap: 18px;
-  background: var(--color-surface, #f7f8fa);
+  background: var(--color-surface, var(--surface-soft));
   padding: 28px 24px;
   border-radius: var(--radius-card, 14px);
-  border: 1px solid #edf0f5;
+  border: 1px solid var(--border-default);
   position: relative;
   transition: all 0.3s ease;
 
@@ -49,7 +49,7 @@
 
 .why-us-card:hover {
   transform: translateY(-5px);
-  background: #ffffff;
+  background: var(--surface-card);
   border-color: rgba(215, 166, 55, 0.35);
   box-shadow: 0 12px 30px rgba(11, 33, 69, 0.08);
 }
@@ -59,7 +59,7 @@
   height: 52px;
   border-radius: 12px;
   background: var(--color-primary, #0b2145);
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,7 +69,7 @@
 
 .why-us-card:hover .why-us-icon-wrapper {
   background: var(--color-accent, #d7a637);
-  color: var(--color-primary, #0b2145);
+  color: #0b2145;
   transform: scale(1.06);
 }
 
@@ -81,13 +81,13 @@
   margin: 0 0 8px;
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
 }
 
 .why-us-card-desc {
   margin: 0;
   font-size: 0.88rem;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   line-height: 1.7;
 }
 

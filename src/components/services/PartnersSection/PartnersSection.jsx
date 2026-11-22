@@ -1,3 +1,4 @@
+import { t } from "../../../i18n/index.js";
 import { useState, useMemo } from "react";
 import { Handshake, Building, Globe, ShieldCheck } from "lucide-react";
 import { partnersData, clientCategories } from "../../../data/services";
@@ -25,22 +26,16 @@ export default function PartnersSection() {
           <span className="section-tag">
             <Handshake
               size={15}
-              style={{ verticalAlign: "middle", marginLeft: 6 }}
+              style={{ verticalAlign: "middle", marginInlineEnd: 6 }}
             />
-            شركاء النجاح والاعتماد
-          </span>
+             {t("شركاء النجاح والاعتماد")} </span>
           <h2 className="section-title">
-            جهات ومؤسسات محلية ودولية
-            <span className="section-title-accent">
+             {t("جهات ومؤسسات محلية ودولية")} <span className="section-title-accent">
               {" "}
-              استفادت من خدماتنا الاستشارية
-            </span>
+               {t("استفادت من خدماتنا الاستشارية")} </span>
           </h2>
           <p className="partners-subtitle">
-            سجل حافل بالشراكات الناجحة مع كبرى المنظمات الإنسانية الدولية،
-            المؤسسات الحكومية، والشركات الاقتصادية الرائدة في سوريا والوطن
-            العربي.
-          </p>
+             {t("سجل حافل بالشراكات الناجحة مع كبرى المنظمات الإنسانية الدولية، المؤسسات الحكومية، والشركات الاقتصادية الرائدة في سوريا والوطن العربي.")} </p>
         </div>
 
         <div className="partners-tabs-nav">

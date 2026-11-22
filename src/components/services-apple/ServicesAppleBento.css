@@ -1,11 +1,11 @@
 /* Apple Bento Grid Section - Mic Brand Colors */
 .apple-bento-section {
   position: relative;
-  background: var(--color-surface, #f7f8fa);
-  color: var(--color-text, #202938);
+  background: var(--color-surface, var(--surface-soft));
+  color: var(--color-text, var(--text-heading));
   padding: 90px 0;
   overflow: hidden;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--border-default);
 }
 
 /* Header */
@@ -25,7 +25,7 @@
   padding: 6px 14px;
   border-radius: 9999px;
   background: rgba(215, 166, 55, 0.14);
-  color: #b3821a;
+  color: var(--text-accent);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -36,7 +36,7 @@
 .apple-bento-title {
   font-size: clamp(2rem, 3.8vw, 3.2rem);
   font-weight: 800;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   line-height: 1.25;
   letter-spacing: -0.015em;
   margin-bottom: 18px;
@@ -44,7 +44,7 @@
 
 .apple-bento-subtitle {
   font-size: clamp(1rem, 1.4vw, 1.15rem);
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   line-height: 1.75;
   margin-bottom: 34px;
 }
@@ -53,7 +53,7 @@
 .apple-segmented-nav {
   display: inline-flex;
   align-items: center;
-  background: #e9eef5;
+  background: var(--surface-soft);
   padding: 5px;
   border-radius: 9999px;
   border: 1px solid rgba(11, 33, 69, 0.08);
@@ -72,7 +72,7 @@
   border-radius: 9999px;
   border: none;
   background: transparent;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   font-size: 0.88rem;
   font-weight: 600;
   cursor: pointer;
@@ -81,12 +81,12 @@
 }
 
 .apple-tab-btn:hover {
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
 }
 
 .apple-tab-btn--active {
-  background: #ffffff;
-  color: var(--color-primary, #0b2145);
+  background: var(--surface-card);
+  color: var(--text-heading);
   box-shadow: 0 4px 14px rgba(11, 33, 69, 0.1);
 }
 
@@ -103,7 +103,7 @@
   position: relative;
   border-radius: 28px;
   overflow: hidden;
-  background: #ffffff;
+  background: var(--surface-card);
   border: 1px solid rgba(11, 33, 69, 0.09);
   min-height: 440px;
   display: flex;
@@ -153,9 +153,9 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.86) 45%,
-    #ffffff 90%
+    rgba(var(--surface-rgb), 0.1) 0%,
+    rgba(var(--surface-rgb), 0.86) 45%,
+    var(--surface-card) 90%
   );
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
@@ -185,9 +185,9 @@
   align-items: center;
   padding: 6px 14px;
   border-radius: 9999px;
-  background: #ffffff;
+  background: var(--surface-card);
   border: 1px solid rgba(11, 33, 69, 0.1);
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -198,12 +198,12 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #ffffff;
+  background: var(--surface-card);
   border: 1px solid rgba(11, 33, 69, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-color, #d7a637);
+  color: var(--accent-color, var(--text-accent));
   box-shadow: 0 2px 10px rgba(11, 33, 69, 0.06);
 }
 
@@ -219,7 +219,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   margin-bottom: 8px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
@@ -227,7 +227,7 @@
 .apple-card-title {
   font-size: clamp(1.3rem, 2vw, 1.65rem);
   font-weight: 800;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   line-height: 1.35;
   margin-bottom: 12px;
 }
@@ -235,7 +235,7 @@
 .apple-card-desc {
   font-size: 0.92rem;
   line-height: 1.7;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   margin-bottom: 20px;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -267,12 +267,12 @@
   align-items: center;
   gap: 9px;
   font-size: 0.88rem;
-  color: var(--color-text, #202938);
+  color: var(--color-text, var(--text-heading));
   font-weight: 500;
 }
 
 .apple-check-icon {
-  color: var(--accent-color, #d7a637);
+  color: var(--accent-color, var(--text-accent));
   flex-shrink: 0;
 }
 
@@ -283,7 +283,7 @@
   justify-content: space-between;
   gap: 12px;
   padding-top: 18px;
-  border-top: 1px solid #eef2f6;
+  border-top: 1px solid var(--border-default);
 }
 
 .apple-card-cta {
@@ -304,7 +304,7 @@
 
 .apple-card-cta:hover {
   background: var(--color-accent, #d7a637);
-  color: #081731;
+  color: #0b2145;
   box-shadow: 0 8px 20px rgba(215, 166, 55, 0.3);
 }
 
@@ -320,9 +320,9 @@
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  color: var(--color-primary, #0b2145);
+  background: var(--surface-soft);
+  border: 1px solid var(--border-default);
+  color: var(--text-heading);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -331,8 +331,8 @@
 }
 
 .apple-quick-action:hover {
-  background: #e2e8f0;
-  color: var(--color-primary, #0b2145);
+  background: var(--surface-soft);
+  color: var(--text-heading);
   transform: scale(1.08);
 }
 

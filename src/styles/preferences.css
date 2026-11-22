@@ -1,0 +1,14 @@
+html[lang="en"] body { font-family: "Segoe UI", Arial, sans-serif; }
+html[lang="en"] .hero__overlay-scrim { transform: scaleX(-1); }
+html[lang="en"] .hero__visual-img { transform: none; }
+html[lang="en"] :is(.lucide-arrow-left, .lucide-arrow-right, .lucide-arrow-up-right, .card-link-arrow, .btn-arrow, .breadcrumb-separator) { scale: -1 1; }
+html[lang="en"] :is(.hero__title, .section-title, .apple-hero-title) { letter-spacing: -.025em; }
+.news-language-note { color: var(--text-muted); font-size: .875rem; line-height: 1.7; margin-block: 0 20px; }
+input, textarea, select { color: var(--color-text); }
+html[data-theme="dark"] :is(.hero, .site-footer, .footer, .benefits-bar, .news-empty) { --text-heading: #fff; --text-muted: #d6dfec; }
+html[data-theme="dark"] .home-award-image { background: #fff; }
+html[data-theme="dark"] .brand-mark { background: #fff; }
+html[data-theme="dark"] :is(.button-primary, .header-cta, .footer-newsletter-form button) { color: #0b2145; }
+html[data-theme="dark"] .apple-hero-title--gradient { background-image: linear-gradient(135deg, #edf3fc, #a9c3eb 55%, #e8bd61); }
+@media (max-width: 520px) { .topbar-info { flex-wrap: wrap; justify-content: center; gap: 6px 12px; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

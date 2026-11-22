@@ -1,11 +1,12 @@
+import { t } from "../../i18n/index.js";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "../../i18n/navigation.jsx";
 
 const CourseCard = ({
   image,
   title,
   description,
-  linkText = "استكشف الدورة",
+  linkText = t("استكشف الدورة"),
   path = "/courses",
   style,
 }) => {

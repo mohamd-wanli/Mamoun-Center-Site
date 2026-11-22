@@ -1,5 +1,6 @@
+import { t } from "../../../i18n/index.js";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "../../../i18n/navigation.jsx";
 import {
   X,
   Clock,
@@ -39,7 +40,7 @@ export default function CourseQuickModal({ program, onClose }) {
         <button
           className="modal-close-btn"
           onClick={onClose}
-          aria-label="إغلاق النافذة"
+          aria-label={t("إغلاق النافذة")}
         >
           <X size={20} />
         </button>
@@ -70,7 +71,7 @@ export default function CourseQuickModal({ program, onClose }) {
             <div className="modal-rating-box">
               <Star size={16} className="star-icon" />
               <strong>{program.rating}</strong>
-              <span>({program.reviewsCount} تقييم)</span>
+              <span>({program.reviewsCount}  {t("تقييم)")} </span>
             </div>
           </div>
 
@@ -80,7 +81,7 @@ export default function CourseQuickModal({ program, onClose }) {
             <div className="modal-metric">
               <Clock size={18} className="metric-icon" />
               <div>
-                <strong>المدة والتدريب</strong>
+                <strong> {t("المدة والتدريب")} </strong>
                 <span>
                   {program.duration} ({program.hours})
                 </span>
@@ -90,7 +91,7 @@ export default function CourseQuickModal({ program, onClose }) {
             <div className="modal-metric">
               <Award size={18} className="metric-icon" />
               <div>
-                <strong>الشهادة الممنوحة</strong>
+                <strong> {t("الشهادة الممنوحة")} </strong>
                 <span>{program.certificate}</span>
               </div>
             </div>
@@ -98,7 +99,7 @@ export default function CourseQuickModal({ program, onClose }) {
             <div className="modal-metric">
               <Layers size={18} className="metric-icon" />
               <div>
-                <strong>نسبة التدريب</strong>
+                <strong> {t("نسبة التدريب")} </strong>
                 <span>{program.practicalPercentage}</span>
               </div>
             </div>
@@ -106,7 +107,7 @@ export default function CourseQuickModal({ program, onClose }) {
             <div className="modal-metric">
               <UserCheck size={18} className="metric-icon" />
               <div>
-                <strong>المستوى المطلوب</strong>
+                <strong> {t("المستوى المطلوب")} </strong>
                 <span>{program.level}</span>
               </div>
             </div>
@@ -115,8 +116,7 @@ export default function CourseQuickModal({ program, onClose }) {
           {program.highlights && (
             <div className="modal-section-block">
               <h4 className="modal-section-title">
-                أبرز المهارات التي ستتقنها:
-              </h4>
+                 {t("أبرز المهارات التي ستتقنها:")} </h4>
               <ul className="modal-highlights-list">
                 {program.highlights.map((h, i) => (
                   <li key={i}>
@@ -130,7 +130,7 @@ export default function CourseQuickModal({ program, onClose }) {
 
           {program.syllabus && (
             <div className="modal-section-block">
-              <h4 className="modal-section-title">محاور المنهاج التدريبي:</h4>
+              <h4 className="modal-section-title"> {t("محاور المنهاج التدريبي:")} </h4>
               <div className="modal-syllabus-list">
                 {program.syllabus.map((unit, i) => (
                   <div key={i} className="modal-syllabus-item">
@@ -149,7 +149,7 @@ export default function CourseQuickModal({ program, onClose }) {
             className="modal-action-btn primary"
             onClick={onClose}
           >
-            <span>التفاصيل الكاملة والمنهاج</span>
+            <span> {t("التفاصيل الكاملة والمنهاج")} </span>
             <ArrowLeft size={16} />
           </Link>
           <Link
@@ -157,7 +157,7 @@ export default function CourseQuickModal({ program, onClose }) {
             className="modal-action-btn secondary"
             onClick={onClose}
           >
-            <span>حجز مقعد واستفسار فوري</span>
+            <span> {t("حجز مقعد واستفسار فوري")} </span>
           </Link>
         </div>
       </div>

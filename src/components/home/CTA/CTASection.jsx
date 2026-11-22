@@ -1,3 +1,4 @@
+import { t } from "../../../i18n/index.js";
 import { Award, Headphones, CheckCircle2 } from "lucide-react";
 import "./CTASection.css";
 import studentsImg from "../../../assets/images/cta.jfif";
@@ -6,18 +7,18 @@ import useScrollReveal from "../../../hooks/useScrollReveal";
 const features = [
   {
     icon: Award,
-    title: "شهادات مهنية معتمدة",
-    desc: "برامج تدريبية متوافقة مع متطلبات سوق العمل لضمان جاهزيتك وتفوقك المهني.",
+    title: t("شهادات مهنية معتمدة"),
+    desc: t("برامج تدريبية متوافقة مع متطلبات سوق العمل لضمان جاهزيتك وتفوقك المهني."),
   },
   {
     icon: Headphones,
-    title: "إرشاد وتوجيه تدريبي مستمر",
-    desc: "متابعة وإشراف مباشر من نخبة من الخبراء والمدربين المتخصصين طوال فترة البرنامج.",
+    title: t("إرشاد وتوجيه تدريبي مستمر"),
+    desc: t("متابعة وإشراف مباشر من نخبة من الخبراء والمدربين المتخصصين طوال فترة البرنامج."),
   },
   {
     icon: CheckCircle2,
-    title: "تدريب عملي تطبيقي 100%",
-    desc: "ورش وقاعات مجهزة بأحدث الأدوات والتقنيات لمحاكاة بيئة العمل الفعلية خطوة بخطوة.",
+    title: t("تدريب عملي تطبيقي 100%"),
+    desc: t("ورش وقاعات مجهزة بأحدث الأدوات والتقنيات لمحاكاة بيئة العمل الفعلية خطوة بخطوة."),
   },
 ];
 
@@ -34,22 +35,19 @@ export default function CTASection() {
           <div className="cta-image-frame">
             <img
               src={studentsImg}
-              alt="طلاب مركز المأمون الدولي"
+              alt={t("طلاب مركز المأمون الدولي")}
               className="cta-image"
             />
           </div>
         </div>
 
         <div className="cta-content-col">
-          <span className="section-tag">التسجيل والقبول • ADMISSIONS</span>
+          <span className="section-tag"> {t("التسجيل والقبول • ADMISSIONS")} </span>
           <h2 className="section-title">
-            ابدأ رحلتك نحو
-            <span className="section-title-accent"> مستقبل واعد ومشرق</span>
+             {t("ابدأ رحلتك نحو")} <span className="section-title-accent">  {t("مستقبل واعد ومشرق")} </span>
           </h2>
           <p className="cta-description">
-            انضم إلى مجتمعنا التدريبي المتميز حيث نضع بين يديك كل ما تحتاجه من
-            خبرات وإمكانيات للانطلاق بقوة وثقة في مسارك المهني.
-          </p>
+             {t("انضم إلى مجتمعنا التدريبي المتميز حيث نضع بين يديك كل ما تحتاجه من خبرات وإمكانيات للانطلاق بقوة وثقة في مسارك المهني.")} </p>
 
           <div className="cta-features-list">
             {features.map((item, idx) => {
@@ -74,10 +72,7 @@ export default function CTASection() {
 
           <div className="cta-info-badge">
             <p>
-              💡 <strong>باب التسجيل مفتوح لجميع الدورات:</strong> يمكنك زيارة
-              المركز في دمشق - جسر فكتوريا أو الاستفسار المباشر عبر الهاتف
-              لمعرفة المواعيد وحجز مقعدك.
-            </p>
+              💡 <strong> {t("باب التسجيل مفتوح لجميع الدورات:")} </strong>  {t("يمكنك زيارة المركز في دمشق - جسر فكتوريا أو الاستفسار المباشر عبر الهاتف لمعرفة المواعيد وحجز مقعدك.")} </p>
           </div>
         </div>
       </div>

@@ -1,8 +1,8 @@
 .about-story-section {
-  background-color: #ffffff;
+  background-color: var(--surface-card);
   position: relative;
   overflow: hidden;
-  direction: rtl;
+  direction: inherit;
 }
 
 .about-story-grid {
@@ -40,7 +40,7 @@
 
 .about-story-lead {
   font-size: 1.08rem;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   font-weight: 600;
   line-height: 1.85;
   margin: 0 0 16px;
@@ -48,7 +48,7 @@
 
 .about-story-desc {
   font-size: 0.95rem;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   line-height: 1.85;
   margin: 0 0 32px;
 }
@@ -63,16 +63,16 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  background: var(--color-surface, #f7f8fa);
+  background: var(--color-surface, var(--surface-soft));
   padding: 16px;
   border-radius: 12px;
-  border: 1px solid #edf0f5;
+  border: 1px solid var(--border-default);
   transition: all 0.25s ease;
 }
 
 .story-highlight-card:hover {
   transform: translateY(-3px);
-  background: #ffffff;
+  background: var(--surface-card);
   border-color: rgba(215, 166, 55, 0.35);
   box-shadow: 0 8px 20px rgba(11, 33, 69, 0.06);
 }
@@ -82,7 +82,7 @@
   height: 32px;
   border-radius: 8px;
   background: rgba(215, 166, 55, 0.15);
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,13 +93,13 @@
   margin: 0 0 4px;
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
 }
 
 .highlight-desc {
   margin: 0;
   font-size: 0.83rem;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   line-height: 1.5;
 }
 
@@ -107,7 +107,7 @@
   position: relative;
   border-radius: 20px;
   padding: 12px;
-  background: linear-gradient(145deg, #ffffff, #f0f4f9);
+  background: linear-gradient(145deg, var(--surface-card), var(--surface-soft));
   box-shadow: 0 20px 45px rgba(11, 33, 69, 0.12);
   border: 1px solid rgba(215, 166, 55, 0.2);
 }
@@ -139,7 +139,7 @@
   height: 44px;
   border-radius: 10px;
   background: rgba(215, 166, 55, 0.2);
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,7 +152,7 @@
 
 .experience-badge .badge-text strong {
   font-size: 1.25rem;
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   line-height: 1.2;
 }
 
@@ -165,8 +165,8 @@
   position: absolute;
   bottom: 30px;
   left: -20px;
-  background: #ffffff;
-  color: var(--color-primary, #0b2145);
+  background: var(--surface-card);
+  color: var(--text-heading);
   padding: 12px 20px;
   border-radius: 50px;
   display: flex;
@@ -175,11 +175,11 @@
   font-weight: 700;
   font-size: 0.9rem;
   box-shadow: 0 10px 25px rgba(11, 33, 69, 0.12);
-  border: 1px solid #eef2f6;
+  border: 1px solid var(--border-default);
 }
 
 .quality-pill svg {
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
 }
 
 @media (max-width: 992px) {

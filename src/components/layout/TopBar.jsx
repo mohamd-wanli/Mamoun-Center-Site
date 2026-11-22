@@ -1,5 +1,6 @@
+import { t } from "../../i18n/index.js";
 import { MapPin, Phone, Mail, User, LogIn } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "../../i18n/navigation.jsx";
 import "./TopBar.css";
 
 export default function TopBar() {
@@ -9,7 +10,7 @@ export default function TopBar() {
                 <div className="topbar-info">
                     <span className="topbar-item">
                         <MapPin size={13} />
-                        <span>دمشق - جسر فكتوريا</span>
+                        <span> {t("دمشق - جسر فكتوريا")} </span>
                     </span>
                     <a className="topbar-item" href="tel:+963111234567" dir="ltr">
                         <Phone size={13} />
@@ -23,11 +24,11 @@ export default function TopBar() {
                 <div className="topbar-actions">
                     <Link to="/student-work" className="topbar-item">
                         <User size={13} />
-                        <span>بوابة المتدرب</span>
+                        <span> {t("بوابة المتدرب")} </span>
                     </Link>
                     <Link to="/contact" className="topbar-item">
                         <LogIn size={13} />
-                        <span>تسجيل الدخول</span>
+                        <span> {t("تسجيل الدخول")} </span>
                     </Link>
                 </div>
             </div>

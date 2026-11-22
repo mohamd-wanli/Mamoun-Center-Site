@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { t } from "../../../i18n/index.js";
+import { Link } from "../../../i18n/navigation.jsx";
 import {
   Award,
   Star,
@@ -15,8 +16,8 @@ export default function CoursesCatalog({ programs, onQuickView }) {
     return (
       <div className="courses-empty-state">
         <Sparkles size={40} className="empty-icon" />
-        <h3>لم يتم العثور على برامج مطابقة</h3>
-        <p>جرب تغيير كلمات البحث أو اختيار تخصص آخر لعرض الدورات المتاحة.</p>
+        <h3> {t("لم يتم العثور على برامج مطابقة")} </h3>
+        <p> {t("جرب تغيير كلمات البحث أو اختيار تخصص آخر لعرض الدورات المتاحة.")} </p>
       </div>
     );
   }
@@ -52,10 +53,10 @@ export default function CoursesCatalog({ programs, onQuickView }) {
                 type="button"
                 className="quick-view-hover-btn"
                 onClick={() => onQuickView(program)}
-                aria-label="نظرة سريعة على الدورة"
+                aria-label={t("نظرة سريعة على الدورة")}
               >
                 <Eye size={16} />
-                <span>نظرة سريعة</span>
+                <span> {t("نظرة سريعة")} </span>
               </button>
             </div>
 
@@ -64,7 +65,7 @@ export default function CoursesCatalog({ programs, onQuickView }) {
                 <div className="program-rating">
                   <Star size={15} className="star-filled" />
                   <strong>{program.rating}</strong>
-                  <span>({program.reviewsCount} تقييم)</span>
+                  <span>({program.reviewsCount}  {t("تقييم)")} </span>
                 </div>
                 <span className="program-level-pill">{program.level}</span>
               </div>
@@ -87,7 +88,7 @@ export default function CoursesCatalog({ programs, onQuickView }) {
                 </div>
                 <div className="meta-chip">
                   <Award size={14} className="chip-icon" />
-                  <span>شهادة معتمدة</span>
+                  <span> {t("شهادة معتمدة")} </span>
                 </div>
               </div>
 
@@ -104,16 +105,15 @@ export default function CoursesCatalog({ programs, onQuickView }) {
 
               <div className="program-actions">
                 <Link to={program.path} className="program-main-btn">
-                  <span>تفاصيل المنهاج</span>
+                  <span> {t("تفاصيل المنهاج")} </span>
                   <ArrowLeft size={16} className="btn-arrow" />
                 </Link>
                 <Link
                   to="/contact"
                   className="program-enroll-btn"
-                  title="سجل أو احجز مقعدك"
+                  title={t("سجل أو احجز مقعدك")}
                 >
-                  حجز مقعد
-                </Link>
+                   {t("حجز مقعد")} </Link>
               </div>
             </div>
           </article>

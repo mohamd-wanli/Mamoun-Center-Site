@@ -11,18 +11,17 @@ import ContactPage from "../pages/ContactPage";
 import NotFoundPage from "../pages/NotFoundPage";
 
 
-export const router = createBrowserRouter(
-    [{
-        element: <SiteLayout />,
-        children: [
-            { path: "/", element: <HomePage /> },
-            { path: "/about", element: <AboutPage /> },
-            { path: "/courses", element: <CoursesPage /> },
-            { path: "/courses/:slug", element: <CourseDetailsPage /> },
-            { path: "/services", element: <ServicesPage /> },
-            { path: "/student-work", element: <StudentWorkPage /> },
-            { path: "/contact", element: <ContactPage /> },
-            { path: "*", element: <NotFoundPage /> },
-        ],
-    },
-    ]);
+const pages = [
+  { index: true, element: <HomePage /> },
+  { path: "about", element: <AboutPage /> },
+  { path: "courses", element: <CoursesPage /> },
+  { path: "courses/:slug", element: <CourseDetailsPage /> },
+  { path: "services", element: <ServicesPage /> },
+  { path: "student-work", element: <StudentWorkPage /> },
+  { path: "contact", element: <ContactPage /> },
+  { path: "*", element: <NotFoundPage /> },
+];
+export const router = createBrowserRouter([
+  { path: "/en", element: <SiteLayout />, children: pages },
+  { path: "/", element: <SiteLayout />, children: pages },
+]);

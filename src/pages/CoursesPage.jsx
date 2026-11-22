@@ -1,3 +1,4 @@
+import { t } from "../i18n/index.js";
 import { useState, useMemo } from "react";
 import PageHeader from "../components/common/PageHeader/PageHeader";
 import CoursesStats from "../components/courses/CoursesStats/CoursesStats";
@@ -51,10 +52,10 @@ export default function CoursesPage() {
   return (
     <>
       <PageHeader
-        tag="البرامج والدورات المهنية"
-        title="استكشف البرامج والدورات التدريبية المعتمدة"
-        subtitle="برامج تطبيقية متطورة صُممت بعناية فائقة لتصقل مهاراتك وتمنحك الجاهزية التامة لسوق العمل والريادة المهنية."
-        breadcrumbs={[{ label: "الدورات والبرامج" }]}
+        tag={t("البرامج والدورات المهنية")}
+        title={t("استكشف البرامج والدورات التدريبية المعتمدة")}
+        subtitle={t("برامج تطبيقية متطورة صُممت بعناية فائقة لتصقل مهاراتك وتمنحك الجاهزية التامة لسوق العمل والريادة المهنية.")}
+        breadcrumbs={[{ label: t("الدورات والبرامج") }]}
       />
 
       <div className="container" style={{ position: "relative" }}>

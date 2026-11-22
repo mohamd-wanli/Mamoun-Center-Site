@@ -1,7 +1,7 @@
 .contact-cards-section {
   padding: 50px 0 30px;
-  direction: rtl;
-  background: var(--color-background, #ffffff);
+  direction: inherit;
+  background: var(--color-background, var(--surface-card));
 }
 
 .contact-cards-grid {
@@ -11,8 +11,8 @@
 }
 
 .contact-card {
-  background: #ffffff;
-  border: 1px solid #eef2f6;
+  background: var(--surface-card);
+  border: 1px solid var(--border-default);
   border-radius: var(--radius-card, 16px);
   padding: 28px 22px;
   box-shadow: 0 8px 24px rgba(11, 33, 69, 0.05);
@@ -62,7 +62,7 @@
 }
 
 .contact-card--accent {
-  background: linear-gradient(180deg, #ffffff 0%, #fffdf8 100%);
+  background: linear-gradient(180deg, var(--surface-card) 0%, var(--surface-card) 100%);
   border-color: rgba(215, 166, 55, 0.3);
 }
 
@@ -78,7 +78,7 @@
   height: 52px;
   border-radius: 12px;
   background: rgba(11, 33, 69, 0.05);
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,39 +87,39 @@
 
 .contact-card:hover .contact-card-icon {
   background: var(--color-primary, #0b2145);
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   transform: scale(1.05);
 }
 
 .contact-card--accent .contact-card-icon {
   background: rgba(215, 166, 55, 0.15);
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
 }
 
 .contact-card-badge {
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--color-secondtext, #687385);
-  background: #f1f5f9;
+  color: var(--color-secondtext, var(--text-muted));
+  background: var(--surface-soft);
   padding: 3px 10px;
   border-radius: 20px;
 }
 
 .contact-card--accent .contact-card-badge {
   background: rgba(215, 166, 55, 0.15);
-  color: #a47614;
+  color: var(--text-accent);
 }
 
 .contact-card-title {
   font-size: 1.12rem;
   font-weight: 700;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   margin: 0 0 8px;
 }
 
 .contact-card-subtitle {
   font-size: 0.85rem;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   line-height: 1.6;
   margin: 0 0 20px;
   flex-grow: 1;
@@ -131,14 +131,14 @@
   justify-content: space-between;
   font-size: 0.92rem;
   font-weight: 700;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   padding-top: 14px;
-  border-top: 1px dashed #e2e8f0;
+  border-top: 1px dashed var(--border-default);
   transition: color 0.2s ease;
 }
 
 .contact-card:hover .contact-card-action {
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
 }
 
 .contact-card-arrow {

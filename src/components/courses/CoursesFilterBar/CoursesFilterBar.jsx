@@ -1,3 +1,4 @@
+import { t } from "../../../i18n/index.js";
 import { Search, X, SlidersHorizontal, Sparkles } from "lucide-react";
 import { courseCategories } from "../../../data/courses";
 import "./CoursesFilterBar.css";
@@ -18,7 +19,7 @@ export default function CoursesFilterBar({
           <Search size={18} className="search-icon" />
           <input
             type="text"
-            placeholder="ابحث عن اسم الدورة، المهارة، أو التخصص..."
+            placeholder={t("ابحث عن اسم الدورة، المهارة، أو التخصص...")}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="courses-search-input"
@@ -27,7 +28,7 @@ export default function CoursesFilterBar({
             <button
               className="clear-search-btn"
               onClick={() => setSearchQuery("")}
-              aria-label="مسح البحث"
+              aria-label={t("مسح البحث")}
             >
               <X size={16} />
             </button>
@@ -36,15 +37,15 @@ export default function CoursesFilterBar({
 
         <div className="courses-sort-box">
           <SlidersHorizontal size={16} className="sort-icon" />
-          <span className="sort-label">ترتيب حسب:</span>
+          <span className="sort-label"> {t("ترتيب حسب:")} </span>
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
             className="courses-sort-select"
           >
-            <option value="featured">الموصى به (الأكثر طلباً)</option>
-            <option value="rating">أعلى تقييم</option>
-            <option value="hours">عدد ساعات التدريب</option>
+            <option value="featured"> {t("الموصى به (الأكثر طلباً)")} </option>
+            <option value="rating"> {t("أعلى تقييم")} </option>
+            <option value="hours"> {t("عدد ساعات التدريب")} </option>
           </select>
         </div>
       </div>
@@ -66,8 +67,7 @@ export default function CoursesFilterBar({
 
       <div className="filter-results-bar">
         <span className="results-count">
-          تم العثور على <strong>{totalResults}</strong> من البرامج التدريبية المعتمدة
-        </span>
+           {t("تم العثور على")} <strong>{totalResults}</strong>  {t("من البرامج التدريبية المعتمدة")} </span>
         {(searchQuery || selectedCategory !== "all") && (
           <button
             className="reset-filters-btn"
@@ -76,8 +76,7 @@ export default function CoursesFilterBar({
               setSelectedCategory("all");
             }}
           >
-            إعادة تعيين الفلاتر
-          </button>
+             {t("إعادة تعيين الفلاتر")} </button>
         )}
       </div>
     </div>

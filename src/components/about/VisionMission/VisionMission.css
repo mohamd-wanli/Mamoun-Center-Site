@@ -1,7 +1,7 @@
 .vm-section {
-  background: var(--color-surface, #f7f8fa);
+  background: var(--color-surface, var(--surface-soft));
   position: relative;
-  direction: rtl;
+  direction: inherit;
 }
 
 .vm-header {
@@ -12,7 +12,7 @@
 
 .vm-header-desc {
   font-size: 0.98rem;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   line-height: 1.8;
   margin: 0;
 }
@@ -24,10 +24,10 @@
 }
 
 .vm-card {
-  background: #ffffff;
+  background: var(--surface-card);
   border-radius: var(--radius-card, 16px);
   padding: 34px 28px;
-  border: 1px solid #eef2f6;
+  border: 1px solid var(--border-default);
   box-shadow: 0 8px 24px rgba(11, 33, 69, 0.04);
   position: relative;
   overflow: hidden;
@@ -81,7 +81,7 @@
   height: 58px;
   border-radius: 14px;
   background: rgba(11, 33, 69, 0.05);
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,7 +90,7 @@
 
 .vm-card:hover .vm-icon-box {
   background: var(--color-primary, #0b2145);
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   transform: rotate(-6deg);
 }
 
@@ -98,7 +98,7 @@
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.08em;
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   background: rgba(215, 166, 55, 0.1);
   padding: 4px 10px;
   border-radius: 6px;
@@ -107,13 +107,13 @@
 .vm-title {
   font-size: 1.35rem;
   font-weight: 800;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   margin: 0 0 12px;
 }
 
 .vm-desc {
   font-size: 0.92rem;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   line-height: 1.75;
   margin: 0 0 24px;
   flex-grow: 1;
@@ -121,7 +121,7 @@
 
 .vm-divider {
   height: 1px;
-  background: #edf1f6;
+  background: var(--surface-soft);
   margin-bottom: 20px;
 }
 
@@ -139,12 +139,12 @@
   align-items: center;
   gap: 10px;
   font-size: 0.88rem;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   font-weight: 600;
 }
 
 .vm-point-icon {
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
   flex-shrink: 0;
 }
 

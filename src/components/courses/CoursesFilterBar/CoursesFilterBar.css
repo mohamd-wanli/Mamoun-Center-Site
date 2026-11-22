@@ -1,11 +1,11 @@
 .courses-filter-wrapper {
-  background: #ffffff;
+  background: var(--surface-card);
   border-radius: var(--radius-card, 16px);
   padding: 24px;
-  border: 1px solid #edf0f5;
+  border: 1px solid var(--border-default);
   box-shadow: 0 6px 20px rgba(11, 33, 69, 0.04);
   margin-bottom: 36px;
-  direction: rtl;
+  direction: inherit;
 }
 
 .filter-top-row {
@@ -26,7 +26,7 @@
 .courses-search-box .search-icon {
   position: absolute;
   right: 16px;
-  color: #94a3b8;
+  color: var(--text-muted);
   pointer-events: none;
 }
 
@@ -35,16 +35,16 @@
   padding: 13px 46px 13px 40px;
   font-size: 0.95rem;
   font-family: inherit;
-  color: var(--color-primary, #0b2145);
-  background: var(--color-surface, #f7f8fa);
-  border: 1.5px solid #e2e8f0;
+  color: var(--text-heading);
+  background: var(--color-surface, var(--surface-soft));
+  border: 1.5px solid var(--border-default);
   border-radius: 10px;
   outline: none;
   transition: all 0.25s ease;
 }
 
 .courses-search-input:focus {
-  background: #ffffff;
+  background: var(--surface-card);
   border-color: var(--color-accent, #d7a637);
   box-shadow: 0 0 0 4px rgba(215, 166, 55, 0.15);
 }
@@ -54,7 +54,7 @@
   left: 14px;
   background: transparent;
   border: none;
-  color: #94a3b8;
+  color: var(--text-muted);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -65,27 +65,27 @@
 }
 
 .clear-search-btn:hover {
-  color: #0b2145;
+  color: var(--text-heading);
 }
 
 .courses-sort-box {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: var(--color-surface, #f7f8fa);
-  border: 1.5px solid #e2e8f0;
+  background: var(--color-surface, var(--surface-soft));
+  border: 1.5px solid var(--border-default);
   border-radius: 10px;
   padding: 6px 14px;
   flex-shrink: 0;
 }
 
 .courses-sort-box .sort-icon {
-  color: var(--color-accent, #d7a637);
+  color: var(--color-accent, var(--text-accent));
 }
 
 .sort-label {
   font-size: 0.85rem;
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
   font-weight: 600;
   white-space: nowrap;
 }
@@ -96,7 +96,7 @@
   font-size: 0.88rem;
   font-family: inherit;
   font-weight: 700;
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   outline: none;
   cursor: pointer;
 }
@@ -106,16 +106,16 @@
   flex-wrap: wrap;
   gap: 10px;
   padding-bottom: 18px;
-  border-bottom: 1px solid #edf0f5;
+  border-bottom: 1px solid var(--border-default);
   margin-bottom: 16px;
 }
 
 .category-pill-btn {
   padding: 8px 18px;
   border-radius: 50px;
-  background: var(--color-surface, #f7f8fa);
-  color: var(--color-secondtext, #687385);
-  border: 1px solid #e2e8f0;
+  background: var(--color-surface, var(--surface-soft));
+  color: var(--color-secondtext, var(--text-muted));
+  border: 1px solid var(--border-default);
   font-size: 0.88rem;
   font-weight: 700;
   font-family: inherit;
@@ -125,8 +125,8 @@
 
 .category-pill-btn:hover {
   border-color: rgba(215, 166, 55, 0.4);
-  color: var(--color-primary, #0b2145);
-  background: #ffffff;
+  color: var(--text-heading);
+  background: var(--surface-card);
 }
 
 .category-pill--active {
@@ -144,11 +144,11 @@
 }
 
 .results-count {
-  color: var(--color-secondtext, #687385);
+  color: var(--color-secondtext, var(--text-muted));
 }
 
 .results-count strong {
-  color: var(--color-primary, #0b2145);
+  color: var(--text-heading);
   font-size: 0.95rem;
 }
 
@@ -165,7 +165,7 @@
 }
 
 .reset-filters-btn:hover {
-  background: #fee2e2;
+  background: var(--surface-soft);
 }
 
 @media (max-width: 768px) {

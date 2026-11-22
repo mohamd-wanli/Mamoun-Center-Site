@@ -1,24 +1,24 @@
-.home-highlights { color: var(--color-primary, #0b2145); }
+.home-highlights { color: var(--text-heading); }
 .home-opinions, .home-awards { padding: 40px 20px; }
-.home-opinions { background: #f6f8fb; }
+.home-opinions { background: var(--surface-soft); }
 .home-compact-heading { margin-bottom: 22px; }
-.home-compact-heading > span { display: flex; align-items: center; gap: 8px; color: #946c19; font-size: .875rem; font-weight: 700; }
+.home-compact-heading > span { display: flex; align-items: center; gap: 8px; color: var(--text-accent); font-size: .875rem; font-weight: 700; }
 .home-compact-heading h2 { margin: 6px 0 0; font-size: clamp(1.5rem, 2.5vw, 1.9rem); line-height: 1.4; }
 .home-opinions-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
-.home-opinion-card { margin: 0; padding: 20px; border: 1px solid #e4e9f0; border-radius: 12px; background: white; }
-.home-opinion-card > svg { color: #b5821c; }
+.home-opinion-card { margin: 0; padding: 20px; border: 1px solid var(--border-default); border-radius: 12px; background: var(--surface-card); }
+.home-opinion-card > svg { color: var(--text-accent); }
 .home-opinion-card blockquote, .home-opinion-card p { margin: 10px 0 16px; font-size: 1rem; line-height: 1.75; }
-.home-opinion-card figcaption { border-top: 1px solid #edf0f4; padding-top: 12px; font-size: .875rem; font-weight: 700; }
-.home-opinion-card figcaption span { display: block; margin-top: 4px; color: #64748b; font-weight: 400; }
-.home-content-placeholder { color: #64748b; }
-.home-sample-note { color: #64748b; font-size: .875rem; margin: 8px 0 0; }
+.home-opinion-card figcaption { border-top: 1px solid var(--border-default); padding-top: 12px; font-size: .875rem; font-weight: 700; }
+.home-opinion-card figcaption span { display: block; margin-top: 4px; color: var(--text-muted); font-weight: 400; }
+.home-content-placeholder { color: var(--text-muted); }
+.home-sample-note { color: var(--text-muted); font-size: .875rem; margin: 8px 0 0; }
 .home-awards-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
 .home-award-card { margin: 0; text-align: center; min-width: 0; }
 /* The original caption is preserved in the asset; readable text is repeated below. */
-.home-award-image { aspect-ratio: 402 / 223; overflow: hidden; background: white; border-radius: 10px; }
+.home-award-image { aspect-ratio: 402 / 223; overflow: hidden; background: var(--surface-card); border-radius: 10px; }
 .home-award-image img { display: block; width: 100%; height: auto; }
 .home-award-card h3 { font-size: .875rem; line-height: 1.6; margin: 12px 0 4px; }
-.home-award-card p { color: #64748b; font-size: .875rem; line-height: 1.6; margin: 0; }
+.home-award-card p { color: var(--text-muted); font-size: .875rem; line-height: 1.6; margin: 0; }
 @media (max-width: 1000px) {
   .home-opinions-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .home-awards-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 16px; }
