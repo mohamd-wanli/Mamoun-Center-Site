@@ -28,7 +28,7 @@
   gap: 6px;
   color: rgba(255, 255, 255, 0.75);
   font-weight: 500;
-  transition: color 180ms ease, opacity 180ms ease;
+  transition: color 180ms ease;
 }
 
 .topbar-item svg {
@@ -36,13 +36,8 @@
   flex-shrink: 0;
 }
 
-a.topbar-item:hover {
-  color: #ffffff;
-}
-
-a.topbar-item:hover svg {
-  color: var(--color-accent-light, var(--text-accent));
-}
+a.topbar-item:hover                { color: #ffffff; }
+a.topbar-item:hover svg            { color: var(--color-accent-light, var(--text-accent)); }
 
 @media (max-width: 768px) {
   .topbar-inner {
@@ -50,7 +45,15 @@ a.topbar-item:hover svg {
     padding-block: 4px;
   }
 
-  .topbar-actions {
-    display: none;
+  .topbar-info {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 14px;
   }
+
+  .topbar-actions { display: none; }
+}
+
+@media (max-width: 480px) {
+  .topbar { display: none; }
 }

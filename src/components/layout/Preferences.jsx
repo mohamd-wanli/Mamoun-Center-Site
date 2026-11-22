@@ -59,7 +59,8 @@ export default function Preferences() {
         }
       >
         <Globe size={14} aria-hidden="true" />
-        <span>{nextLanguage === "en" ? "English" : "العربية"}</span>
+        <span className="lang-label-full">{nextLanguage === "en" ? "English" : "العربية"}</span>
+        <span className="lang-label-short">{nextLanguage === "en" ? "EN" : "عربي"}</span>
       </a>
       <label className="theme-control">
         <ThemeIcon size={14} aria-hidden="true" />
@@ -70,7 +71,6 @@ export default function Preferences() {
           value={theme}
           onChange={(event) => setTheme(event.target.value)}
         >
-          {/* <option value="system">{language === "en" ? "System" : "النظام"}</option> */}
           <option value="light">{language === "en" ? "Light" : "فاتح"}</option>
           <option value="dark">{language === "en" ? "Dark" : "داكن"}</option>
         </select>
