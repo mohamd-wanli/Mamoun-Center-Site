@@ -1,5 +1,9 @@
 import { forwardRef } from "react";
-import { Link as RouterLink, NavLink as RouterNavLink, Navigate as RouterNavigate } from "react-router-dom";
+import {
+  Link as RouterLink,
+  NavLink as RouterNavLink,
+  Navigate as RouterNavigate,
+} from "react-router-dom";
 import { language } from "./index";
 import { localizedPath as pathForLanguage } from "./paths";
 

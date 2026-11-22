@@ -22,7 +22,10 @@
   line-height: 1;
   text-decoration: none;
   box-sizing: border-box;
-  transition: border-color 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+  transition:
+    border-color 0.18s ease,
+    background-color 0.18s ease,
+    color 0.18s ease;
   user-select: none;
 }
 
